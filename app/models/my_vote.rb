@@ -7,7 +7,9 @@
 #  counter    :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  user_id    :bigint
 #
 
 class MyVote < ApplicationRecord
+    belongs_to :user
 end
