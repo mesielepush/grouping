@@ -17,8 +17,7 @@ $primary: #e6a756 !default;
 $secondary: #2F170F !default;
 
 @mixin heading-font {
-    font-family: "battle";
-    src: url("../fonts/battle.ttf");
+    font-family: 'Raleway';
   }
   
   @mixin body-font {
@@ -30,14 +29,7 @@ $secondary: #2F170F !default;
     text-align: center;
     font-size: 3rem;
 }
-body {
-    @include body-font;
-    font-family: 'Lora';
-    background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("https://i.imgur.com/aDUDXk7.png");
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-  }
+
   
   h1,
   h2,
@@ -129,7 +121,7 @@ body {
   
   body {
   @include body-font;
-  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('https://i.imgur.com/aDUDXk7.png');
+  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('https://bit.ly/39jIT4y');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
