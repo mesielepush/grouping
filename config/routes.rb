@@ -45,4 +45,5 @@ Rails.application.routes.draw do
   root to: "users#show"
   get '/create_vote',   to: 'votes#create'
   get '/vote',   to: 'votes#show'
+  
 end
