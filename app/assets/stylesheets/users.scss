@@ -17,7 +17,8 @@ $primary: #e6a756 !default;
 $secondary: #2F170F !default;
 
 @mixin heading-font {
-    font-family: 'Raleway';
+    font-family: "battle";
+    src: url("../fonts/battle.ttf");
   }
   
   @mixin body-font {
@@ -159,7 +160,6 @@ p {
   
   @include heading-font;
   .site-heading-upper {
-    border: 2px solid red;
     
     display: block;
     font-size: 2rem;
@@ -169,7 +169,7 @@ p {
   .site-heading-lower {
     position: relative;
     top:1rem;
-    border: 2px solid red;
+    
     font-size: 5rem;
     font-weight: 100;
     line-height: 4rem;
