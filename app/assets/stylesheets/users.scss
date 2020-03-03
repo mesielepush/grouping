@@ -29,8 +29,7 @@ $secondary: #2F170F !default;
     text-align: center;
     font-size: 3rem;
 }
-
-  
+ 
   h1,
   h2,
   h3,
@@ -94,7 +93,7 @@ $secondary: #2F170F !default;
     }
   }
   
-  body {
+  .User_Profile {
   @include body-font;
   background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('https://bit.ly/39jIT4y');
   background-attachment: fixed;
@@ -120,8 +119,8 @@ p {
 }
 
 .site-heading {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  
+  
   text-transform: uppercase;
   line-height: 1;
   
@@ -135,7 +134,7 @@ p {
   
   .site-heading-lower {
     position: relative;
-    top:1rem;
+    
     
     font-size: 5rem;
     font-weight: 100;

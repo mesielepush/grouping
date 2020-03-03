@@ -1,3 +1,23 @@
 // Place all the styles related to the groups controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@mixin heading-font {
+    font-family: 'Raleway';
+  }
+  
+  @mixin body-font {
+    font-family: 'Lora';
+  }
+
+.group_carrousel {
+    margin-top: 5rem;
+}
+
+body {
+    @include body-font;
+    background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('https://i.imgur.com/X77nmJr.png') ;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+  }
