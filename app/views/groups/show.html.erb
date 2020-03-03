@@ -18,16 +18,16 @@
             <div class="carousel-item active d-flex justify-content-center align-items-center">
             </div>
             
-            <% @group.each do |group| %>
+            <% @group.votes.each do |demand| %>
                             
                 <div class="carousel-item" style="padding-top: 5rem;">
-                    <a href= <%= group_profile_path(id: group.id)%> >
+                    <a href= <%= demands_profile_path(id: demand.id)%> >
                         <div class = "d-flex justify-content-center align-items-center">
                             <div class="card  text-white group_back" style="width: 25rem; padding: 2rem;">
-                                <img src= <%=group.imagen_url%> alt="group" class = "img-fluid img-thumbnail rounded-circle">
+                                <img src= <%=demand.gravatar_url %> alt="group" class = "img-fluid img-thumbnail rounded-circle">
                                 <div class="card-body">
-                                    <h5 class="card-title title_group text-center"><%=group.name%></h5>
-                                    <p class="card-text text-center description_group"><%=group.description%></p>
+                                    <h5 class="card-title title_group text-center"><%=demand.name%></h5>
+                                    <p class="card-text text-center description_group"><%=demand.description%></p>
                                     
                                 </div>
                             </div>
