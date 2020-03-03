@@ -1,5 +1,5 @@
 <h1 class="site-heading text-center text-white d-lg-block">
-    <span class="site-heading-upper text-primary mb-3" style="padding-top: 5rem;"><img src="https://i.imgur.com/wUzFVgH.png" alt="uptitle"></span>
+    <span class="site-heading-upper text-primary mb-3" style="padding-top: 3rem;"><img src="https://i.imgur.com/wUzFVgH.png" alt="uptitle"></span>
     
 </h1>
 
@@ -13,13 +13,13 @@
 
         <% @groups.each do |group| %>
             
-            <div class="carousel-item" style="padding-top: 15rem;">
+            <div class="carousel-item" style="padding-top: 5rem;">
                 <div class = "d-flex justify-content-center align-items-center">
                     <div class="card  text-white group_back" style="width: 25rem; padding: 2rem;">
                         <img src= <%=group.imagen_url%> alt="group" class = "img-fluid img-thumbnail rounded-circle">
                         <div class="card-body">
-                            <h5 class="card-title"><%=group.name%></h5>
-                            <p class="card-text"><%=group.description%></p>
+                            <h5 class="card-title title_group text-center"><%=group.name%></h5>
+                            <p class="card-text text-center description_group"><%=group.description%></p>
                             
                         </div>
                     </div>

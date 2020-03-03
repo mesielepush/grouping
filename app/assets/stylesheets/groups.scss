@@ -30,8 +30,22 @@ body {
     height: 100%;
     border: 2px solid;
     padding: 10px;
-    box-shadow: 0 0 35px rgb(49, 45, 45), 0 0 40px rgb(45, 45, 49);
+    box-shadow:  0px 0px 50px rgba(27, 27, 29, 0.5);
   }
   
+.title_group {
+  font-family: monospace;
+  font-size: 3.0rem !important;
+  width: 100%;
+  text-shadow: 3px 3px #5f4437;
+  background-color: rgba(47, 23, 15, 0.65);
+  box-shadow: 0px 0px 50px rgba(27, 27, 29, 0.5);
+}
+.description_group {
   
-  
+  font-family:   Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.8rem !important;
+  text-shadow: 3px 3px #181716;
+  background-color: rgba(105, 60, 45, 0.65);
+  box-shadow: 0px 0px 50px rgba(27, 27, 29, 0.5);
+}
