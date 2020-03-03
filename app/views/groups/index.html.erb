@@ -1,5 +1,5 @@
 <h1 class="site-heading text-center text-white d-lg-block">
-    <span class="site-heading-upper text-primary mb-3"><img src="https://i.imgur.com/wUzFVgH.png" alt="uptitle"></span>
+    <span class="site-heading-upper text-primary mb-3" style="padding-top: 5rem;"><img src="https://i.imgur.com/wUzFVgH.png" alt="uptitle"></span>
     
 </h1>
 
@@ -9,42 +9,23 @@
     
     <div class="carousel-inner group_carrousel">
         <div class="carousel-item active d-flex justify-content-center align-items-center">
-            
         </div>
-        <div class="carousel-item">
+
+        <% @groups.each do |group| %>
             
-            <div class = "d-flex justify-content-center align-items-center">
-                <div class="card" style="width: 15rem;">
-                    <img src="https://i.imgur.com/PAV1GeH.jpg" alt="group" class = "img-thumbnail rounded-circle">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        
+            <div class="carousel-item" style="padding-top: 15rem;">
+                <div class = "d-flex justify-content-center align-items-center">
+                    <div class="card  text-white group_back" style="width: 25rem; padding: 2rem;">
+                        <img src= <%=group.imagen_url%> alt="group" class = "img-fluid img-thumbnail rounded-circle">
+                        <div class="card-body">
+                            <h5 class="card-title"><%=group.name%></h5>
+                            <p class="card-text"><%=group.description%></p>
+                            
+                        </div>
                     </div>
-                </div>
-            </div>      
-        </div>
-        <div class="carousel-item">
-            <div class = "d-flex justify-content-center align-items-center">
-                <img src="https://i.imgur.com/t7nEyRP.jpg" alt="Chicago">
-            </div>      
-        </div>
-        <div class="carousel-item">
-            <div class = "d-flex justify-content-center align-items-center">
-                <img src="https://i.imgur.com/t7nEyRP.jpg" alt="Chicago">
-            </div>      
-        </div>
-        <div class="carousel-item">
-            <div class = "d-flex justify-content-center align-items-center">
-                <img src="https://i.imgur.com/ZSc0fD0.jpg" alt="Chicago">
-            </div>      
-        </div>
-        
-        <div class="carousel-item">
-            <div class = "d-flex justify-content-center align-items-center">
-                <img src="https://i.imgur.com/3EhDh2X.jpg" alt="New York">
-            </div>      
-        </div>
+                </div>      
+            </div>
+        <% end %>
     </div>
 
     <!-- Left and right controls -->

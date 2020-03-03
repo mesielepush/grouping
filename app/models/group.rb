@@ -2,11 +2,13 @@
 #
 # Table name: groups
 #
-#  id         :bigint           not null, primary key
-#  name       :string
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  user_id    :bigint
+#  id          :bigint           not null, primary key
+#  name        :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  user_id     :bigint
+#  description :string
+#  imagen_url  :string
 #
 
 class Group < ApplicationRecord
