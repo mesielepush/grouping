@@ -51,4 +51,5 @@ Rails.application.routes.draw do
   get '/groups', to: 'groups#index'
   get '/demands', to: 'votes#index'
   get '/my_votes', to: 'my_votes#index'
+  get '/group_profile', to: 'groups#show'
 end
