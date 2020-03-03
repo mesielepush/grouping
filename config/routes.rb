@@ -3,7 +3,7 @@
 #                                Prefix Verb   URI Pattern                                                                              Controller#Action
 #                      new_user_session GET    /users/sign_in(.:format)                                                                 devise/sessions#new
 #                          user_session POST   /users/sign_in(.:format)                                                                 devise/sessions#create
-#                  destroy_user_session DELETE /users/sign_out(.:format)                                                                devise/sessions#destroy
+#                  destroy_user_session GET    /users/sign_out(.:format)                                                                devise/sessions#destroy
 #                     new_user_password GET    /users/password/new(.:format)                                                            devise/passwords#new
 #                    edit_user_password GET    /users/password/edit(.:format)                                                           devise/passwords#edit
 #                         user_password PATCH  /users/password(.:format)                                                                devise/passwords#update
@@ -19,6 +19,7 @@
 #                                  root GET    /                                                                                        users#show
 #                           create_vote GET    /create_vote(.:format)                                                                   votes#create
 #                                  vote GET    /vote(.:format)                                                                          votes#show
+#                                groups GET    /groups(.:format)                                                                        groups#index
 #         rails_mandrill_inbound_emails POST   /rails/action_mailbox/mandrill/inbound_emails(.:format)                                  action_mailbox/ingresses/mandrill/inbound_emails#create
 #         rails_postmark_inbound_emails POST   /rails/action_mailbox/postmark/inbound_emails(.:format)                                  action_mailbox/ingresses/postmark/inbound_emails#create
 #            rails_relay_inbound_emails POST   /rails/action_mailbox/relay/inbound_emails(.:format)                                     action_mailbox/ingresses/relay/inbound_emails#create
@@ -45,5 +46,7 @@ Rails.application.routes.draw do
   root to: "users#show"
   get '/create_vote',   to: 'votes#create'
   get '/vote',   to: 'votes#show'
-  
+  get '/groups', to: 'groups#index'
+  get '/demands', to: 'votes#index'
+  get '/my_votes', to: 'my_votes#index'
 end

@@ -41,20 +41,21 @@ $secondary: #2F170F !default;
   }
   
   p {
-    line-height: 1.75;
+    line-height: 2;
   }
     
-  
-  .site-heading .site-heading-upper {
-    display: block;
-    font-size: 2rem;
-    font-weight: 800;
-    color: rgb(141, 7, 130) !important;
+  .user-nav {
+      height: 10rem;
   }
-   
+  .nav-item:hover{
+    
+    text-shadow: 0 0 35px #FF0000, 0 0 40px #0000FF;
+
+  }
   
   .io {
-    color: #e40bb5 !important;
+    color: #CB3FF5 !important;
+    font-size: 1.8rem;
   }
   
   
@@ -63,38 +64,12 @@ $secondary: #2F170F !default;
     font-family: 'Raleway';
   }
   
-  .intro {
-    position: relative;
-  }
-  
-  
   
   .footer {
     background-color: rgba(47, 23, 15, 0.9);
   }
   
-  #mainNav {
-    background-color: fade-out($secondary, 0.1);
-    
-    .navbar-brand {
-      color: $primary;
-    }
-    .navbar-nav {
-      .nav-item {
-        .nav-link {
-          color: fade-out($white, 0.5);
-  
-          font-weight: 800;
-        }
-        &.active {
-          .nav-link {
-            color: $primary;
-          }
-        }
-      }
-    }
-    
-  }
+
   
   
   .cta {
@@ -193,5 +168,7 @@ p {
 
 .sign_form {
     background-color: rgba($color: black, $alpha: 0.30);
+    padding-bottom: 2rem;
+    padding-top: 2rem;
     color: white;
 }

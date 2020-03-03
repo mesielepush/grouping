@@ -16,4 +16,7 @@ class VotesController < ApplicationController
     def post_params
         params.require(:post).permit(:content)
       end
+      def index
+        @demands = Vote.all
+      end
 end

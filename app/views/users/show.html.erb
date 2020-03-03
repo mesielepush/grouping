@@ -1,22 +1,24 @@
 <h1 class="site-heading text-center text-white d-lg-block">
-    <span class="site-heading-upper text-primary mb-3"><img src="https://i.imgur.com/lW0rPDM.png" alt="Girl in a jacket"></span>
-    <span class="site-heading-lower titles"><img src="https://i.imgur.com/KkItsDn.png" alt="Girl in a jacket"></span>
+    <span class="site-heading-upper text-primary mb-3"><img src="https://i.imgur.com/FDk3V48.png" alt="Girl in a jacket"></span>
+    <span class="site-heading-lower titles"><img src="https://i.imgur.com/Apw10z1.png" alt="Girl in a jacket"></span>
   </h1>
-    
-  <ul class="nav justify-content-center mx-auto" id="mainNav">
-  <li class="nav-item px-lg-4">
-    <a class= "nav-link io text-uppercase text-expanded" href="index.html">Home</a>
-  </li>
-  <li class="nav-item px-lg-4">
-    <a class= "nav-link io text-uppercase text-expanded" href="#">Link</a>
-  </li>
-  <li class="nav-item io px-lg-4">
-    <a class= "nav-link io text-uppercase text-expanded" href="#">Link</a>
-  </li>
-  <li class="nav-item io px-lg-4">
-    <a class= "nav-link text-uppercase text-expanded" href= "/users/sign_out">Sign out</a>
-  </li>
-</ul>
+
+  <ul class="nav user-nav justify-content-center align-items-center mx-auto" id="mainNav">
+    <li class="nav-item px-lg-3">
+        <%= link_to 'Groups', groups_url, method: :get, class: 'nav-link io text-uppercase text-expanded' %>
+        
+    </li>
+    <li class="nav-item px-lg-3">
+        <%= link_to 'Demands', demands_url, method: :get, class: 'nav-link io text-uppercase text-expanded' %>
+    </li>
+    <li class="nav-item io px-lg-3">
+        <%= link_to 'My Demands', my_votes_url, method: :get, class: 'nav-link io text-uppercase text-expanded' %>
+        
+    </li>
+    <li class="nav-item io px-lg-5">
+        <a class= "nav-link text-uppercase text-expanded" href= "/users/sign_out">Sign out</a>
+    </li>
+  </ul>
 <section class = 'page-section clearfix'>
     
     <div class="container">

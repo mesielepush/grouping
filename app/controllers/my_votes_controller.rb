@@ -4,7 +4,7 @@ class MyVotesController < ApplicationController
 
         if @my_vote.save
             
-            notice: 'Your Vote was successfully created.'
+            render :index, alert: 'Your Vote was successfully created.'
         else
             
             render :index, alert: 'Vote was not created.'
@@ -14,7 +14,11 @@ class MyVotesController < ApplicationController
         @my_vote = Vote.find(params[:id])
     end
 
+    def index
+        @my_votes = Vote.find_by_user_id(current_user)
+    end
     def post_params
         params.require(:post).permit(:content)
       end
+    
 end
