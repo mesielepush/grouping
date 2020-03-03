@@ -10,24 +10,26 @@
     <div class="carousel-inner group_carrousel">
         <div class="carousel-item active d-flex justify-content-center align-items-center">
         </div>
-
+        
         <% @groups.each do |group| %>
-            <a href= <%= group_profile_path(id: group.id, user_id: group.user_id)%> >
-            
+                        
             <div class="carousel-item" style="padding-top: 5rem;">
-                <div class = "d-flex justify-content-center align-items-center">
-                    <div class="card  text-white group_back" style="width: 25rem; padding: 2rem;">
-                        <img src= <%=group.imagen_url%> alt="group" class = "img-fluid img-thumbnail rounded-circle">
-                        <div class="card-body">
-                            <h5 class="card-title title_group text-center"><%=group.name%></h5>
-                            <p class="card-text text-center description_group"><%=group.description%></p>
-                            
+                <a href= <%= group_profile_path(id: group.id)%> >
+                    <div class = "d-flex justify-content-center align-items-center">
+                        <div class="card  text-white group_back" style="width: 25rem; padding: 2rem;">
+                            <img src= <%=group.imagen_url%> alt="group" class = "img-fluid img-thumbnail rounded-circle">
+                            <div class="card-body">
+                                <h5 class="card-title title_group text-center"><%=group.name%></h5>
+                                <p class="card-text text-center description_group"><%=group.description%></p>
+                                
+                            </div>
                         </div>
                     </div>
-                </div>      
+                </a>
             </div>
-            </a>
+            
         <% end %>
+        
     </div>
 
     <!-- Left and right controls -->
