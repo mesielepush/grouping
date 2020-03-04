@@ -1,4 +1,5 @@
 class MyVotesController < ApplicationController
+    before_action :authenticate_user!
     def create
         @my_vote = current_user.my_votes.new(post_params)
 

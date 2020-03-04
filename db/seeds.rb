@@ -38,23 +38,44 @@ user_group_6.save
 groups = [user_group_1,user_group_2,user_group_3,user_group_4,user_group_5,user_group_6,]
 
 def makeDemand(demand_type)
+    case demand_type
+    when 1
+        demand_title = Faker::Educator.subject + " courses for young kiwi's it's too "+ Faker::Hipster.word+ ", isn't?"
+        demand_description = 'Acording to , '+Faker::Science.scientist+' '+ Faker::Educator.degree+' Kiwis should know a little bit of' +Faker::Educator.subject+', he got his degree from: '+Faker::Educator.campus+' so...'
+        demand_avatar = "https://loremflickr.com/320/240/kiwi"
+
+    when 2
+        demand_title = Faker::Science.scientist+ " has said that you should take: "+ Faker::Educator.subject+" classes"
+        demand_description = "'"+Faker::Marketing.buzzwords+"'"  + ", some "+ Faker::Educator.degree+' would know a little bit of ' +Faker::Educator.subject+', got his degree from: '+Faker::Educator.campus+' so...'
+        demand_avatar = "https://loremflickr.com/320/240/science"
+    
+    when 3
+        demand_title = "Jaques Brel has been " + Faker::Verb.past_participle + " and thinks that's too "+ Faker::Hacker.adjective 
+        demand_description = "Nothing is more " + Faker::Hacker.adjective + " said Brel on "+ Faker::Company.name + " " + Faker::Company.buzzword + " and then something or i don't know"
+        demand_avatar = "https://loremflickr.com/320/240/science"
+
+
     if demand_type == 'a'
-        demand_title = 'I want my '+Faker::Science.scientist+', '+ Faker::Job.title+' back...'
-        demand_description = 'People from '+Faker::Job.field+' thiks they are some type of '+ Faker::Ancient.god+', but the works of this author should be imposed over everyone, by force.'
-    
+        
+        demand_title = 'Jaques Brel, '+ Faker::Job.title+' is back again...'
+        demand_description = 'People from '+Faker::Job.field+' thiks they are some type of '+ Faker::Ancient.god+', but the works of this jaques brel guy should be imposed over everyone, by force.'
+        demand_avatar = "https://loremflickr.com/320/240/jaquesbrel"
+
+        "https://loremflickr.com/320/240/memes"
     elsif demand_type == 'b'
-        demand_title = 'Quoting stuff from '+Faker::TvShows::GameOfThrones.character+ ' has to stop'
+        character = Faker::TvShows::GameOfThrones.character
+        demand_title = 'Quoting stuff from '+character+ ' has to stop'
         demand_description = "Quotes like " + Faker::TvShows::TheITCrowd.quote + " are " + Faker::Hacker.adjective + Faker::Hipster.words.sample + " so I demand something i don't know wherever..."
-    
+        demand_avatar = "https://loremflickr.com/320/240/#{character.delete(' ').downcase}"
     elsif demand_type == 'c'
         demand_title = 'Did you know that '+ Faker::ChuckNorris.fact + ' Is this another lie from the '+ Faker::Hipster.words.sample + ' church?, so this is a demand i guess.'
         demand_description = 'The same church has said thigs like: '+ '"...' + Faker::Movies::HitchhikersGuideToTheGalaxy.quote + '..."' + ' this has to stop.'
-    
+        demand_avatar = "https://loremflickr.com/320/240/chucknorris"
     end
     demand = {
         name: demand_title,
         description: demand_description,
-        gravatar_url: "https://source.unsplash.com/320x240"
+        gravatar_url: demand_avatar
     }
     return demand
 end
@@ -62,11 +83,15 @@ end
 
 groups.each do |group|
     (1..10).each do
-        demand_type = ['a','b','c'].sample
-        demand = makeDemand(demand_type)
-        group.votes.new( name:demand[:name], description:demand[:description], gravatar_url: demand[:gravatar_url],user_id:rand(1..6), counter: 0 )
+        
+        demand = makeDemand(group.id)
+        group.votes.new( name:'Jaques Brel, '+ Faker::Job.title+' is back again...',
+            description:demand[:description],
+            gravatar_url: demand[:gravatar_url],
+            user_id:rand(1..6), counter: 0 )
         group.save
         puts 'one more'
+        
     end
     
 end
