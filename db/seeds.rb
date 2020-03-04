@@ -21,7 +21,7 @@ user4.save
 user5.save
 user6.save
 
-user_group_1 = user1.groups.new(name: "Kiwi's Education", description: "Having a Kiwi i'ts cool and all but what about the kikwi's learning environment?.", imagen_url: 'https://bit.ly/3atyNOZ')
+user_group_1 = user1.groups.new(name: "Kiwi's Education", description: "Having a Kiwi i'ts cool and all but what about the kikwi's learning environment?.", imagen_url: 'https://bit.ly/3cBnxlB')
 user_group_2 = user2.groups.new(name: 'General Relativity', description: "Is it?, is it thou?", imagen_url: 'https://bit.ly/39iZPII')
 user_group_3 = user3.groups.new(name: 'Jacques Brel is trash', description: 'Jacques Brel should be prohibited, he smells funny, maybe drinks some alcohols or something', imagen_url: 'https://bit.ly/2TvKEFi')
 user_group_4 = user4.groups.new(name: 'Bruno did nothing wrong', description: 'Even thou Mr Giordano i´ts not very popular right now, we should check his non secular works for memes' , imagen_url: 'https://bit.ly/2TyeHMB')
@@ -39,45 +39,43 @@ groups = [user_group_1,user_group_2,user_group_3,user_group_4,user_group_5,user_
 
 def makeDemand(demand_type)
     case demand_type
-    when 1
-        demand_title = Faker::Educator.subject + " courses for young kiwi's it's too "+ Faker::Hipster.word+ ", isn't?"
-        demand_description = 'Acording to , '+Faker::Science.scientist+' '+ Faker::Educator.degree+' Kiwis should know a little bit of' +Faker::Educator.subject+', he got his degree from: '+Faker::Educator.campus+' so...'
-        demand_avatar = "https://loremflickr.com/320/240/kiwi"
+        when 1
+            demand_title = Faker::Educator.subject + " courses for young kiwi's it's too "+ Faker::Hipster.word+ ", isn't?"
+            demand_description = 'Acording to , '+Faker::Science.scientist+' '+ Faker::Educator.degree+' Kiwis should know a little bit of ' +Faker::Educator.subject+', he got his degree from: '+Faker::Educator.campus+' so...'
+            demand_avatar = "https://loremflickr.com/#{rand(320..360)}/#{rand(320..360)}/kiwi"
 
-    when 2
-        demand_title = Faker::Science.scientist+ " has said that you should take: "+ Faker::Educator.subject+" classes"
-        demand_description = "'"+Faker::Marketing.buzzwords+"'"  + ", some "+ Faker::Educator.degree+' would know a little bit of ' +Faker::Educator.subject+', got his degree from: '+Faker::Educator.campus+' so...'
-        demand_avatar = "https://loremflickr.com/320/240/science"
-    
-    when 3
-        demand_title = "Jaques Brel has been " + Faker::Verb.past_participle + " and thinks that's too "+ Faker::Hacker.adjective 
-        demand_description = "Nothing is more " + Faker::Hacker.adjective + " said Brel on "+ Faker::Company.name + " " + Faker::Company.buzzword + " and then something or i don't know"
-        demand_avatar = "https://loremflickr.com/320/240/science"
-
-
-    if demand_type == 'a'
+        when 2
+            demand_title = Faker::Science.scientist+ " has said that you should take: "+ Faker::Educator.subject+" classes"
+            demand_description = "'"+Faker::Marketing.buzzwords+"'"  + ", some "+ Faker::Educator.degree+' would know a little bit of ' +Faker::Educator.subject+', got his degree from: '+Faker::Educator.campus+' so...'
+            demand_avatar = "https://loremflickr.com/#{rand(320..360)}/#{rand(320..360)}/science"
         
-        demand_title = 'Jaques Brel, '+ Faker::Job.title+' is back again...'
-        demand_description = 'People from '+Faker::Job.field+' thiks they are some type of '+ Faker::Ancient.god+', but the works of this jaques brel guy should be imposed over everyone, by force.'
-        demand_avatar = "https://loremflickr.com/320/240/jaquesbrel"
+        when 3
+            demand_title = "Jaques Brel has been " + Faker::Verb.past_participle + " and thinks that's too "+ Faker::Hacker.adjective 
+            demand_description = "Nothing is more " + Faker::Hacker.adjective + " said Brel on "+ Faker::Company.name + " " + Faker::Company.buzzword + " and then something or i don't know"
+            demand_avatar = "https://loremflickr.com/#{rand(320..360)}/#{rand(320..360)}/jaquesbrel"
+        
+        when 4
+            demand_title = "Giordano has been " + Faker::Verb.past_participle + " and thinks that's too "+ Faker::Hacker.adjective 
+            demand_description = "Memes are so " + Faker::Hacker.adjective + " said Girdano on "+ Faker::Company.name + " " + Faker::Company.buzzword + " and then something or i don't know"
+            demand_avatar = "https://loremflickr.com/#{rand(320..360)}/#{rand(320..360)}/memes"
+        
+        when 5
+            demand_title =  "Apple " + Faker::Dessert.variety + " it's the most "+ Faker::Hacker.adjective
+            demand_description = "To end up on a " + Faker::Dessert.variety + " " + Faker::Dessert.flavor + " it's the goal of every Apple" + 
+            demand_avatar = "https://loremflickr.com/#{rand(320..360)}/#{rand(320..360)}/apples"
 
-        "https://loremflickr.com/320/240/memes"
-    elsif demand_type == 'b'
-        character = Faker::TvShows::GameOfThrones.character
-        demand_title = 'Quoting stuff from '+character+ ' has to stop'
-        demand_description = "Quotes like " + Faker::TvShows::TheITCrowd.quote + " are " + Faker::Hacker.adjective + Faker::Hipster.words.sample + " so I demand something i don't know wherever..."
-        demand_avatar = "https://loremflickr.com/320/240/#{character.delete(' ').downcase}"
-    elsif demand_type == 'c'
-        demand_title = 'Did you know that '+ Faker::ChuckNorris.fact + ' Is this another lie from the '+ Faker::Hipster.words.sample + ' church?, so this is a demand i guess.'
-        demand_description = 'The same church has said thigs like: '+ '"...' + Faker::Movies::HitchhikersGuideToTheGalaxy.quote + '..."' + ' this has to stop.'
-        demand_avatar = "https://loremflickr.com/320/240/chucknorris"
+        when 6
+            demand_title =  "Today " + Faker::Artist.name + " said victory of Samothrace is "+ Faker::Hacker.adjective
+            demand_description = "Again the " + Faker::Hacker.verb  + " of the " + Faker::Hacker.noun + " it's the goal of every Art" + 
+            demand_avatar = "https://loremflickr.com/#{rand(320..360)}/#{rand(320..360)}/victoryofsamothrace"
     end
-    demand = {
-        name: demand_title,
-        description: demand_description,
-        gravatar_url: demand_avatar
-    }
-    return demand
+
+        demand = {
+            name: demand_title,
+            description: demand_description,
+            gravatar_url: demand_avatar
+        }
+      
 end
 
 
@@ -85,13 +83,12 @@ groups.each do |group|
     (1..10).each do
         
         demand = makeDemand(group.id)
-        group.votes.new( name:'Jaques Brel, '+ Faker::Job.title+' is back again...',
+        
+        group.votes.new( name:demand[:name],
             description:demand[:description],
             gravatar_url: demand[:gravatar_url],
-            user_id:rand(1..6), counter: 0 )
-        group.save
-        puts 'one more'
+            user_id:rand(1..6), counter: 0 ).save
         
     end
-    
 end
+    
