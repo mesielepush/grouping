@@ -14,9 +14,16 @@ user4 = User.new(name: 'cuatro', email: 'cuatro@gmail.com', gravatar: 'https://b
 user5 = User.new(name: 'cinco', email: 'cinco@gmail.com', gravatar: 'https://bit.ly/32LOCOh',password: 'pppppp', password_confirmation: 'pppppp')
 user6 = User.new(name: 'seis', email: 'seis@gmail.com', gravatar: 'https://bit.ly/32NamJz',password: 'pppppp', password_confirmation: 'pppppp')
 
+user1.save
+user2.save
+user3.save
+user4.save
+user5.save
+user6.save
+
 user_group_1 = user1.groups.new(name: "Kiwi's Education", description: "Having a Kiwi i'ts cool and all but what about the kikwi's learning environment?.", imagen_url: 'https://bit.ly/3atyNOZ')
 user_group_2 = user2.groups.new(name: 'General Relativity', description: "Is it?, is it thou?", imagen_url: 'https://bit.ly/39iZPII')
-user_group_3 = user3.groups.new(name: 'Jacques Brel is trash', description: 'Jacques Brel should be prohibited, he smells funny, maybe drinks some alcohols or something', imagen_url: 'https://bit.ly/3cmNLrP')
+user_group_3 = user3.groups.new(name: 'Jacques Brel is trash', description: 'Jacques Brel should be prohibited, he smells funny, maybe drinks some alcohols or something', imagen_url: 'https://bit.ly/2TvKEFi')
 user_group_4 = user4.groups.new(name: 'Bruno did nothing wrong', description: 'Even thou Mr Giordano i´ts not very popular right now, we should check his non secular works for memes' , imagen_url: 'https://bit.ly/2TyeHMB')
 user_group_5 = user5.groups.new(name: 'Apples', description: 'apples', imagen_url: 'https://bit.ly/32XtrZT')
 user_group_6 = user6.groups.new(name: 'Victory of Samothrace', description: 'Self explanatory mate', imagen_url: 'https://bit.ly/2wtpr7e')
@@ -28,4 +35,8 @@ user_group_4.save
 user_group_5.save
 user_group_6.save
 
+(1..10).each do 
+    user_group_1.votes.new(name:)
+end
 
+#random img generator https://source.unsplash.com/320x240

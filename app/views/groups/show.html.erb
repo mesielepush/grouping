@@ -1,8 +1,10 @@
 <div class="group_show_back">
+
     <div class="container text-white d-lg-block">
         <div class="container group_photo">
         
             <div class = 'd-flex  justify-content-center align-center' >
+            
                 <img src=<%= @group.imagen_url%> alt="groupPhoto" class='group_foto rounded-circle img-responsive'>
             </div>
 
@@ -13,35 +15,43 @@
         </div>
 
     <div id="demo" class="carousel slide" data-ride="carousel">
-       
-        <div class="carousel-inner group_carrousel">
-            <div class="carousel-item active d-flex justify-content-center align-items-center">
-            </div>
-            
-            <% @group.votes.each do |demand| %>
-                            
-                <div class="carousel-item" style="padding-top: 5rem;">
-                    <a href= <%= demands_profile_path(id: demand.id)%> >
-                        <div class = "d-flex justify-content-center align-items-center">
-                            <div class="card  text-white group_back" style="width: 25rem; padding: 2rem;">
-                                <img src= <%=demand.gravatar_url %> alt="group" class = "img-fluid img-thumbnail rounded-circle">
-                                <div class="card-body">
-                                    <h5 class="card-title title_group text-center"><%=demand.name%></h5>
-                                    <p class="card-text text-center description_group"><%=demand.description%></p>
-                                    
-                                </div>
+
+    
+    <div class="carousel-inner group_carrousel">
+        <div class="carousel-item active  d-flex justify-content-center align-items-center" style="padding-top: 5rem;">
+            <img src= <%= current_user.gravatar%> alt="group" class = "img-fluid img-thumbnail rounded-circle">
+        </div>
+        
+        <% @group.votes.each do |demand| %>
+                        
+            <div class="carousel-item" style="padding-top: 5rem;">
+                <a href= <%= group_profile_path(id: group.id)%> >
+                    <div class = "d-flex justify-content-center align-items-center">
+                        <div class="card  text-white group_back" style="width: 28rem;padding:4rem;">
+                            <img src= <%=demand.gravatar_url%> alt="group" class = "img-fluid img-thumbnail rounded-circle">
+                            <div class="card-body">
+                                <h5 class="card-title title_group text-center"><%=demand.name%></h5>
+                                <p class="card-text text-center description_group"><%=demand.description%></p>
+                                
                             </div>
                         </div>
-                    </a>
-                </div>
-                
-            <% end %>
+                    </div>
+                </a>
+            </div>
             
-        </div>
-
-
-
+        <% end %>
+        
     </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+
+    
 </div>
 
    

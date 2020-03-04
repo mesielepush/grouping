@@ -140,8 +140,18 @@ p {
 }
 
 .sign_form {
+    margin-top: 3rem;
     background-color: rgba($color: black, $alpha: 0.30);
+    font-size: 3rem;
     padding-bottom: 2rem;
     padding-top: 2rem;
     color: white;
+}
+.login_form {
+  margin-top: 100px;
+  width: 550px;
+}
+.login_button {
+  background: rgba(108, 23, 119,0.5);
+  color: white;
 }

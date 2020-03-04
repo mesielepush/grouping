@@ -8,7 +8,8 @@
 
     
     <div class="carousel-inner group_carrousel">
-        <div class="carousel-item active d-flex justify-content-center align-items-center">
+        <div class="carousel-item active  d-flex justify-content-center align-items-center" style="padding-top: 5rem;">
+            <img src= <%= current_user.gravatar%> alt="group" class = "img-fluid img-thumbnail rounded-circle">
         </div>
         
         <% @groups.each do |group| %>
@@ -16,7 +17,7 @@
             <div class="carousel-item" style="padding-top: 5rem;">
                 <a href= <%= group_profile_path(id: group.id)%> >
                     <div class = "d-flex justify-content-center align-items-center">
-                        <div class="card  text-white group_back" style="width: 25rem; padding: 2rem;">
+                        <div class="card  text-white group_back" style="width: 28rem;padding:4rem;">
                             <img src= <%=group.imagen_url%> alt="group" class = "img-fluid img-thumbnail rounded-circle">
                             <div class="card-body">
                                 <h5 class="card-title title_group text-center"><%=group.name%></h5>
