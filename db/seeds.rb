@@ -41,7 +41,7 @@ def makeDemand(demand_type)
     case demand_type
         when 1
             demand_title = Faker::Educator.subject + " courses for young kiwi's it's too "+ Faker::Hipster.word+ ", isn't?"
-            demand_description = 'Acording to , '+Faker::Science.scientist+' '+ Faker::Educator.degree+' Kiwis should know a little bit of ' +Faker::Educator.subject+', he got his degree from: '+Faker::Educator.campus+' so...'
+            demand_description = 'Acording to  '+Faker::Science.scientist+' '+ Faker::Educator.degree+' Kiwis should know a little bit of ' +Faker::Educator.subject+', he got his degree from: '+Faker::Educator.campus+' so...'
             demand_avatar = "https://loremflickr.com/#{rand(320..360)}/#{rand(320..360)}/kiwi"
 
         when 2

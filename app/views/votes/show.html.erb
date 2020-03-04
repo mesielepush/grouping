@@ -1,1 +1,16 @@
-SHHHHHHHHHHHHHHHHHHHHHHHHIIIIIIIIIIOOOOOOOOOOOOOOOOO
+<div class="container demand">
+    <div class="text-center demand_img">
+        <img src= <%=@vote.gravatar_url%> alt="demand" class = "img-fluid img-thumbnail">
+    </div>
+    <h1 class= 'demand_description text-justify'>
+        <%=@vote.description%>
+    </h1>
+   
+</div>
+<div class="demand_controls">
+    <div class="demand_elements d-flex justify-content-between">
+        <img src= 'https://i.imgur.com/vRbv6wK.png' alt="demand" class = "img-fluid down_arrow">
+        <span class= 'demand_counter'><%=@vote.counter%></span>
+        <img src= 'https://i.imgur.com/SgIrwNL.png' alt="demand" class = "img-fluid up_arrow">
+    </div>
+</div>
