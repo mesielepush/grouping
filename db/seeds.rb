@@ -35,8 +35,38 @@ user_group_4.save
 user_group_5.save
 user_group_6.save
 
-(1..10).each do 
-    user_group_1.votes.new(name:)
+groups = [user_group_1,user_group_2,user_group_3,user_group_4,user_group_5,user_group_6,]
+
+def makeDemand(demand_type)
+    if demand_type == 'a'
+        demand_title = 'I want my '+Faker::Science.scientist+', '+ Faker::Job.title+' back...'
+        demand_description = 'People from '+Faker::Job.field+' thiks they are some type of '+ Faker::Ancient.god+', but the works of this author should be imposed over everyone, by force.'
+    
+    elsif demand_type == 'b'
+        demand_title = 'Quoting stuff from '+Faker::TvShows::GameOfThrones.character+ ' has to stop'
+        demand_description = "Quotes like " + Faker::TvShows::TheITCrowd.quote + " are " + Faker::Hacker.adjective + Faker::Hipster.words.sample + " so I demand something i don't know wherever..."
+    
+    elsif demand_type == 'c'
+        demand_title = 'Did you know that '+ Faker::ChuckNorris.fact + ' Is this another lie from the '+ Faker::Hipster.words.sample + ' church?, so this is a demand i guess.'
+        demand_description = 'The same church has said thigs like: '+ '"...' + Faker::Movies::HitchhikersGuideToTheGalaxy.quote + '..."' + ' this has to stop.'
+    
+    end
+    demand = {
+        name: demand_title,
+        description: demand_description,
+        gravatar_url: "https://source.unsplash.com/320x240"
+    }
+    return demand
 end
 
-#random img generator https://source.unsplash.com/320x240
+
+groups.each do |group|
+    (1..10).each do
+        demand_type = ['a','b','c'].sample
+        demand = makeDemand(demand_type)
+        group.votes.new( name:demand[:name], description:demand[:description], gravatar_url: demand[:gravatar_url],user_id:rand(1..6), counter: 0 )
+        group.save
+        puts 'one more'
+    end
+    
+end
