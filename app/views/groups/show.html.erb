@@ -1,6 +1,6 @@
 <div class="group_show_back">
 
-    <div class="container text-white d-lg-block">
+    <div class="container text-white d-lg-block group_front">
         <div class="container group_photo">
         
             <div class = 'd-flex  justify-content-center align-center' >
@@ -27,7 +27,7 @@
             <div class="carousel-item" style="padding-top: 5rem;">
                 <a href= <%= demand_path(id: demand.id)%> >
                     <div class = "d-flex justify-content-center align-items-center">
-                        <div class="card  text-white group_back" style="width: 28rem;padding:4rem;">
+                        <div class="card  text-white group_back" style="width: 40rem;padding:4rem;">
                             <img src= <%=demand.gravatar_url%> alt="group" class = "img-fluid img-thumbnail rounded-circle">
                             <div class="card-body">
                                 <h5 class="card-title title_group text-center"><%=demand.name%></h5>

@@ -1,10 +1,12 @@
 <section class='User_Profile'>
 
-
-  <h1 class="site-heading text-center text-white d-lg-block">
+  <div class="site-heading">
+    <h1 class="text-center text-white d-lg-block">
       <span class="text-primary"><img src="https://i.imgur.com/FDk3V48.png" alt="uptitle" class='up_title  img-responsive'></span>
       <span class="titles"><img src="https://i.imgur.com/Apw10z1.png" alt="downtitle"></span>
     </h1>
+  </div>
+    
 
     <ul class="nav user-nav justify-content-center align-items-center mx-auto" id="mainNav">
       <li class="nav-item px-lg-3">
@@ -12,7 +14,7 @@
           
       </li>
       <li class="nav-item px-lg-3">
-          <%= link_to 'Demands', demands_url, method: :get, class: 'nav-link io text-uppercase text-expanded' %>
+          <%= link_to 'Demands', demands_profile_url, method: :get, class: 'nav-link io text-uppercase text-expanded' %>
       </li>
       <li class="nav-item io px-lg-3">
           <%= link_to 'My Demands', my_votes_url, method: :get, class: 'nav-link io text-uppercase text-expanded' %>

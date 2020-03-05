@@ -94,12 +94,18 @@ $secondary: #2F170F !default;
   
   .User_Profile {
   @include body-font;
+  position: relative;
+  top: -5rem;
+  left: -1rem;
+  width: 1000px;
   background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('https://bit.ly/39jIT4y');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
 }
-
+.site-heading {
+  padding-top: 8rem !important;
+}
 h1,
 h2,
 h3,
@@ -117,8 +123,9 @@ p {
   color: fade-out($white, 0.7);
 }
 .page-section {
-  margin-top: 5rem;
+  margin-top: 25rem;
   margin-bottom: 5rem;
+
 }
 
 .section-heading {

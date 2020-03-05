@@ -18,6 +18,6 @@ class VotesController < ApplicationController
     end
 
     def index
-    @demands = Vote.all
+        @demands = Vote.all
     end
 end
