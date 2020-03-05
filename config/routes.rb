@@ -65,4 +65,5 @@ Rails.application.routes.draw do
   post '/groups_new',   to: 'groups#create'
   get '/demands_new',   to: 'votes#new'
   post '/demands_new',   to: 'votes#create'
+  get 'group_statistics', to 'my_votes#show'
 end

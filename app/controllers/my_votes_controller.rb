@@ -12,15 +12,13 @@ class MyVotesController < ApplicationController
         end
     end
     def show
-        @my_vote = Vote.find(params[:id])
+        @my_vote = Vote.find(params[:vote_id])
 
     end
 
     def index
         
     end
-    def post_params
-        params.require(:post).permit(:content)
-      end
+    
     
 end
