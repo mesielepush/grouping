@@ -23,10 +23,10 @@ user6.save
 
 user_group_1 = user1.groups.new(name: "Kiwi's Education", description: "Having a Kiwi i'ts cool and all but what about the kikwi's learning environment?.", imagen_url: 'https://bit.ly/3cBnxlB')
 user_group_2 = user2.groups.new(name: 'General Relativity', description: "Is it?, is it thou?", imagen_url: 'https://bit.ly/39iZPII')
-user_group_3 = user3.groups.new(name: 'Jacques Brel is trash', description: 'Jacques Brel should be prohibited, he smells funny, maybe drinks some alcohols or something', imagen_url: 'https://bit.ly/2TvKEFi')
+user_group_3 = user3.groups.new(name: 'Jacques Brel is trash', description: 'Jacques Brel should be prohibited, he smells funny, maybe drinks some alcohols or something', imagen_url: 'https://bit.ly/2vHKgeO')
 user_group_4 = user4.groups.new(name: 'Bruno did nothing wrong', description: 'Even thou Mr Giordano i´ts not very popular right now, we should check his non secular works for memes' , imagen_url: 'https://bit.ly/2TyeHMB')
 user_group_5 = user5.groups.new(name: 'Apples', description: 'apples', imagen_url: 'https://bit.ly/32XtrZT')
-user_group_6 = user6.groups.new(name: 'Victory of Samothrace', description: 'Self explanatory mate', imagen_url: 'https://bit.ly/2wtpr7e')
+user_group_6 = user6.groups.new(name: 'Victory of Samothrace', description: 'Self explanatory mate', imagen_url: 'https://bit.ly/3aredyt')
 
 user_group_1.save
 user_group_2.save
@@ -61,19 +61,19 @@ def makeDemand(demand_type)
         
         when 5
             demand_title =  "Apple " + Faker::Dessert.variety + " it's the most "+ Faker::Hacker.adjective
-            demand_description = "To end up on a " + Faker::Dessert.variety + " " + Faker::Dessert.flavor + " it's the goal of every Apple" + 
+            demand_description = "To end up on a " + Faker::Dessert.variety + " " + Faker::Dessert.flavor + " it's the goal of every Apple"
             demand_avatar = "https://loremflickr.com/#{rand(320..360)}/#{rand(320..360)}/apples"
 
         when 6
             demand_title =  "Today " + Faker::Artist.name + " said victory of Samothrace is "+ Faker::Hacker.adjective
-            demand_description = "Again the " + Faker::Hacker.verb  + " of the " + Faker::Hacker.noun + " it's the goal of every Art" + 
+            demand_description = "Again the " + Faker::Hacker.verb  + " of the " + Faker::Hacker.noun + " it's the goal of every Art" 
             demand_avatar = "https://loremflickr.com/#{rand(320..360)}/#{rand(320..360)}/victoryofsamothrace"
     end
 
         demand = {
             name: demand_title,
             description: demand_description,
-            gravatar_url: demand_avatar
+            gravatar_url: demand_avatar,
         }
       
 end

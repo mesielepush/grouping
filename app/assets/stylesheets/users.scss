@@ -18,6 +18,7 @@ $secondary: #2F170F !default;
 
 @mixin heading-font {
     font-family: 'Raleway';
+    
   }
   
   @mixin body-font {
@@ -30,6 +31,13 @@ $secondary: #2F170F !default;
     font-size: 3rem;
 }
  
+.up_title {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+.down_title {
+  padding-bottom: 3rem;
+}
   h1,
   h2,
   h3,
@@ -38,7 +46,9 @@ $secondary: #2F170F !default;
   h6 {
     @include heading-font;
   }
-  
+  .nav {
+    margin-top: 5rem;
+  }
   p {
     line-height: 2;
   }
@@ -46,6 +56,7 @@ $secondary: #2F170F !default;
   .user-nav {
       height: 10rem;
   }
+  
   .nav-item:hover{
     
     text-shadow: 0 0 35px #FF0000, 0 0 40px #0000FF;
@@ -55,6 +66,7 @@ $secondary: #2F170F !default;
   .io {
     color: #CB3FF5 !important;
     font-size: 1.8rem;
+    font-weight: 800 !important;
   }
   
   
@@ -64,9 +76,6 @@ $secondary: #2F170F !default;
   }
   
   
-  .footer {
-    background-color: rgba(47, 23, 15, 0.9);
-  }
   
 
   

@@ -1,6 +1,6 @@
 <div class="demand_index">
-    <h1 class="site-heading text-center text-white d-lg-block">
-        <span class="site-heading-upper text-primary mb-3" ><img src="https://i.imgur.com/rfW3546.png" alt="uptitle"></span>
+    <h1 class=" text-center text-white d-lg-block">
+        <span class="text-primary mb-3" ><img src="https://i.imgur.com/yd5PavD.png" alt="uptitle" class='site-heading-upper'></span>
     </h1>
 </div>
 
@@ -9,7 +9,7 @@
     
     <div class="carousel-inner group_carrousel">
         <div class="carousel-item active  d-flex justify-content-center align-items-center" style="padding-top: 5rem;">
-            <img src= <%= current_user.gravatar%> alt="group" class = "img-fluid img-thumbnail rounded-circle">
+            <img src= <%= current_user.gravatar%> alt="group" class = "img-fluid img-thumbnail rounded-circle avatar" >
         </div>
         
         <% @demands.each do |demand| %>
@@ -18,7 +18,7 @@
                 <a href= <%= demand_path(id: demand.id)%> >
                     <div class = "d-flex justify-content-center align-items-center">
                         <div class="card  text-white group_back" style="width: 45rem;padding:4rem;">
-                            <img src= <%=demand.gravatar_url%> alt="demand" class = "img-fluid img-thumbnail rounded-circle">
+                            <img src= <%=demand.gravatar_url%> alt="demand" class = "img-fluid img-thumbnail rounded-circle avatar">
                             <div class="card-body">
                                 <h5 class="card-title title_group text-center"><%=demand.name%></h5>
                                 <p class="card-text text-center description_group"><%=demand.description%></p>

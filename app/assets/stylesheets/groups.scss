@@ -14,20 +14,24 @@
     margin-top: 5rem;
 }
 
-body {
-    @include body-font;
-    background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('https://i.imgur.com/X77nmJr.png') ;
+.group_show_back {
+    position: relative;
+    top:-5rem;
+    left: -3rem;
+    background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('https://bit.ly/39r5pbM') !important ;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    height: 100%;
+    height: 130%;
+    width: 110%;
+    z-index: 100;
   }
   .group_front {
     background: rgba(#70615C, 0.2);
   }
   .group_back {
     @include body-font;
-    background: black !important;
+    background: rgba(0, 0, 0, 0.95) !important;
     
     height: 100%;
     border: 2px solid;
@@ -64,6 +68,7 @@ body {
   text-shadow: 3px 3px #181716;
   background-color: rgba(105, 60, 45, 0.65);
   box-shadow: 0px 0px 50px rgba(27, 27, 29, 0.5);
+  
 }
 .group_foto {
   margin-top: 5rem;
@@ -78,4 +83,9 @@ body {
   color: rgb(221, 160, 27);
   text-shadow: 3px 3px #5f4437;
   box-shadow: 0px 0px 50px rgba(171, 171, 184, 0.5);
+}
+.group_title {
+  position: relative;
+  
+  width: 48rem;
 }
