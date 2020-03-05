@@ -12,7 +12,11 @@ class MyVotesController < ApplicationController
         end
     end
     def show
-        @my_vote = Vote.find(params[:vote_id])
+        if params[:group_id] != nil
+            return @group = Group.find_by_id(params[:group_id])
+        else
+            return @vote = Vote.find_by_id(params[:vote_id])
+        end
 
     end
 

@@ -1,0 +1,15 @@
+<div class="my_votes_stats_background d-flex justify-content-center">
+</div>
+
+<% if @votes == nil %>
+    <div class="d-flex justify-content-center">
+        <div class="card " style="width: 40rem;">
+            <img class="card-img-top" src=<%= @group.imagen_url%> alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title title_group text-center"><%=@group.name%></h5>
+                <p class="card-text" style = 'font-size:1.5rem'> <%=@group.description%> </p>
+            </div>
+        </div>
+    </div>
+    
+<% end %>

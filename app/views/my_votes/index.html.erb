@@ -35,7 +35,7 @@
         <% current_user.groups.each do |group| %>
                         
             <div class="carousel-item pt-5" >
-                <a href= <%= group_profile_path(id: group.id)%> >
+                <a href= <%= group_stats_path(group_id: group.id)%> >
                     <div class = "d-flex justify-content-center align-items-center">
                         <div class="text-white ">
                             <img src= <%=group.imagen_url%> alt="group" class = "img-fluid img-thumbnail rounded-circle group_foto_my_votes">

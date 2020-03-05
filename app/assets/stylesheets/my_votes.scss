@@ -59,3 +59,14 @@
 .groups_carousel {
     height: 300px;
 }
+
+
+.my_votes_stats_background {
+    position: absolute;
+    top: -5rem;
+    left: -2rem;
+    background:black;
+    height: 2000px;
+    width: 110%;
+    z-index: -10;
+}
