@@ -63,4 +63,6 @@ Rails.application.routes.draw do
   get '/demand_update',   to: 'votes#update'
   get '/groups_new',   to: 'groups#new'
   post '/groups_new',   to: 'groups#create'
+  get '/demands_new',   to: 'votes#new'
+  post '/demands_new',   to: 'votes#create'
 end

@@ -10,13 +10,10 @@
     font-family: 'Lora';
   }
 
-.group_carrousel {
-    margin-top: 5rem;
-}
 
 .group_show_back {
     position: relative;
-    top:-5rem;
+    
     left: -3rem;
     background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('https://bit.ly/39r5pbM') !important ;
     background-attachment: fixed;
@@ -27,12 +24,17 @@
   }
   .group_front {
     background: rgba(#70615C, 0.2);
+    
   }
+  .group_front_show {
+    padding-top: 5rem;
+    
+  }
+
   .group_back {
     @include body-font;
     background: rgba(0, 0, 0, 0.95) !important;
-    position: relative;
-    top: -5rem;
+    
     border: 2px solid;
     padding: 10px;
     box-shadow:  0px 0px 80px rgba(27, 27, 29, 0.8);
@@ -40,6 +42,9 @@
   .group_back:hover {
     box-shadow: 0px 0px 50px rgba(139, 47, 151, 0.5);
   }
+.avatar_carousel {
+  margin-top: 8rem;
+}
 .group_show_back {
   @include body-font;
     background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('https://bit.ly/2PONYdx') ;
@@ -54,24 +59,34 @@
 .title_group {
   font-family: monospace;
   font-size: 3.0rem !important;
-  
+  margin-top: 3rem;
   color: rgb(255, 166, 0);
   text-shadow: 3px 3px #5f4437;
   background-color: rgba(47, 23, 15, 0.65);
   box-shadow: 0px 0px 50px rgba(27, 27, 29, 0.5);
 }
 .description_group {
-  
-  font-family:   Georgia, 'Times New Roman', Times, serif;
-  font-size: 1.8rem !important;
+  margin-top: 3rem;
+  font-family:   monospace;
+  font-size: 3rem !important;
   text-shadow: 3px 3px #181716;
   background-color: rgba(105, 60, 45, 0.65);
   box-shadow: 0px 0px 50px rgba(27, 27, 29, 0.5);
   
 }
 .group_foto {
-  margin-top: 5rem;
-  width: 15rem;
+  max-height: 20rem;
+  max-width: 10rem;
+  box-shadow: 0px 0px 100px rgba(173, 173, 185, 0.7);
+}
+.group_foto_show {
+  max-height: 18rem;
+  max-width: 18rem;
+  box-shadow: 0px 0px 100px rgba(173, 173, 185, 0.7);
+}
+.group_avatar_show{
+  max-height: 25rem;
+  max-width: 25rem;
   box-shadow: 0px 0px 100px rgba(173, 173, 185, 0.7);
 }
 .group_name {
@@ -89,5 +104,17 @@
   width: 48rem;
 }
 .create_group {
-  width: 50rem;
+ margin-left: 2.5rem;
+}
+.new_demand {
+  position: relative;
+  top: -6rem
+}
+.create_demand {
+  height: 10rem;
+}
+.new_demand_link {
+  max-width: 250px;
+  position: relative;
+  left: 11rem
 }

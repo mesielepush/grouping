@@ -1,3 +1,61 @@
 // Place all the styles related to the my_votes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.my_votes_background {
+    position: absolute;
+    top: -5rem;
+    left: -2rem;
+    background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('https://i.imgur.com/ul4ibcL.png') !important ;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 2000px;
+    width: 110%;
+}
+.my_votes_items {
+    position: relative;
+    top: -3rem;
+    height: 100%;
+    margin-bottom: 3rem;
+}
+.my_votes_avatar {
+    position: relative;
+    top: 1rem;
+    width: 250px;
+    box-shadow: 0px 0px 50px rgba(27, 27, 29, 0.5);
+    
+}
+.main_my_vote {
+    z-index: 100;
+    font-size: 5rem;
+}
+.groups_label {
+    position: relative;
+    top: -3.5%;
+    margin-bottom: 4rem;
+    width: 400px;
+    box-shadow: 0px 0px 50px rgba(41, 41, 46, 0.7);
+}
+.avatar_group_my_votes {
+    width: 250px;
+}
+.group_foto_my_votes{
+  height: 350px;
+  width: 350px;
+  box-shadow: 0px 0px 100px rgba(173, 173, 185, 0.7);
+}
+.demands_label_my_votes {
+    top: 8rem;
+    margin-bottom: 7rem;
+    position: relative;
+    width: 400px;
+    box-shadow: 0px 0px 50px rgba(24, 24, 26, 0.7);
+
+}
+.votes_carousel {
+    margin-top: 5rem;
+    height: 300px;
+}
+.groups_carousel {
+    height: 300px;
+}

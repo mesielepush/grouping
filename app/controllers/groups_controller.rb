@@ -10,9 +10,13 @@ class GroupsController < ApplicationController
         @group = Group.new()
     end
     def create
+        
         @group = current_user.groups.create(group_params)  
+        
         if @group.save
             redirect_to groups_path, notice: 'Post was successfully created.'
+            
+
         else
             
             render :index, alert: 'Post was not created.'

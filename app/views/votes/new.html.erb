@@ -1,0 +1,29 @@
+<div class='container login_form d-flex justify-content-center'>
+  <img src="https://i.imgur.com/7E6ryeu.png" alt="Login" class = "img-fluid login_form">
+</div>
+
+<div class="container d-flex justify-content-center create_group sign_form">
+    <%= form_for(@vote, url: '/demands_new') do |f| %>
+        
+        
+        <%= f.hidden_field :group_id, value: @group_id %>
+        <%= f.hidden_field :counter, value: 0 %>
+        
+        
+        
+        
+        <div class="field">
+            <%= f.label :name %><br />
+            <%= f.text_field :name, autofocus: true%>
+        </div>
+        <div class="field">
+            <%= f.label :description %><br />
+            <%= f.text_field :description, autofocus: true%>
+        </div>
+        <div class="field">
+            <%= f.label :image %><br />
+            <%= f.text_field :gravatar_url, autofocus: true%>
+        </div>
+        <%= f.submit 'create', class: 'btn btn-secondary' %>
+    <% end %>
+</div>

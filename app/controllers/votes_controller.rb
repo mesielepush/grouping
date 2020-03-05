@@ -1,12 +1,17 @@
 class VotesController < ApplicationController
+    def new
+        @vote = Vote.new()
+        @group_id = params[:group_id]
+    end
     def create
-        @vote = current_user.votes.new(post_params)
-
+        @vote = current_user.votes.new(vote_params)
+       
         if @vote.save
-            redirect_to '/vote', notice: 'Vote was successfully created.'
+           
+            redirect_to demand_url(id: @vote.id), notice: 'Demand was successfully created.'
         else
             
-            render :index, alert: 'Vote was not created.'
+            render :show, alert: 'demand was not created.'
         end
     end
     def show
@@ -43,6 +48,9 @@ class VotesController < ApplicationController
         redirect_to vote_url(id: votes.id)
         
     end
-
+    private
+    def vote_params
+        params.require(:vote).permit(:name, :description, :gravatar_url,:group_id,:counter)
+    end
 
 end

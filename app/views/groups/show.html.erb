@@ -1,11 +1,12 @@
 <div class="group_show_back">
+    
 
-    <div class="container text-white d-lg-block group_front">
+    <div class="container text-white d-lg-block group_front_show">
         <div class="container group_photo">
         
             <div class = 'd-flex  justify-content-center align-center' >
             
-                <img src=<%= @group.imagen_url%> alt="groupPhoto" class='group_foto rounded-circle img-responsive'>
+                <img src=<%= @group.imagen_url%> alt="groupPhoto" class='group_foto_show rounded-circle img-responsive'>
             </div>
 
             <h1 class = 'group_name d-flex  justify-content-center align-center'>
@@ -13,13 +14,15 @@
             </h1>
             
         </div>
-
+    <a class="d-flex justify-content-end" href= <%= demands_new_url(group_id: @group.id)%> >
+        <img src="https://bit.ly/2x5l6XV" alt="uptitle" class='new_demand_link'>
+    </a>
     <div id="demo" class="carousel slide" data-ride="carousel">
 
     
     <div class="carousel-inner group_carrousel">
         <div class="carousel-item active  d-flex justify-content-center align-items-center" style="padding-top: 5rem;">
-            <img src= <%= current_user.gravatar%> alt="group" class = "img-fluid img-thumbnail rounded-circle">
+            <img src= <%= current_user.gravatar%> alt="group" class = "img-fluid img-thumbnail rounded-circle group_avatar_show">
         </div>
         
         <% @group.votes.each do |demand| %>
@@ -27,7 +30,7 @@
             <div class="carousel-item" style="padding-top: 5rem;">
                 <a href= <%= demand_path(id: demand.id)%> >
                     <div class = "d-flex justify-content-center align-items-center">
-                        <div class="card  text-white group_back" style="width: 40rem;padding:4rem;">
+                        <div class="card  text-white group_back" style="width: 50rem;padding:4rem;">
                             <img src= <%=demand.gravatar_url%> alt="group" class = "img-fluid img-thumbnail rounded-circle">
                             <div class="card-body">
                                 <h5 class="card-title title_group text-center"><%=demand.name%></h5>
