@@ -18,14 +18,9 @@ class VotesController < ApplicationController
     end
     
     def update
-        puts '###############'
-        puts params
-        puts '###############'
-        puts votes = Vote.find_by_id(params[:vote_id])
-        puts '###############'
-        puts votes
-        puts '###############'
-
+        
+        votes = Vote.find_by_id(params[:vote_id])
+        
         if params[:vote] == 'up'
             votes.counter += 1
             votes.save
