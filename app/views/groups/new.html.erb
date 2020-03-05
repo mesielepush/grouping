@@ -3,7 +3,7 @@
 </div>
 
 <div class="container d-flex justify-content-center create_group sign_form">
-    <%= form_for(Group.new) do |f| %>
+    <%= form_for(@group, url: '/groups_new') do |f| %>
         <div class="field">
             <%= f.label :name %><br />
             <%= f.text_field :name, autofocus: true%>

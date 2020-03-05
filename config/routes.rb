@@ -49,6 +49,7 @@
 
 Rails.application.routes.draw do
   devise_for :users
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: "users#show"
   get '/create_vote',   to: 'votes#create'
@@ -60,6 +61,6 @@ Rails.application.routes.draw do
   get '/demands_profile', to: 'votes#index'
   get '/demand',   to: 'votes#show'
   get '/demand_update',   to: 'votes#update'
-  get '/groups/new',   to: 'groups#create'
-  
+  get '/groups_new',   to: 'groups#new'
+  post '/groups_new',   to: 'groups#create'
 end
