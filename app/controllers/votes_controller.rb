@@ -21,28 +21,31 @@ class VotesController < ApplicationController
         puts '###############'
         puts params
         puts '###############'
-        puts Vote.find_by_id(params[:vote_id])
+        puts votes = Vote.find_by_id(params[:vote_id])
         puts '###############'
-        puts @v
+        puts votes
         puts '###############'
 
         if params[:vote] == 'up'
-            @v.counter += 1
-            if current_user.my_votes.where(votes_id: @vote.id).last == nil
-                current_user.my_votes.new(votes_id: @vote.id, counter: 1).save
+            votes.counter += 1
+            votes.save
+            if current_user.my_votes.where(votes_id: votes.id).last == nil
+                current_user.my_votes.new(votes_id: votes.id, counter: 1).save
             else
-                count = current_user.my_votes.where(votes_id: @vote.id).last.counter
-                current_user.my_votes.new(votes_id: @vote.id, counter: count+1).save
+                count = current_user.my_votes.where(votes_id: votes.id).last.counter
+                current_user.my_votes.new(votes_id: votes.id, counter: count+1).save
             end
         elsif params[:vote]== 'down'
-            @vote.counter -= 1
-            if current_user.my_votes.where(votes_id: @vote.id).last == nil
-                current_user.my_votes.new(votes_id: @vote.id, counter:1).save
+            votes.counter -= 1
+            votes.save
+            if current_user.my_votes.where(votes_id: votes.id).last == nil
+                current_user.my_votes.new(votes_id: votes.id, counter:1).save
             else
-                count = current_user.my_votes.where(votes_id: @vote.id).last.counter
-                current_user.my_votes.new(votes_id: @vote.id, counter: count-1).save
+                count = current_user.my_votes.where(votes_id: votes.id).last.counter
+                current_user.my_votes.new(votes_id: votes.id, counter: count-1).save
             end
         end
+        redirect_to vote_url(id: votes.id)
         
     end
 
