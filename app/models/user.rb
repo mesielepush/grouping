@@ -22,4 +22,9 @@ class User < ApplicationRecord
   has_many :votes
   has_many :groups
   has_many :my_votes
+
+  def my_votes_of(demand_id)
+    My_Vote.where(votes_id: demand_id, user_id: current_user.id)
+  end
+
 end

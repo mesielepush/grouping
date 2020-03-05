@@ -9,8 +9,13 @@
 </div>
 <div class="demand_controls">
     <div class="demand_elements d-flex justify-content-between">
-        <img src= 'https://i.imgur.com/vRbv6wK.png' alt="demand" class = "img-fluid down_arrow">
+        <a href=<%= demand_update_url(vote:'down',vote_id: @vote.id)  %>>
+            <img src= 'https://i.imgur.com/vRbv6wK.png' alt="demand" class = "img-fluid down_arrow">
+        </a>
         <span class= 'demand_counter'><%=@vote.counter%></span>
-        <img src= 'https://i.imgur.com/SgIrwNL.png' alt="demand" class = "img-fluid up_arrow">
+        <a href=<%= demand_update_url(vote:'up',vote_id: @vote.id)  %>>
+            <img src= 'https://i.imgur.com/SgIrwNL.png' alt="demand" class = "img-fluid up_arrow">
+        </a>
+        
     </div>
 </div>

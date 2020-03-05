@@ -22,6 +22,10 @@
 #                                groups GET    /groups(.:format)                                                                        groups#index
 #                               demands GET    /demands(.:format)                                                                       votes#index
 #                              my_votes GET    /my_votes(.:format)                                                                      my_votes#index
+#                         group_profile GET    /group_profile(.:format)                                                                 groups#show
+#                       demands_profile GET    /demands_profile(.:format)                                                               votes#index
+#                                demand GET    /demand(.:format)                                                                        votes#show
+#                         demand_update GET    /demand_update(.:format)                                                                 votes#update
 #         rails_mandrill_inbound_emails POST   /rails/action_mailbox/mandrill/inbound_emails(.:format)                                  action_mailbox/ingresses/mandrill/inbound_emails#create
 #         rails_postmark_inbound_emails POST   /rails/action_mailbox/postmark/inbound_emails(.:format)                                  action_mailbox/ingresses/postmark/inbound_emails#create
 #            rails_relay_inbound_emails POST   /rails/action_mailbox/relay/inbound_emails(.:format)                                     action_mailbox/ingresses/relay/inbound_emails#create
@@ -54,5 +58,6 @@ Rails.application.routes.draw do
   get '/group_profile', to: 'groups#show'
   get '/demands_profile', to: 'votes#index'
   get '/demand',   to: 'votes#show'
+  get '/demand_update',   to: 'votes#update'
   
 end
