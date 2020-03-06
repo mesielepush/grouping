@@ -46,13 +46,52 @@
 
                 <div class="collaborators ">
                             
-                    <% @group.my_collaborators(current_user.id).each do |col_id, dictionary|%>
-                        <h4 class= 'collaborator_names text-center d-flex justify-content-between'>
+                    <% @group.my_collaborators(current_user.id).each do |col_id, collaborator|%>
+                        <div class= 'collaborator_names text-center d-flex justify-content-between'>
                             
-                            <span class='collabs'><%= dictionary[:name] %>  </span>
+                            <div class="modal fade " id=<%= 'myModal'+col_id.to_s%>>
+                                <div class="modal-dialog ">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            This demands were created by: <%= '     '+ User.find_by_id(col_id).name %> 
+                                        </div>
+                                        <div class="modal-body modal_collab d-flex flex-column justify-content-center">
+                                            
+                                            <% collaborator.keys.each do |vote| %>
+                                                
+                                                <% if vote != :total_counter %>
+
+                                                    <div class="card_my_vote " style="width:40rem;">
+                                                        <img class="img-responsive rounded-circle float-left" style="width:15rem; pt-5" src=<%= Vote.find_by_id(vote).gravatar_url %> alt="Card image cap">
+                                                        <div class="vote_my_votes_body">
+                                                            <h5 >
+                                                                <%= collaborator[vote][:name]%>
+                                                            </h5>
+                                                            <p class="card_description_demand">
+                                                                <%=collaborator[vote][:description]%>
+                                                            </p>
+                                                            <a href=<%=vote_url(vote)%> class = 'link_go_to' style="" ><span id = 'button_cards'> Go There</span></a>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                <%end%>
+                                            <% end %>
+                                        </div>
+                                        <div class="model-footer">
+                                            <input class='btn btn-default' value='Close'>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <a class='collabs' data-toggle="modal" data-target=<%= '#myModal'+col_id.to_s%>>
+                                <%= User.find_by_id(col_id).name %>  
+                            </a>
                             
-                            <span class='collabs'><%= dictionary[:counter] %></span>
-                        </h4>
+                            <span class='collabs'><%= collaborator[:total_counter] %></span>
+                        </div>
                     <% end %>
 
                 </div>

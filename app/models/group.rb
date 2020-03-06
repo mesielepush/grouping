@@ -26,34 +26,28 @@ class Group < ApplicationRecord
 
     def my_collaborators(current_user)
         collaborators = {}
-        demands = self.votes.where.not(user_id: current_user)
-
-        demands.each do |demand|
-            if collaborators[demand.user_id] == nil
-
-                collaborators[demand.user_id] = {}
-                collaborators[demand.user_id][:counter] = 0
+        
+        self.votes.where.not(user_id: current_user).each do |vote|
+            if collaborators[vote.user_id] == nil
+                collaborators[vote.user_id] = {total_counter: 0}
+                
             end
             
-            collaborators[demand.user_id][:name] = User.find_by_id(demand.user_id).name
-            collaborators[demand.user_id][:counter] += demand.counter
             
-            
+            collaborators[vote.user_id][vote.id] = {name:vote.name,
+                                                    description: vote.description,
+                                                    counter: vote.counter}
+            collaborators[vote.user_id][:total_counter] += vote.counter
+
         end
-        
         collaborators
+    end
+    def cumulative
+        
     end
 
     def all_collaborators
-        colaborators = []
-        demands = self.votes
-        demands.each do |demand|
-            collaborators[demand.user_id] ||= {}
-            collaborators[demand.user_id][:counter] = 0
-            collaborators[demand.user_id][:creator] = demand.user_id
-            collaborators[demand.user_id][:counter] += demand.counter
-        end
-        collaborators
+        @demands = self.votes
     end
 
 
