@@ -151,11 +151,22 @@
     margin-top: 2rem;
 }
 .my_votes_demand_list{
+    
     position: relative;
-    width: 30rem;
+    
+    width: 25rem;
     top:2rem;
     background: white;
+    
 }
 .my_group_description{
     font-size: 1.8rem;
+}
+.demands_list_my_votes{
+    max-height: 25rem;
+    position: relative;
+    overflow: scroll
+}
+.list-group{
+    overflow: scroll
 }

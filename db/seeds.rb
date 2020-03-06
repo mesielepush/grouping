@@ -80,7 +80,7 @@ end
 
 
 groups.each do |group|
-    (1..10).each do
+    (1..50).each do
         
         demand = makeDemand(group.id)
         

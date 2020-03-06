@@ -60,9 +60,18 @@
             demands
                 
         </div>
-        <div class="my_votes_demand_list">
-            <div class="demands_list_my_votes">
-            d
+        <div class="my_votes_demand_list ">
+            <div class="demands_list_my_votes ">
+               <ul class="list-group ">
+                    <% @group.votes.each do |demand| %>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <%=demand.name%>
+                            <span class="badge badge-primary badge-pill"><%=demand.counter%></span>
+                        </li>
+                    <%end%>
+
+                </ul>
             </div>
         </div>
     </section>
