@@ -31,7 +31,7 @@
             <div class="d-flex flex-column">
 
                 <div  class="collab_title ">
-                    Collaborators
+                    _ _Collaborators_ _
                 </div>
                 <div class="users_counter d-flex justify-content-between">
                     
@@ -53,34 +53,46 @@
                                 <div class="modal-dialog ">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            This demands were created by: <%= '     '+ User.find_by_id(col_id).name %> 
+                                            <span>
+                                                This demands were created by: 
+                                            </span>
+                                            <span id = 'collaborator_name'><%= '     '+ User.find_by_id(col_id).name %> </span>
                                         </div>
-                                        <div class="modal-body modal_collab d-flex flex-column justify-content-center">
+                                        <div class="modal-body modal_collab d-flex flex-column justify-content-center" style="width:59.9rem;">
                                             
                                             <% collaborator.keys.each do |vote| %>
                                                 
                                                 <% if vote != :total_counter %>
 
-                                                    <div class="card_my_vote " style="width:40rem;">
-                                                        <img class="img-responsive rounded-circle float-left" style="width:15rem; pt-5" src=<%= Vote.find_by_id(vote).gravatar_url %> alt="Card image cap">
-                                                        <div class="vote_my_votes_body">
-                                                            <h5 >
-                                                                <%= collaborator[vote][:name]%>
-                                                            </h5>
-                                                            <p class="card_description_demand">
-                                                                <%=collaborator[vote][:description]%>
-                                                            </p>
-                                                            <a href=<%=vote_url(vote)%> class = 'link_go_to' style="" ><span id = 'button_cards'> Go There</span></a>
-                                                        </div>
+                                                    <div class="card_my_vote d-flex justify-items-center" style="width:55rem;">
+                                                        <img class="img-responsive rounded-circle" style="width:10rem;height:10rem" src=<%= Vote.find_by_id(vote).gravatar_url %> alt="Card image cap">
+                                                        <a href=<%=vote_url(vote)%> style="" >
+                                                            <div class="vote_my_votes_body">
+                                                                <span id = 'user_name_card_my_votes' style='font-size: 2rem;'>
+                                                                    <%= collaborator[vote][:name]%>
+                                                                </span>
+                                                                
+                                                                
+                                                                    <div class = 'counter_scroll_demands_my_vote_parent'>
+                                                                        <span class = 'counter_scroll_demands_my_vote'>
+                                                                            <%= collaborator[vote][:counter]%>
+                                                                        </span>
+                                                                    </div>
+                                                                
+                                                            </div>
+                                                        </a>
+                                                        
                                                     </div>
-
 
 
                                                 <%end%>
                                             <% end %>
                                         </div>
-                                        <div class="model-footer">
-                                            <input class='btn btn-default' value='Close'>
+                                        <div class=" foot_1 d-flex justify-content-center">
+                                            <div class="foot_demand_creator">
+                                                <img class = 'img-responsive rounded-circle pp' src= <%= User.find_by_id(col_id).gravatar%> alt="">
+                                            </div>
+                                            
                                         </div>
                                     </div>
                                     
@@ -101,9 +113,9 @@
         
         <div class='d-flex justify-content-center my_votes_demands_list'>
             <div>
-                <div class="collab_demand_title">
+                <div class="collab_title">
                     
-                    demands
+                   _ _Demands_ _
                         
                 </div>
                 <div class="my_votes_demand_list ">

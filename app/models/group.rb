@@ -36,7 +36,8 @@ class Group < ApplicationRecord
             
             collaborators[vote.user_id][vote.id] = {name:vote.name,
                                                     description: vote.description,
-                                                    counter: vote.counter}
+                                                    counter: vote.counter,
+                                                    avatar: vote.gravatar_url}
             collaborators[vote.user_id][:total_counter] += vote.counter
 
         end
@@ -52,6 +53,3 @@ class Group < ApplicationRecord
 
 
 end
-#<% @group.votes.where(user_id: col_id).each do |demand|%>
-#    <%= demand.name[0..45] %>
-#<%end%>

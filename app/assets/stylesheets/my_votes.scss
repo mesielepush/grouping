@@ -70,7 +70,7 @@
     top: -5rem;
     left: -2rem;
     background:black;
-    height: 2300px;
+    height: 150%;
     width: 110%;
     z-index: -10;
 }
@@ -79,15 +79,19 @@
     right: -2.5rem;
 }
 .group_my_votes{
+    
     max-width: 30rem;
     max-height: 40rem;
-    margin-bottom: 10rem;
+    margin-bottom: 1rem;
 }
 .info_group_my_votes{
     margin-top: 2rem;
+    position: relative;
+    top: -6rem !important;
 }
 .group_totals{
     margin-top: 4rem;
+    top: -25rem;;
 }
 .total_votes_group{
     background: rgba(19, 197, 87, 0.65) !important;
@@ -128,6 +132,18 @@
     background: rgb(129, 230, 13) !important;
     box-shadow: 0px 0px 50px rgba(62, 62, 68, 0.7);
 }
+.foot_1{
+    background: #4E4D53;
+    padding: 1rem;
+}
+.foot_demand_creator, .pp{
+    background: #878591;
+    
+    width: 100px !important;
+    height: 100px!important;
+    box-shadow: 0px 0px 50px rgba(180, 180, 187, 0.7);
+}
+
 .collaborators{
     max-height: 30rem;
     position: relative;
@@ -143,22 +159,65 @@
     font-size: 2rem;
     position: relative;
 }
-  
+#collaborator_name{
+    position:relative;
+    left:-10rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    background: rgb(120, 113, 126);
+    padding: 1rem;
+}
+.thisdemands{
+    position: relative;
+    top:6rem;
+    color:red
+}
+
+.counter_scroll_demands_my_vote{
+    background: rgb(8, 8, 8)!important;
+   
+    left: 3.5rem !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+    position: absolute;
+    left:35rem!important;
+    top: 6rem;
+    font-size: 3rem;
+    box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7)!important;
+}
+
+.modal-dialog{
+    background: black;
+}
  .modal-content{
-    width: 700px !important;
+    position: absolute;
+    left: -15rem;
+    width: 60rem !important;
     
  }
 .modal_collab{
-    right: -1rem;
-    height: 500px !important;
+    
+    height: 1000px !important;
     overflow-y: scroll;
 }
-
+.modal-header{
+    position: relative;
+    background: #4e4d53;
+    color: white;
+    text-align: center;
+    padding-bottom: 1rem;
+    box-shadow: 0px 0px 50px rgba(29, 29, 31, 0.8)!important;
+    
+}
+.modal-body{
+    background: rgb(48, 41, 49);
+}
 .collab_title{
     position: relative;
     
     width: 45rem;
-    background: rgba(177, 184, 170, 0.9);
+    background: rgba(89, 167, 11, 0.9);
     text-align: center;
     font-size: 3rem;
     
@@ -191,10 +250,35 @@
 }
 
 
+.vote_my_votes_body{
+    padding-left: 2rem;
+    position: relative;
+    
+}
 
+#user_name_card_my_votes{
+    max-width: 20rem;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    font-size: 5rem;
+    
 
-
-
+}
+.model-footer{
+    height: 6rem;
+    font-size: 2rem;
+    background: #4e4d53!important;;
+}
+.button_cards{
+    font-size: 2rem !important;
+    position: absolute;
+    background: green;
+    right: -15rem;
+    bottom: -1rem;
+    color: red;
+    padding: 1rem;
+    box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7);
+}
 .my_votes_demand_list{
     
     position: relative;
@@ -206,7 +290,7 @@
 }
 .my_group_description{
     font-size: 2.5rem;
-    background: white;
+    background: rgb(197, 199, 202);
     text-align: center;
     font-family: monospace;
 }
@@ -231,7 +315,12 @@
 .card_my_vote{
     background: rgba(173, 173, 185, 0.7);
     margin-bottom: 2rem;
+    padding: 2rem;
+    margin-left: 1.5rem;
     
+}
+.card-body{
+    top:-15rem
 }
 .card_description_demand{
 font-size: 1.5rem;
