@@ -1,15 +1,73 @@
 <div class="my_votes_stats_background d-flex justify-content-center">
 </div>
-
 <% if @votes == nil %>
-    <div class="d-flex justify-content-center">
-        <div class="card " style="width: 40rem;">
-            <img class="card-img-top" src=<%= @group.imagen_url%> alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title title_group text-center"><%=@group.name%></h5>
-                <p class="card-text" style = 'font-size:1.5rem'> <%=@group.description%> </p>
+
+    <div class="group_stats_gral">
+        
+            <div class="d-flex justify-content-center">
+                <div class="card " style="width: 40rem;">
+                    <img class="card-img-top" src=<%= @group.imagen_url%> alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title title_group text-center"><%=@group.name%></h5>
+                        <p class="card-text my_group_description" > <%=@group.description%> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="group_totals">
+                <h4 class= 'total_groups text-center'>
+                    <span class='total_votes_title_group'>
+                        TOTAL VOTES: 
+                    </span>
+                    <span class='total_votes_group'>
+                        <%= @group.group_total%>
+                    </span>
+                </h4>
+            </div>
+            
+        
+    </div>
+    <section class='d-flex justify-content-between'>
+        <div class="collab_card">
+            <div class="collab_title">
+                
+                    Collaborators
+                
+            </div>
+            <div class="users_counter d-flex justify-content-between">
+                
+                    <span>
+                        demand creator
+                    </span>
+                    <span>
+                        Votes
+                    </span>
+                
+            </div>
+
+            <div class="collaborators ">
+                        
+                <% @group.my_collaborators(current_user.id).each do |col_id, dictionary|%>
+                    <h4 class= 'collaborator_names text-center d-flex justify-content-between'>
+                        <span><%= dictionary[:name] %>  </span>
+                        <span><%= dictionary[:counter] %></span>
+                    </h4>
+                <% end %>
+
             </div>
         </div>
-    </div>
+        <div class="collab_demand_title">
+              
+            demands
+                
+        </div>
+        <div class="my_votes_demand_list">
+            <div class="demands_list_my_votes">
+            d
+            </div>
+        </div>
+    </section>
     
+    
+
 <% end %>
+

@@ -60,7 +60,10 @@
     height: 300px;
 }
 
-
+@mixin heading-font {
+    font-family: 'Raleway';
+    
+  }
 .my_votes_stats_background {
     position: absolute;
     top: -5rem;
@@ -69,4 +72,90 @@
     height: 2000px;
     width: 110%;
     z-index: -10;
+}
+.group_stats_gral{
+    position: relative;
+    right: -2rem;
+}
+.total_votes_group{
+    background: rgba(19, 197, 87, 0.65) !important;
+    color: rgb(19, 18, 18);
+    font-family: 'Raleway';
+    font-size: 2rem;
+}
+.collaborators {
+    text-align: center;
+    position: relative;
+}
+.total_groups {
+    height: 50px;
+    background: rgba(173, 173, 185, 0.7);
+    color: black;
+    font-size: 2rem;
+    padding:.5rem;
+    text-align: center;
+}
+
+.total_votes_title_group{
+    background: rgba(241, 65, 6, 0.65);
+    position: relative;
+    top: -0.6rem;
+    padding: 0.5rem;
+    right: 10rem;
+    font-weight: 900;
+    box-shadow: 0px 0px 50px rgba(62, 62, 68, 0.7);
+}
+.total_votes_group {
+    width: 500px;
+    position: relative;
+    font-size: 2.5rem;
+    padding:0.5rem;
+    top:-0.2rem;
+    right: -8rem;
+    font-weight: 900;
+    background: rgb(129, 230, 13) !important;
+    box-shadow: 0px 0px 50px rgba(62, 62, 68, 0.7);
+}
+.collaborators{
+    right: -5rem;
+    width: 25rem;
+    background: rgba(173, 173, 185, 0.7);
+}
+.collaborator_names{
+    background-color: rgba(192, 192, 218, 0.7);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 2rem;
+}
+.collab_title{
+    position: relative;
+    right: -5rem;
+    width: 25rem;
+    background: rgba(177, 184, 170, 0.9);
+    text-align: center;
+    font-size: 3rem;
+    
+}
+.users_counter{
+    background-color: rgba(156, 156, 179, 0.7);
+    position: relative;
+    right: -5rem;
+    width: 25rem;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.collab_title, .user_counter, .collaborators {
+    margin-top: 2rem;
+}
+.my_votes_demand_list{
+    position: relative;
+    width: 30rem;
+    top:2rem;
+    background: white;
+}
+.my_group_description{
+    font-size: 1.8rem;
 }
