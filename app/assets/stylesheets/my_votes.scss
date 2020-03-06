@@ -172,7 +172,10 @@
     top:6rem;
     color:red
 }
-
+.counter_for_demand_list{
+    width: 70px;
+    color:black!important
+}
 .counter_scroll_demands_my_vote{
     background: rgb(8, 8, 8)!important;
    
@@ -304,7 +307,8 @@
 
 .demand_my_votes_item{
     background: rgba(79, 79, 122, 0.2) !important;
-    color:white
+    color:white;
+    font-size: 1.8rem;;
 }
 .collab_card {
     align-items: center;
