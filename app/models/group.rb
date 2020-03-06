@@ -29,15 +29,16 @@ class Group < ApplicationRecord
         demands = self.votes.where.not(user_id: current_user)
 
         demands.each do |demand|
+            if collaborators[demand.user_id] == nil
+
+                collaborators[demand.user_id] = {}
+                collaborators[demand.user_id][:counter] = 0
+            end
             
-            collaborators[demand.user_id] ||= {}
-            collaborators[demand.user_id][:counter] = 0
             collaborators[demand.user_id][:name] = User.find_by_id(demand.user_id).name
             collaborators[demand.user_id][:counter] += demand.counter
-            puts '###################################'
-            puts collaborators.keys
-            puts '###################################'
-
+            
+            
         end
         
         collaborators
@@ -57,3 +58,6 @@ class Group < ApplicationRecord
 
 
 end
+#<% @group.votes.where(user_id: col_id).each do |demand|%>
+#    <%= demand.name[0..45] %>
+#<%end%>

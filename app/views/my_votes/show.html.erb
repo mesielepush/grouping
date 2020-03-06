@@ -4,10 +4,10 @@
 
     <div class="group_stats_gral">
         
-            <div class="d-flex justify-content-center">
-                <div class="card " style="width: 40rem;">
+            <div class="d-flex justify-content-center ">
+                <div class="card group_my_votes">
                     <img class="card-img-top" src=<%= @group.imagen_url%> alt="Card image cap">
-                    <div class="card-body">
+                    <div class="card-body info_group_my_votes">
                         <h5 class="card-title title_group text-center"><%=@group.name%></h5>
                         <p class="card-text my_group_description" > <%=@group.description%> </p>
                     </div>
@@ -26,54 +26,67 @@
             
         
     </div>
-    <section class='d-flex justify-content-between'>
-        <div class="collab_card">
-            <div class="collab_title">
-                
+    <section class = 'my_votes_data' >
+        <div class="d-flex justify-content-center my_votes_data_1">
+            <div class="d-flex flex-column">
+
+                <div  class="collab_title ">
                     Collaborators
-                
-            </div>
-            <div class="users_counter d-flex justify-content-between">
-                
+                </div>
+                <div class="users_counter d-flex justify-content-between">
+                    
                     <span>
                         demand creator
                     </span>
                     <span>
                         Votes
                     </span>
-                
-            </div>
+                    
+                </div>
 
-            <div class="collaborators ">
+                <div class="collaborators ">
+                            
+                    <% @group.my_collaborators(current_user.id).each do |col_id, dictionary|%>
+                        <h4 class= 'collaborator_names text-center d-flex justify-content-between'>
+                            
+                            <span class='collabs'><%= dictionary[:name] %>  </span>
+                            
+                            <span class='collabs'><%= dictionary[:counter] %></span>
+                        </h4>
+                    <% end %>
+
+                </div>
+
+            </div>
+        </div>
+        
+        <div class='d-flex justify-content-center my_votes_demands_list'>
+            <div>
+                <div class="collab_demand_title">
+                    
+                    demands
                         
-                <% @group.my_collaborators(current_user.id).each do |col_id, dictionary|%>
-                    <h4 class= 'collaborator_names text-center d-flex justify-content-between'>
-                        <span><%= dictionary[:name] %>  </span>
-                        <span><%= dictionary[:counter] %></span>
-                    </h4>
-                <% end %>
+                </div>
+                <div class="my_votes_demand_list ">
+                    <div class="demands_list_my_votes ">
+                    <ul class="list-group ">
+                            <% @group.votes.each do |demand| %>
 
+                                <li class="list-group-item d-flex justify-content-between align-items-center demand_my_votes_item">
+                                    <%=demand.name%>
+                                    <span class="badge badge-primary badge-pill"><%=demand.counter%></span>
+                                </li>
+                            <%end%>
+
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="collab_demand_title">
-              
-            demands
-                
-        </div>
-        <div class="my_votes_demand_list ">
-            <div class="demands_list_my_votes ">
-               <ul class="list-group ">
-                    <% @group.votes.each do |demand| %>
-
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <%=demand.name%>
-                            <span class="badge badge-primary badge-pill"><%=demand.counter%></span>
-                        </li>
-                    <%end%>
-
-                </ul>
-            </div>
-        </div>
+        
+            
+        
+        
     </section>
     
     
