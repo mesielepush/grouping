@@ -4,9 +4,12 @@
 <div class="container my_votes_items">
 
     <div class="d-flex justify-content-center align-content-center">
+    <a href=<%=root_url%>>
         <div class="my_votes_avatar text-center">
             <img src=<%= current_user.gravatar %> alt="User avatar" class = 'my_votes_avatar rounded-circle img-responsive'>
         </div>
+    </a>
+        
         
     </div>
         
@@ -60,42 +63,35 @@
 </div>
 
 <div class="d-flex justify-content-center align-content-center">
-    <div class=" text-center">
-        <img src="https://bit.ly/2Trk7Kl" alt="groups" class='demands_label_my_votes'>
+    <div class=" groups_label text-center mb-5">
+        demands
     </div>
 </div>
 
-<div id="demo" class="carousel slide votes_carousel" data-ride="carousel">
-       
-    <div class="carousel-inner">
+<div class='d-flex justify-content-center my_votes_demands_list'>
+
+    <div>
         
-        <div class="carousel-item active avatar_carousel d-flex justify-content-center align-items-center">
-            <img src= <%= current_user.gravatar%> alt="group" class = " d-none img-fluid img-thumbnail rounded-circle avatar_group_my_votes">
-        </div>
-        
-        <% current_user.votes.each do |demand| %>
-                        
-            <div class="carousel-item pt-5" >
-                <a href= <%= vote_path(id: demand.id)%> >
-                    <div class = "d-flex justify-content-center align-items-center">
-                        <div class="text-white ">
-                            <img src= <%=demand.gravatar_url%> alt="group" class = "img-fluid img-thumbnail rounded-circle group_foto_my_votes">
-                            
-                        </div>
-                    </div>
-                </a>
+        <div class="my_votes_demand_list ">
+            <div class="demands_list_my_votes ">
+            <ul class="list-group ">
+                    <% current_user.votes.each do |demand| %>
+                        <a href=<%= vote_stats_url(vote_id: demand.id) %>>
+                            <li class="list-group-item d-flex justify-content-between align-items-center demand_my_votes_item">
+                                <%=demand.name%>
+                                <span class="badge badge-success badge-pill counter_for_demand_list">
+                                    <%=demand.counter%>
+                                </span>
+                            </li>
+                        </a>
+                        <li class="list-group-item d-flex justify-content-between align-items-center demand_my_votes_item">
+                            <%=demand.name%>
+                            <span class="badge badge-success badge-pill counter_for_demand_list"><%=demand.counter%></span>
+                        </li>
+                    <%end%>
+
+                </ul>
             </div>
-            
-        <% end %>
-        
+        </div>
     </div>
-
-        
-    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#demo" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </a>
-
 </div>
