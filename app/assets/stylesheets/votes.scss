@@ -2,7 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 body {
-    background-image: url('https://i.imgur.com/in7tzyr.png') !important;
+    background-image:linear-gradient(to bottom, rgba(43, 23, 37, 0.52), rgba(95, 78, 53, 0.73)),
+url('https://i.imgur.com/in7tzyr.png');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -13,14 +14,19 @@ body {
 .demand {
     
     background:rgba(0, 0, 0, 0.8);
-    height: 100%;
-    border: 2px solid red;
+    height: 56rem;;
+    border: 5px solid rgb(139, 138, 33);
+    margin-top: 8rem;;
     padding: 10px;
-    box-shadow:  0px 0px 80px rgba(27, 27, 29, 0.8);
+    -webkit-box-shadow: 3px 2px 45px 9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 2px 45px 9px rgba(0,0,0,0.75);
+    box-shadow: 3px 2px 45px 9px rgba(0,0,0,0.75);
     color: white
 }
 .demand_img, .demand_description {
     padding: 2rem;
+    width: 43rem;
+    height: 25rem;;;
 }
 .demand_controls {
     padding-top: 12rem;
@@ -34,12 +40,40 @@ body {
 
 
 .demand_counter {
-    background: rgba(0, 0, 0, 0.8);
-    height: 500px;
+    background: rgba(0, 0, 0, 0.3);
+    width: 80%;
+    height: auto;
     padding: 2rem;
     font-size: 12rem;
-    color: white
+    color: white;
+    text-align:center;
+    -webkit-box-shadow: 3px 2px 45px 9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 2px 45px 9px rgba(0,0,0,0.75);
+    box-shadow: 3px 2px 45px 9px rgba(0,0,0,0.75);
 }
 .site-heading-upper {
     width: 55rem;
+}
+.home_button{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 8rem;
+}
+.imagen_vote_show{
+    width: 8rem!important;
+}
+.home_button_2{
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 8rem;
+}
+.imagen_vote_show_2{
+    width: 8rem!important;
+}
+.post_title{
+    position: relative;
+    top: -5rem;
+    height: 6rem;;
 }
