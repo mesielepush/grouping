@@ -4,7 +4,7 @@ class GroupsController < ApplicationController
         @groups = Group.all
     end
     def show
-        @group  = Group.find_by_id(params[:id])
+        @group  = Group.find_by_id(params[:group_id])
     end
     def new
         @group = Group.new()

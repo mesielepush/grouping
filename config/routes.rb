@@ -68,3 +68,4 @@ Rails.application.routes.draw do
   get '/group_stats', to: 'my_votes#show_group'
   get '/vote_stats', to: 'my_votes#show'
 end
+
