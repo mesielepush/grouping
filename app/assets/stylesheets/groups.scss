@@ -136,7 +136,9 @@
   background: rgba(73, 179, 46, 0.25);
 }
 .groups_scroll_show{
-  height: 1400px!important;
+  position:relative;
+  top:-8rem !important;
+  height: 1350px!important;
   overflow-y: scroll;
   background: black !important;
 }
@@ -145,19 +147,7 @@
 }
 .groups_label_index{
   position: relative;
-  top:-6rem;
-  
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin-left: 1rem;
-  background: rgb(15, 15, 15);
-  width: 45rem;
-  color:white;
-  font-size: 4rem;
-  box-shadow: 3px 2px 45px 9px rgba(83, 76, 76, 0.75);
-}
-.groups_label_index span{
-  position: relative;
-  top:-0.5rem;
+  top:-6rem
 }
 .meta_card_relative{
   position: relative;
@@ -215,6 +205,8 @@ height: 50px;
   background: black;
 }
 .footer{
-  height: 150px;
+  height: 100px;
   background: black;
+  position: relative;
+  
 }
