@@ -103,7 +103,9 @@
   
   width: 48rem;
 }
-
+.content_grl{
+  background: black !important;
+}
 .create_group {
  margin-left: 2.5rem;
 }
@@ -131,32 +133,45 @@
   top:1.5rem;
   left: 2rem;
   width: 8rem;
-  background: rgba(194, 189, 188, 0.25);
+  background: rgba(73, 179, 46, 0.25);
 }
 .groups_scroll_show{
-  height: 1720px!important;
+  height: 1400px!important;
   overflow-y: scroll;
+  background: black !important;
+}
+.unit_group{
+  background: black!important;
 }
 .groups_label_index{
   position: relative;
-  top:-5rem;
+  top:-6rem;
+  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-left: 1rem;
-  background: rgb(44, 42, 42);
+  background: rgb(15, 15, 15);
   width: 45rem;
   color:white;
   font-size: 4rem;
   box-shadow: 3px 2px 45px 9px rgba(83, 76, 76, 0.75);
 }
+.groups_label_index span{
+  position: relative;
+  top:-0.5rem;
+}
+.meta_card_relative{
+  position: relative;
+}
 .profile{
   position: absolute;
   
   display: inline-block;
-  box-shadow: 3px 2px 45px 9px rgba(83, 76, 76, 0.75);
+  
   box-sizing: border-box;
   right: 3rem;
-  bottom:15rem;
+  bottom:14rem;
   margin: 0;
-  border: 1px solid #fff;
+  box-shadow: 3px 2px 45px 9px rgba(83, 76, 76, 0.75);
   border-radius: 50%;
 }
 .author_image{
@@ -165,6 +180,41 @@
   height: 150px!important;
 }
 .group_title_scroll{
+  padding: 1.5rem;
+  color: rgb(231, 222, 222);
   font-size: 5rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.card-img-top{
+  width: 15rem;
+  height: 40rem!important;;
+}
+.center_card_groups_index{
+  background: rgb(0, 0, 0);
+  overflow-y: auto;
+  max-height: 15rem;
+}
+.meta_card_group_index{
+  color:rgba(73, 179, 46, 0.75);
+  font-size: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+}
+.card-text_groups{
+  font-size: 2rem;;
+}
+.foot_group_index{
+height: 50px;
+
+}
+.ul_scroll_groups_index{
+  background: black;
+}
+.gral_link_for_group{
+  background: black;
+}
+.footer{
+  height: 150px;
+  background: black;
 }

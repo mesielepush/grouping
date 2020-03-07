@@ -5,61 +5,62 @@
     </a>
     
     <div class="d-flex justify-content-center align-content-center">
-        <div class=" groups_label_index text-center mb-5">
-            Groups
-        </div>
-</div>
-
-<div class='d-flex justify-content-center groups_scroll_show'>
-
-    <div>
-        
-        <div class="">
-            <div class="">
-            <ul class=" ">
-                    <% @groups.each do |group| %>
-                        <% if group.user_id != current_user.id%>
-                        <br>
-                            <a href=<%= group_profile_url(group_id: group.id) %>>
-
-                                <div class="card pb-5">
-                                    <img class="card-img-top" src=<%=group.imagen_url%>>
-                                    <div class="card-block text-center">
-                                        <div class="profile">
-                                             <img class= 'rounded-circle img-fluid author_image' src=<%=User.find_by_id(group.user_id).gravatar%> alt="">
-                                        </div>
-                                        <h4 class="card-title mt-3 group_title_scroll"><%=group.name%></h4>
-                                        <div class="meta">
-                                            <a>Friends</a>
-                                        </div>
-                                        <div class="card-text">
-                                            Tawshif is a web designer living in Bangladesh.
-                                        </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small>Last updated 3 mins ago</small>
-                                        <button class="btn btn-secondary float-right btn-sm">show</button>
-                                    </div>
-                                </div>
-
-                            </a>
-                            
-                            
-                                
-                        <%end%>
-                    <%end%>
-
-                </ul>
-            </div>
+        <div class=" groups_label_index rounded text-center mb-5">
+            <span>
+                Groups
+            </span> 
         </div>
     </div>
-</div>
 
-    
-    <div>
+    <div id= 'content_grl'>
         <a href=<%= root_url %> class = 'home_button_groups'>
             <img src="https://bit.ly/39poQlf" alt="" class='img-responsive imagen_vote_show'>
         </a>
         
     </div>
+
+    <div class='d-flex justify-content-center groups_scroll_show'>
+        
+        <ul class="ul_scroll_groups_index ">
+            <% @groups.each do |group| %>
+                <% if group.user_id != current_user.id%>
+                
+                    <a class = 'gral_link_for_group'href=<%= group_profile_url(group_id: group.id) %>>
+
+                        <div class="card pb-5 unit_group">
+                            <div class='photo_top_group_card'>
+                                <img class="card-img-top img-fluid" src=<%=group.imagen_url%>>
+                                
+                            </div>
+            
+                            
+                            <div class="card-block text-center center_card_groups_index">
+                                <div class="profile">
+                                    <img class= 'rounded-circle img-fluid author_image' src=<%=User.find_by_id(group.user_id).gravatar%> alt="">
+                                </div>
+                                <h4 class="card-title mt-3 group_title_scroll"><%=group.name%></h4>
+                                <div class="meta meta_card_relative">
+                                    <h6 class='meta_card_group_index'><%=group.description%></h6>
+                                    
+                                </div>
+                                <div class="card-text card-text_groups">
+                                    Created by: <%=User.find_by_id(group.user_id).name%>
+                                    <p>Last updated <%= group.votes.last.created_at %></p>
+                                </div>
+                                    
+                            </div>
+                        </div>
+                    </a>                   
+                <%end%>
+            <%end%>
+
+        </ul>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <img src="https://i.imgur.com/Apw10z1.png" alt="downtitle" class='down_title  img-responsive'>
+      </div>
+    </footer>
+    
+    
 </div>
