@@ -14,23 +14,29 @@
     width: 110%;
 }
 
-.my_votes_avatar {
+.my_votes_avatar{
     position: relative;
-    top: 1rem;
+    
     color: white !important;
-    width: 150px;
-    
+    width: 100%;
     box-shadow: 0px 0px 50px rgba(173, 173, 185, 0.7);
-    
 }
+#my_votes_name{
+    position: absolute;
+    top:4rem;
+    margin-left: 10px;
+    right: 1rem;
+}
+
 .groups_label{
     color: white!important;
-    height: 2.5rem;
+    height: 4rem;
     width: 50rem!important;
     background: rgba(59, 57, 57,0.7)!important;;
     box-shadow: 0px 0px 50px rgba(173, 173, 185, 0.7);
     z-index: 3000;
-    font-size: 2rem;;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .main_my_vote {
     z-index: 100;
