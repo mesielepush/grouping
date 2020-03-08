@@ -3,34 +3,39 @@
 
 
     <div class="group_stats_gral">
-        
+            <img class="card-img-top" src=<%= @group.imagen_url%> alt="Card image cap">
             <div class="d-flex justify-content-center ">
+                
                 <div class="card group_my_votes">
-                    <img class="card-img-top" src=<%= @group.imagen_url%> alt="Card image cap">
+                    
                     <div class="card-body info_group_my_votes">
                         <h5 class="card-title title_group text-center"><%=@group.name%></h5>
                         <p class="card-text my_group_description" > <%=@group.description%> </p>
                     </div>
                 </div>
             </div>
-            <div class="group_totals">
-                <h4 class= 'total_groups text-center'>
-                    <span class='total_votes_title_group'>
-                        TOTAL VOTES: 
-                    </span>
-                    <span class='total_votes_group'>
-                        <%= @group.group_total%>
-                    </span>
-                </h4>
-            </div>
+            
             
         
     </div>
+    
     <section class = 'my_votes_data' >
+        
+        <div class="group_totals">
+            <h4 class= 'total_groups text-center'>
+                <span class='total_votes_title_group'>
+                    TOTAL VOTES: 
+                </span>
+                <span class='total_votes_group'>
+                    <%= @group.group_total%>
+                </span>
+            </h4>
+        </div>
+
         <div class="d-flex justify-content-center my_votes_data_1">
             <div class="d-flex flex-column">
 
-                <div  class="collab_title ">
+                <div  class="collab_title_1 ">
                     _ _Collaborators_ _
                 </div>
                 <div class="users_counter d-flex justify-content-between">
@@ -58,7 +63,7 @@
                                             </span>
                                             <span id = 'collaborator_name'><%= '     '+ User.find_by_id(col_id).name %> </span>
                                         </div>
-                                        <div class="modal-body modal_collab d-flex flex-column justify-content-center" style="width:59.9rem;">
+                                        <div class="modal-body d-flex flex-column justify-content-center" style="width:59.9rem;">
                                             
                                             <% collaborator.keys.each do |vote| %>
                                                 
@@ -83,14 +88,15 @@
                                                         </a>
                                                         
                                                     </div>
-
-
                                                 <%end%>
+
                                             <% end %>
+                                            
                                         </div>
                                         <div class=" foot_1 d-flex justify-content-center">
+                                        
                                             <div class="foot_demand_creator">
-                                                <img class = 'img-responsive rounded-circle pp' src= <%= User.find_by_id(col_id).gravatar%> alt="">
+                                                <img  data-dismiss="modal" type="button" class = 'img-responsive rounded-circle pp' src= 'https://bit.ly/2PXlu1o' alt="">
                                             </div>
                                             
                                         </div>
@@ -115,7 +121,7 @@
             <div>
                 <div class="collab_title">
                     
-                   _ _Demands_ _
+                   _ _Demands of the Group_ _
                         
                 </div>
                 <div class="my_votes_demand_list ">
@@ -130,10 +136,7 @@
                                         </span>
                                     </li>
                                 </a>
-                                <li class="list-group-item d-flex justify-content-between align-items-center demand_my_votes_item">
-                                    <%=demand.name%>
-                                    <span class="badge badge-success badge-pill counter_for_demand_list"><%=demand.counter%></span>
-                                </li>
+                                
                             <%end%>
 
                         </ul>

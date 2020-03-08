@@ -26,23 +26,23 @@ class Group < ApplicationRecord
 
     def my_collaborators(current_user)
         collaborators = {}
-        
         self.votes.where.not(user_id: current_user).each do |vote|
             if collaborators[vote.user_id] == nil
                 collaborators[vote.user_id] = {total_counter: 0}
                 
             end
             
-            
             collaborators[vote.user_id][vote.id] = {name:vote.name,
                                                     description: vote.description,
                                                     counter: vote.counter,
                                                     avatar: vote.gravatar_url}
             collaborators[vote.user_id][:total_counter] += vote.counter
-
+     
         end
+
         collaborators
     end
+
     def cumulative
         
     end

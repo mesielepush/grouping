@@ -18,17 +18,19 @@
     position: relative;
     
     color: white !important;
-    width: 100%;
+    width: 250px;
     box-shadow: 0px 0px 50px rgba(173, 173, 185, 0.7);
 }
 #my_votes_name{
     position: absolute;
-    top:4rem;
-    margin-left: 10px;
-    right: 1rem;
+    right: 6rem;
+    color: white;
+    top:6rem;
+    
 }
 
 .groups_label{
+    margin-top: 5rem!important;
     color: white!important;
     height: 4rem;
     width: 50rem!important;
@@ -73,6 +75,7 @@
     height: 300px;
 }
 
+
 @mixin heading-font {
     font-family: 'Raleway';
     
@@ -89,21 +92,24 @@
 .group_stats_gral{
     position: relative;
     right: -2.5rem;
+    
 }
 .group_my_votes{
-    
-    max-width: 30rem;
-    max-height: 40rem;
+    background: black!important;
+    max-width: 75rem;
+    max-height: 1rem;
     margin-bottom: 1rem;
 }
 .info_group_my_votes{
-    margin-top: 2rem;
+    margin-top: 4rem;
+    width: 45rem;;
     position: relative;
     top: -6rem !important;
 }
 .group_totals{
-    margin-top: 4rem;
-    top: -25rem;;
+    position: relative;
+    
+    
 }
 .total_votes_group{
     background: rgba(19, 197, 87, 0.65) !important;
@@ -157,11 +163,12 @@
 }
 
 .collaborators{
+    top:-5rem;
     max-height: 30rem;
     position: relative;
     overflow-y: scroll;
     width: 45rem;
-    background: rgba(173, 173, 185, 0.7);
+    background: rgba(19, 19, 173, 0.7);
 }
 .collaborator_names{
     border: 2px solid black;
@@ -209,16 +216,16 @@
     position: absolute;
     left: -15rem;
     width: 60rem !important;
-    
+    height: 700px !important;
  }
 .modal_collab{
     
-    height: 1000px !important;
     overflow-y: scroll;
+    border: 2px solid red;
 }
 .modal-header{
     position: relative;
-    background: #4e4d53;
+    background: #4d534d;
     color: white;
     text-align: center;
     padding-bottom: 1rem;
@@ -226,9 +233,21 @@
     
 }
 .modal-body{
-    background: rgb(48, 41, 49);
+    background: rgb(48, 41, 49);   
+}
+
+.my_votes_demands_list{
+   
 }
 .collab_title{
+    position: relative;
+    left:2.4rem;
+    width: 45rem;
+    background: rgba(89, 167, 11, 0.9);
+    text-align: center;
+    font-size: 3rem;
+}
+.collab_title_1{
     position: relative;
     
     width: 45rem;
@@ -253,7 +272,7 @@
 }
 .collab_title, .user_counter, .collaborators {
     box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7);
-    margin-top: 2rem;
+    margin-top: 7rem;
 }
 .collabs{
     margin-right: 2rem;
@@ -264,7 +283,10 @@
     background: red;
 }
 
-
+.my_votes_data_1{
+    position: relative;
+    bottom:-5rem
+}
 .vote_my_votes_body{
     padding-left: 2rem;
     position: relative;
@@ -298,23 +320,38 @@
     
     position: relative;
     box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7);
-    width: 45rem;
-    top:2rem;
-    
+    width: 50rem;
+    top:1rem;    
+}
+.my_votes_demand_list_index{
+    position: relative;
+    box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7);
+    width: 50rem;
+    top:5rem;
+}
+.title_group{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.group_my_votes{
     
 }
 .my_group_description{
     font-size: 2.5rem;
     background: rgb(197, 199, 202);
     text-align: center;
-    font-family: monospace;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .demands_list_my_votes{
     
-    max-height: 25rem;
+    max-height: 35rem;
     position: relative;
     overflow-y: scroll;
     
+}
+.demands_list_my_votes_group{
+    max-height: 45rem;
+    position: relative;
+    overflow-y: scroll;
 }
 
 .demand_my_votes_item{
@@ -327,6 +364,8 @@
 }
 .my_votes_data{
     margin-left: 6rem;
+    position: relative;
+    bottom: -13rem;;
 }
 .card_my_vote{
     background: rgba(173, 173, 185, 0.7);
