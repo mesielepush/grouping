@@ -95,16 +95,13 @@
     
 }
 .group_my_votes{
-    background: black!important;
-    max-width: 75rem;
-    max-height: 1rem;
-    margin-bottom: 1rem;
+    background: rgb(0, 0, 0)!important;
+    
 }
 .info_group_my_votes{
-    margin-top: 4rem;
-    width: 45rem;;
-    position: relative;
-    top: -6rem !important;
+   
+    width: 100%;;
+    
 }
 .group_totals{
     position: relative;
@@ -122,6 +119,8 @@
     position: relative;
 }
 .total_groups {
+    width: 70rem;
+    
     height: 50px;
     background: rgba(173, 173, 185, 0.7);
     color: black;
@@ -235,26 +234,38 @@
 .modal-body{
     background: rgb(48, 41, 49);   
 }
-
+.card-img-top_show_group{
+    height: 40rem !important;
+    width: 60rem;;
+}
 .my_votes_demands_list{
    
 }
 .collab_title{
     position: relative;
-    left:2.4rem;
+    right: -4.5rem;
     width: 45rem;
-    background: rgba(89, 167, 11, 0.9);
+    background: rgba(81, 146, 16, 0.9);
     text-align: center;
     font-size: 3rem;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.collab_title:hover{
+    background: rgba(89, 167, 11, 0.9);
 }
 .collab_title_1{
     position: relative;
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 45rem;
-    background: rgba(89, 167, 11, 0.9);
+    background: rgba(81, 146, 16, 0.9);
     text-align: center;
     font-size: 3rem;
-    
+    color: white
+}
+.collab_title_1:hover{
+    background: rgba(89, 167, 11, 0.9);
 }
 .collab_demand_name:nth-child(odd) {
     background: rgba(173, 173, 185, 0.7);
@@ -285,6 +296,7 @@
 
 .my_votes_data_1{
     position: relative;
+    right: -1.5rem;
     bottom:-5rem
 }
 .vote_my_votes_body{
@@ -317,7 +329,7 @@
     box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7);
 }
 .my_votes_demand_list{
-    
+    right: -1.5rem;
     position: relative;
     box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7);
     width: 50rem;
@@ -340,6 +352,7 @@
     background: rgb(197, 199, 202);
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
 }
 .demands_list_my_votes{
     
@@ -363,9 +376,13 @@
     align-items: center;
 }
 .my_votes_data{
-    margin-left: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    bottom: -13rem;;
+    
+    
 }
 .card_my_vote{
     background: rgba(173, 173, 185, 0.7);
