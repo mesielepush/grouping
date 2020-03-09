@@ -1,15 +1,9 @@
 // Place all the styles related to the Votes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-body {
-    background-image:linear-gradient(to bottom, rgba(43, 23, 37, 0.52), rgba(95, 78, 53, 0.73)),
-url('https://i.imgur.com/in7tzyr.png');
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    padding: 10px;
-    
-    color: white
+
+.down_title{
+    width: 45rem;;
 }
 .demand {
     
@@ -36,9 +30,31 @@ url('https://i.imgur.com/in7tzyr.png');
     padding-top: 5rem;
     width: 300px;
 }
-
-
-
+.new_button_votes{
+    position: relative;
+    top:1.5rem;
+    right: -82%;
+    width: 8rem;
+    background: rgba(175, 33, 194, 0.45);
+  }
+.home_button_votes{
+  position: absolute;
+  top:1.5rem;
+  left: 2rem;
+  width: 8rem;
+  background: rgba(175, 33, 194, 0.45);
+}
+.groups_label_index_votes{
+  position: relative;
+  top:-6rem;
+  left:2rem;
+}
+.meta_card_votes_index{
+    color:rgba(222, 129, 235, 0.45);
+  font-size: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
 .demand_counter {
     background: rgba(0, 0, 0, 0.3);
     width: 80%;
@@ -51,7 +67,6 @@ url('https://i.imgur.com/in7tzyr.png');
     -moz-box-shadow: 3px 2px 45px 9px rgba(0,0,0,0.75);
     box-shadow: 3px 2px 45px 9px rgba(0,0,0,0.75);
 }
-
 .site-heading-upper {
     width: 55rem;
 }

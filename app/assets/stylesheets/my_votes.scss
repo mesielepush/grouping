@@ -2,24 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.my_votes_background {
-    position: absolute;
-    top: -5rem;
-    left: -2rem;
-    background:black !important ;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    height: 2000px;
-    width: 110%;
-}
 
+.ioo{
+    width: 100%;
+}
 .my_votes_avatar{
     position: relative;
-    
+    height: 250px!important;
     color: white !important;
     width: 250px;
-    box-shadow: 0px 0px 50px rgba(173, 173, 185, 0.7);
+    box-shadow: 0px 0px 70px rgba(77, 77, 143, 0.7);
 }
 #my_votes_name{
     position: absolute;
@@ -32,10 +24,10 @@
 .groups_label{
     margin-top: 5rem!important;
     color: white!important;
-    height: 4rem;
+    height: 6rem;
     width: 50rem!important;
     background: rgba(59, 57, 57,0.7)!important;;
-    box-shadow: 0px 0px 50px rgba(173, 173, 185, 0.7);
+    box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7);
     z-index: 3000;
     font-size: 2rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -44,19 +36,14 @@
     z-index: 100;
     font-size: 5rem;
 }
-.groups_label {
-    position: relative;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-    width: 400px;
-    box-shadow: 0px 0px 50px rgba(41, 41, 46, 0.7);
-}
+
 .avatar_group_my_votes {
     width: 250px;
 }
 .group_foto_my_votes{
-  height: 350px;
-  width: 350px;
+  height: 300px!important;
+  width: 300px!important;
+  margin-top: 3rem;;
   box-shadow: 0px 0px 100px rgba(173, 173, 185, 0.7);
 }
 .demands_label_my_votes {
@@ -75,20 +62,6 @@
     height: 300px;
 }
 
-
-@mixin heading-font {
-    font-family: 'Raleway';
-    
-  }
-.my_votes_stats_background {
-    position: absolute;
-    top: -5rem;
-    left: -2rem;
-    background:black;
-    height: 150%;
-    width: 110%;
-    z-index: -10;
-}
 .group_stats_gral{
     position: relative;
     right: -2.5rem;
@@ -150,15 +123,16 @@
     box-shadow: 0px 0px 50px rgba(62, 62, 68, 0.7);
 }
 .foot_1{
-    background: #4E4D53;
-    padding: 1rem;
+    background: rgba(12, 12, 12, 9);
+    padding: 2rem;
+    width: 145%;
+    
 }
 .foot_demand_creator, .pp{
-    background: #878591;
-    
+   
     width: 100px !important;
     height: 100px!important;
-    box-shadow: 0px 0px 50px rgba(180, 180, 187, 0.7);
+    
 }
 
 .collaborators{
@@ -179,16 +153,17 @@
 }
 #collaborator_name{
     position:relative;
-    left:-10rem;
+    
     padding-left: 4rem;
     padding-right: 4rem;
     background: rgb(120, 113, 126);
     padding: 1rem;
 }
-.thisdemands{
+#thisdemands{
     position: relative;
-    top:6rem;
-    color:red
+    top: 1.5rem;
+    height: 100px;
+    
 }
 .counter_for_demand_list{
     width: 70px;
@@ -196,51 +171,49 @@
 }
 .counter_scroll_demands_my_vote{
     background: rgb(8, 8, 8)!important;
-   
-    left: 3.5rem !important;
+    margin-top: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
     color: white;
-    position: absolute;
-    left:35rem!important;
-    top: 6rem;
+    
     font-size: 3rem;
     box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7)!important;
 }
 
-.modal-dialog{
-    background: black;
-}
- .modal-content{
-    position: absolute;
-    left: -15rem;
-    width: 60rem !important;
-    height: 700px !important;
- }
-.modal_collab{
-    
-    overflow-y: scroll;
-    border: 2px solid red;
-}
+
+ 
+
 .modal-header{
     position: relative;
-    background: #4d534d;
+    background: #0c0c0c;
     color: white;
+    left: -5rem;;
     text-align: center;
-    padding-bottom: 1rem;
-    box-shadow: 0px 0px 50px rgba(29, 29, 31, 0.8)!important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 55rem;
+    font-size: 2.5rem;;
+    padding: 1rem;
+    box-shadow: 0px 0px 50px rgba(252, 18, 115, 0.8)!important;
+    margin-bottom: 4rem;;
+    
     
 }
+.modal{
+    position: relative;
+    left: -19rem!important;
+    height: 80rem!important;
+    overflow-y: scroll;
+}
 .modal-body{
-    background: rgb(48, 41, 49);   
+    
+    background: rgb(17, 17, 17);
+    width: 45rem!important;; 
 }
 .card-img-top_show_group{
     height: 40rem !important;
     width: 60rem;;
 }
-.my_votes_demands_list{
-   
-}
+
 .collab_title{
     position: relative;
     right: -4.5rem;
@@ -268,7 +241,7 @@
     background: rgba(89, 167, 11, 0.9);
 }
 .collab_demand_name:nth-child(odd) {
-    background: rgba(173, 173, 185, 0.7);
+    background: rgba(1, 1, 27, 0.7);
 }
 .users_counter{
     background-color: rgba(156, 156, 179, 0.7);
@@ -302,16 +275,21 @@
 .vote_my_votes_body{
     padding-left: 2rem;
     position: relative;
+    color:white;
+}
+.modal-content{
+    background: rgba(77, 85, 34, 0.4)!important;
     
 }
-
 #user_name_card_my_votes{
-    max-width: 20rem;
-    color: rgb(0, 0, 0);
-    font-weight: 900;
-    font-size: 5rem;
     
-
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 2rem;
+    
+}
+.image_modal_votes{
+    box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7);
 }
 .model-footer{
     height: 6rem;
@@ -339,7 +317,7 @@
     position: relative;
     box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7);
     width: 50rem;
-    top:5rem;
+    top:8rem;
 }
 .title_group{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -370,7 +348,8 @@
 .demand_my_votes_item{
     background: rgba(79, 79, 122, 0.2) !important;
     color:white;
-    font-size: 1.8rem;;
+    font-size: 1.8rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;;
 }
 .collab_card {
     align-items: center;
@@ -385,10 +364,11 @@
     
 }
 .card_my_vote{
-    background: rgba(173, 173, 185, 0.7);
+    background: rgba(39, 39, 53, 0.7);
     margin-bottom: 2rem;
     padding: 2rem;
     margin-left: 1.5rem;
+    
     
 }
 .card-body{
@@ -413,3 +393,18 @@ font-size: 1.5rem;
     font-size:1.5rem;
     
 }
+.foot_buttons{
+    margin-top: 4rem;;
+}
+.home_button_index_my_votes_groups{
+    position: absolute;
+    left: 5rem;
+    bottom:-10rem;
+    width: 8rem;
+    background: rgba(73, 179, 46, 0.25);
+  }
+  .back_button_index_my_votes_groups{
+    position: absolute;
+    width: 8rem;
+    bottom:-10rem;
+  }

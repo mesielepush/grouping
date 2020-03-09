@@ -1,94 +1,92 @@
 <div class="my_votes_background d-flex justify-content-center">
-    
-</div>
-<div class="container my_votes_items d-flex justify-content-between">
+</div>  
+
+    <div class="container ioo d-flex justify-content-between">
+
+        <div class="d-flex justify-content-center align-content-center">
+            <a href=<%=root_url%>>
+                <div class=" text-center">
+                    <img src=<%= current_user.gravatar %> alt="User avatar" class = 'my_votes_avatar rounded-circle img-fluid'>
+                </div>
+            </a>
+            
+        </div>
+            
+        <div class="d-flex justify-content-center align-content-center main_my_vote">
+            <div class="text-center">
+                <span id = 'my_votes_name'> <%=current_user.name[0..10] %></span>
+            </div>
+        </div>
+    </div>
+
 
     <div class="d-flex justify-content-center align-content-center">
-        <a href=<%=root_url%>>
-            <div class=" text-center">
-                <img src=<%= current_user.gravatar %> alt="User avatar" class = 'my_votes_avatar rounded-circle img-responsive'>
-            </div>
-        </a>
-           
-    </div>
-        
-    <div class="d-flex justify-content-center align-content-center main_my_vote">
-        <div class="text-center">
-            <span id = 'my_votes_name'> <%=current_user.name[0..10] %></span>
+        <div class="groups_label text-center d-flex justify-content-center align-content-center">
+        <img src="https://i.imgur.com/4JaJn4a.png" alt="">
         </div>
     </div>
-</div>
 
-
-<div class="d-flex justify-content-center align-content-center">
-    <div class="groups_label text-center">
-        <span>
+    <div id="demo" class="carousel slide groups_carousel" data-ride="carousel">
         
-        </span> MY GROUPS
-    </div>
-</div>
-
-<div id="demo" class="carousel slide groups_carousel" data-ride="carousel">
-       
-    <div class="carousel-inner">
-        
-        <div class="carousel-item active avatar_carousel d-flex justify-content-center align-items-center">
-            <img src= <%= current_user.gravatar%> alt="group" class = " d-none img-fluid img-thumbnail rounded-circle avatar_group_my_votes">
-        </div>
-        
-        <% current_user.groups.each do |group| %>
-                        
-            <div class="carousel-item pt-5" >
-                <a href= <%= group_stats_path(group_id: group.id)%> >
-                    <div class = "d-flex justify-content-center align-items-center">
-                        <div class="text-white ">
-                            <img src= <%=group.imagen_url%> alt="group" class = "img-fluid img-thumbnail rounded-circle group_foto_my_votes">
-                            
-                        </div>
-                    </div>
-                </a>
+        <div class="carousel-inner">
+            
+            <div class="carousel-item active avatar_carousel d-flex justify-content-center align-items-center">
+                <img src= <%= current_user.gravatar%> alt="group" class = " d-none img-fluid img-thumbnail rounded-circle avatar_group_my_votes">
             </div>
             
-        <% end %>
-        
+            <% current_user.groups.each do |group| %>
+                            
+                <div class="carousel-item carousel_square" >
+                    <a href= <%= group_stats_path(group_id: group.id)%> >
+                        <div class = "d-flex justify-content-center align-items-center">
+                            <div class="text-white ">
+                                <img src= <%=group.imagen_url%> alt="group" class = "img-fluid img-thumbnail rounded-circle group_foto_my_votes">
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+            <% end %>
+            
+        </div>
+
+            
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
     </div>
 
-        
-    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#demo" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </a>
-
-</div>
-
-<div class="d-flex justify-content-center align-content-center">
-    <div class=" groups_label text-center mb-5">
-        MY DEMANDS
+    <div class="d-flex justify-content-center align-content-center">
+        <div class=" groups_label text-center d-flex justify-content-center align-content-center">
+            <img src="https://i.imgur.com/dFJVIaJ.png" alt="">
+        </div>
     </div>
-</div>
 
-<div class='d-flex justify-content-center'>
+    <div class='d-flex justify-content-center'>
 
-    <div>
-        
-        <div class="my_votes_demand_list_index ">
-            <div class="demands_list_my_votes_group ">
-                <ul class="list-group">
-                    <% current_user.votes.each do |demand| %>
-                        <a href=<%= vote_stats_url(vote_id: demand.id) %>>
-                            <li class="list-group-item d-flex justify-content-between align-items-center demand_my_votes_item">
-                                <%=demand.name%>
-                                <span class="badge badge-success badge-pill counter_for_demand_list">
-                                    <%=demand.counter%>
-                                </span>
-                            </li>
-                        </a>
-                        
-                    <%end%>
-                </ul>
+        <div>
+            
+            <div class="my_votes_demand_list_index ">
+                <div class="demands_list_my_votes_group ">
+                    <ul class="list-group">
+                        <% current_user.votes.each do |demand| %>
+                            <a href=<%= vote_stats_url(vote_id: demand.id) %>>
+                                <li class="list-group-item d-flex justify-content-between align-items-center demand_my_votes_item mb-1">
+                                    <%=demand.name%>
+                                    <span class="badge badge-success badge-pill counter_for_demand_list">
+                                        <%=demand.counter%>
+                                    </span>
+                                </li>
+                            </a>
+                            
+                        <%end%>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-</div>

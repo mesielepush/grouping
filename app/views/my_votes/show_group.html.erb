@@ -55,25 +55,29 @@
                         <div class= 'collaborator_names text-center d-flex justify-content-between'>
                             
                             <div class="modal fade " id=<%= 'myModal'+col_id.to_s%>>
-                                <div class="modal-dialog ">
+                                <div class="modal-dialog">
+                                    
                                     <div class="modal-content">
-                                        <div class="modal-header">
+                                        
+                                        <div class="modal-header d-flex justify-content-around align-content-center">
                                             <span id = 'thisdemands'>
-                                                This demands were created by: 
+                                                This demands were created by: <%= ' '+ User.find_by_id(col_id).name %>
                                             </span>
-                                            <span id = 'collaborator_name'><%= '     '+ User.find_by_id(col_id).name %> </span>
+                                            
+                                                
                                         </div>
-                                        <div class="modal-body d-flex flex-column justify-content-center" style="width:59.9rem;">
+
+                                        <div class="modal-body d-flex flex-column justify-content-center">
                                             
                                             <% collaborator.keys.each do |vote| %>
                                                 
                                                 <% if vote != :total_counter %>
 
-                                                    <div class="card_my_vote d-flex justify-items-center" style="width:55rem;">
-                                                        <img class="img-responsive rounded-circle" style="width:10rem;height:10rem" src=<%= Vote.find_by_id(vote).gravatar_url %> alt="Card image cap">
+                                                    <div class="card_my_vote d-flex justify-items-center" >
+                                                        <img class="img-fluid image_modal_votes rounded-circle" style="width:10rem;height:10rem" src=<%= Vote.find_by_id(vote).gravatar_url %> alt="Card image cap">
                                                         <a href=<%=vote_url(id:vote) %> style="" >
                                                             <div class="vote_my_votes_body">
-                                                                <span id = 'user_name_card_my_votes' style='font-size: 2rem;'>
+                                                                <span id = 'user_name_card_my_votes'>
                                                                     <%= collaborator[vote][:name]%>
                                                                 </span>
                                                                 
@@ -93,22 +97,28 @@
                                             <% end %>
                                             
                                         </div>
+
                                         <div class=" foot_1 d-flex justify-content-center">
                                         
                                             <div class="foot_demand_creator">
-                                                <img  data-dismiss="modal" type="button" class = 'img-responsive rounded-circle pp' src= 'https://bit.ly/2PXlu1o' alt="">
+                                                <img  data-dismiss="modal" type="button" class = 'img-fluid rounded-circle pp' src= <%= User.find_by_id(col_id).gravatar %> alt="">
                                             </div>
                                             
                                         </div>
+
                                     </div>
                                     
                                 </div>
                             </div>
+
                             <a class='collabs' data-toggle="modal" data-target=<%= '#myModal'+col_id.to_s%>>
                                 <%= User.find_by_id(col_id).name %>  
                             </a>
                             
-                            <span class='collabs'><%= collaborator[:total_counter] %></span>
+                            <span class='collabs'>
+                                <%= collaborator[:total_counter] %>
+                            </span>
+
                         </div>
                     <% end %>
 
@@ -121,12 +131,13 @@
             <div>
                 <div class="collab_title">
                     
-                   _ _Demands of the Group_ _
+                   Demands of the Group
                         
                 </div>
+                
                 <div class="my_votes_demand_list ">
                     <div class="demands_list_my_votes ">
-                    <ul class="list-group ">
+                        <ul class="list-group ">
                             <% @group.votes.each do |demand| %>
                                 <a href=<%= vote_stats_url(vote_id: demand.id) %>>
                                     <li class="list-group-item d-flex justify-content-between align-items-center demand_my_votes_item">
@@ -142,11 +153,27 @@
                         </ul>
                     </div>
                 </div>
+
             </div>
         </div>
-        
             
-        
-        
+            <div class="foot_buttons d-flex justify-content-around">
+                
+                <div>
+                    <a href=<%= my_votes_url %> class = 'back_button_index_my_votes_groups'>
+                        <img src="https://i.imgur.com/BEcgpsg.png" alt="" class='img-fluid imagen_vote_show'>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        <div class="foot_buttons d-flex justify-content-around">
+            <div>
+                    <a href=<%= root_url %> class = 'home_button_index_my_votes_groups'>
+                        <img src="https://bit.ly/39poQlf" alt="" class='img-fluid imagen_vote_show'>
+                    </a>
+                    
+                </div>
+        </div>
     </section>
     

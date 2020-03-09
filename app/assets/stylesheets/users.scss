@@ -16,64 +16,48 @@ $black: #000 !default;
 $primary: #e6a756 !default;
 $secondary: #2F170F !default;
 
-@mixin heading-font {
-    font-family: 'Raleway';
-    
-  }
-  
-  @mixin body-font {
-    font-family: 'Lora';
-  }
-.jojo{
-    background-color: rgb(118, 80, 255);
-    border: 2px solid red;
-    text-align: center;
-    font-size: 3rem;
-}
+
  
 .up_title {
-  padding-top: 5rem;
+  padding-top: 15rem;
   padding-bottom: 3rem;
+  width: 45rem;;
 }
 .down_title {
   padding-bottom: 3rem;
+  width: 60rem;;
 }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @include heading-font;
-  }
-  .nav {
-    margin-top: 5rem;
-  }
-  p {
-    line-height: 2;
-  }
-    
-  .user-nav {
-      height: 10rem;
-  }
+.post_title{
+  width: 50rem;
+}
+.nav {
+  margin-top: 12rem;
+}
+p {
+  line-height: 2;
+}
   
-  .nav-item:hover{
-    
-    text-shadow: 0 0 35px #FF0000, 0 0 40px #0000FF;
+.user-nav {
+    height: 10rem;
+}
 
-  }
+.nav-item:hover{
   
-  .io {
-    color: #CB3FF5 !important;
-    font-size: 1.8rem;
-    font-weight: 800 !important;
-  }
+  text-shadow: 0 0 35px #FF0000, 0 0 40px #0000FF;
+
+}
+
+.io {
+  color: #CB3FF5 !important;
+  font-size: 2.3rem;
+  font-weight: 800 !important;
+}
   
-  
-  #mainNav {
-    background-color: rgba(47, 23, 15, 0.9);
-    font-family: 'Raleway';
-  }
+
+#mainNav {
+  background-color: rgba(47, 23, 15, 0.9);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
   
   
   
@@ -100,13 +84,22 @@ $secondary: #2F170F !default;
       }
     }
   }
-  
+  .my_votes_user_background {
+    position: absolute;
+    top: -5rem;
+    left: -2rem;
+    background:black;
+    height: 100%;
+    width: 100%;
+    z-index: -10;
+}
   .User_Profile {
-  @include body-font;
+  
   position: relative;
   top: -5rem;
-  left: -1rem;
-  width: 1000px;
+  left:-1rem;
+  width: 110%;
+  height:120rem;;
   background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('https://bit.ly/39jIT4y');
   background-attachment: fixed;
   background-position: center;
@@ -115,14 +108,7 @@ $secondary: #2F170F !default;
 .site-heading {
   padding-top: 8rem !important;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @include heading-font;
-}
+
 
 p {
   line-height: 1.75;
