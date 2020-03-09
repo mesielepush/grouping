@@ -8,8 +8,20 @@
         background-size: cover;
 }
 .down_title{
+    position: absolute;
     width: 45rem;
-    top:-5rem!important;
+    bottom: -2rem!important;
+}
+.name_header{
+    position: absolute;
+    color: rgb(230, 209, 23);
+    top:1rem;
+    left:12rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3rem;;
+    width: 40rem;
+    height: 10rem;;
+    overflow-y: scroll;
 }
 .demand {
     
@@ -21,12 +33,15 @@
     -webkit-box-shadow: 3px 2px 45px 9px rgba(0,0,0,0.75);
     -moz-box-shadow: 3px 2px 45px 9px rgba(0,0,0,0.75);
     box-shadow: 3px 2px 45px 9px rgba(0,0,0,0.75);
-    color: white
+    color: white;
+    margin-top: 10rem;
 }
 .demand_img, .demand_description {
     padding: 2rem;
     width: 43rem;
-    height: 25rem;;;
+    height: 25rem;
+    
+    overflow-y: scroll;
 }
 .demand_controls {
     padding-top: 12rem;

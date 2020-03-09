@@ -69,25 +69,25 @@
                                                 <% if vote != :total_counter %>
                                                     
                                                     <div class="card_my_vote_show_group d-flex justify-items-center" >
+                                                        
                                                         <img class="img-fluid image_modal_votes_show_group rounded-circle" style="width:10rem;height:10rem" src=<%= Vote.find_by_id(vote).gravatar_url %> alt="Card image cap">
-                                                        <a href=<%= vote_url(votes_id: vote) %> class='bad_link'>
+                                                        
+                                                        <a href=<%= vote_url(votes_id:vote) %> class='bad_link'>
                                                             <div class="vote_my_votes_body">
                                                                 
                                                                 <span id = 'user_name_card_my_votes'>
-                                                                    
-                                                                        <%= collaborator[vote][:name]%>
-                                                                    
+                                                                    <%= collaborator[vote][:name]%>
                                                                 </span>
-                                                                
-                                                            
+                                                                                                                            
                                                                 <div class = 'counter_scroll_demands_my_vote_parent'>
                                                                     <span class = 'counter_scroll_demands_my_vote'>
                                                                         <%= collaborator[vote][:counter]%>
                                                                     </span>
                                                                 </div>
-                                                                
+
                                                             </div>
-                                                        </a>                                              
+                                                        </a>    
+                                                        
                                                     </div>
                                                     
                                                 <%end%>
@@ -137,7 +137,7 @@
                     <div class="demands_list_my_votes ">
                         <ul class="list-group ">
                             <% @group.votes.each do |demand| %>
-                                <a href=<%= root_url %>>
+                                <a href=<%= vote_url(votes_id:demand.id) %>>
                                     <li class="list-group-item d-flex justify-content-between align-items-center demand_my_votes_item">
                                         <%=demand.name%>
                                         <span class="badge badge-success badge-pill counter_for_demand_list">
