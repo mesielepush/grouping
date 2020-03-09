@@ -8,7 +8,7 @@ class VotesController < ApplicationController
        
         if @vote.save
            
-            redirect_to demand_url(id: @vote.id), notice: 'Demand was successfully created.'
+            redirect_to demand_url(votes_id: @vote.id), notice: 'Demand was successfully created.'
         else
             
             render :show, alert: 'demand was not created.'

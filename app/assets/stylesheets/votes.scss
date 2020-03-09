@@ -22,6 +22,7 @@
     width: 40rem;
     height: 10rem;;
     overflow-y: scroll;
+    text-align: center;
 }
 .demand {
     
@@ -134,6 +135,48 @@
     background: rgba(175, 33, 194, 0.45);
     width: 150px;
 }
+.modal_new_demand{
+    
+    position: absolute;
+    top:-50rem;
+    left:-20rem;
+    width: 45rem!important;
+    height: 40rem;
+    background: rgb(13, 13, 14)!important;
+    
+}
+.header_new_demand{
+    width: 45rem!important;
+    background: rgb(160, 69, 145);
+}
+.title_new_demand{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    color:white;
+    font-weight: 700;
+}
+.body_demands_new_list{
+    overflow: scroll;
+}
+.groups_list_item_new_demand{
+    background: rgba(99, 42, 89,0.5);
+    border: 2px solid black;
+    padding:1rem;
+}
+.groups_list_item_new_demand span{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    color:white;
+    margin-top: 1.5rem;font-weight: 700;;
+}
+#button_submit_new_demand{
+    width: 7rem!important;
+    height: 3rem;;
+    background: rgb(160, 69, 145);
+}
+.modal-backdrop {
+    z-index: -1!important;
+  }
 .new_link_modal{
     position: relative;
     right: -46rem;

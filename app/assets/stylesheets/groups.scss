@@ -99,9 +99,7 @@
 .content_grl{
   background: black !important;
 }
-.create_group {
- margin-left: 2.5rem;
-}
+
 .new_demand {
   position: relative;
   top: -6rem
@@ -117,16 +115,19 @@
 .new_button{
   position: relative;
   top:1.5rem;
-  right: -82%;
-  width: 8rem;
+  right: -87%;
+  width: 9rem;
   background: rgba(73, 179, 46, 0.25);
 }
 .home_button_groups{
   position: absolute;
   top:1.5rem;
-  left: 2rem;
+  left: 3.5rem;
   width: 8rem;
   background: rgba(73, 179, 46, 0.25);
+}
+.imagen_vote_show{
+  width: 250px;
 }
 .groups_scroll_show{
   position:relative;
@@ -145,10 +146,10 @@
 }
 .down_title_groups_demo{
   width: 50rem;
-  border:2px solid rgb(86, 28, 245);
   position: relative;
   top:-5rem;
   left:-2rem;
+  
 }
 .groups_label_index_g{
   position: relative;
@@ -157,6 +158,7 @@
 }
 .meta_card_relative{
   position: relative;
+  
 }
 .profile{
   position: absolute;
@@ -183,11 +185,11 @@
 }
 .card-img-top{
   width: 15rem;
-  height: 40rem!important;;
+  height: 40rem!important;
 }
 .center_card_groups_index{
   background: rgb(0, 0, 0);
-  
+  overflow-y: scroll;
   max-height: 15rem;
 }
 .meta_card_group_index{
