@@ -28,7 +28,7 @@
             <% @demands.each do |demand| %>
                 <% if demand.user_id != current_user.id%>
                 
-                    <a class = 'gral_link_for_group'href=<%= vote_url %>>
+                    <a class = 'gral_link_for_group'href=<%= vote_url(votes_id: demand.id) %>>
 
                         <div class="card pb-5 unit_group">
                             <div class='photo_top_group_card'>

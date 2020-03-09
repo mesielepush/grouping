@@ -71,12 +71,12 @@
 }
 .info_group_my_votes{
    
-    width: 100%;;
+   width: 50rem;
     
 }
 .group_totals{
     position: relative;
-    
+    margin-top:2rem;
     
 }
 .total_votes_group{
@@ -101,7 +101,7 @@
 }
 
 .total_votes_title_group{
-    background: rgba(126, 126, 129, 0.65);
+    background: rgba(226, 60, 9, 0.65);
     position: relative;
     top: -0.6rem;
     padding: 0.5rem;
@@ -328,16 +328,23 @@
 }
 .title_group{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 46rem;;
 }
-.group_my_votes{
-    
+.bad_link{
+   z-index: 4000;
+   cursor:pointer
+}
+.bad_link:hover{
+    background: red;
 }
 .my_group_description{
     font-size: 2.5rem;
+    
     background: rgb(197, 199, 202);
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
+    width: 46rem;;
 }
 .demands_list_my_votes{
     
