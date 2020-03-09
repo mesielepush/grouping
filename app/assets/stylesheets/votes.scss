@@ -11,7 +11,8 @@
     
 }
 .down_title{
-    width: 45rem;;
+    width: 45rem;
+    top:-5rem!important;
 }
 .demand {
     
@@ -48,7 +49,7 @@
 .home_button_votes{
   position: absolute;
   top:1.5rem;
-  left: 2rem;
+  left: 3.5rem;
   width: 8rem;
   background: rgba(175, 33, 194, 0.45);
 }
@@ -102,4 +103,22 @@
     position: relative;
     top: -5rem;
     height: 6rem;;
+}
+.footer_votes_index{
+    height: 6rem;
+    font-size: 2rem;
+    position:relative;
+    top:-5rem;
+    
+}
+.group_list_votes_index{
+   position: relative;
+}
+.new_link_votes{
+    background: rgba(175, 33, 194, 0.45);
+    width: 150px;
+}
+.new_link_modal{
+    position: relative;
+    right: -46rem;
 }

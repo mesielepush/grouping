@@ -131,15 +131,29 @@
 .groups_scroll_show{
   position:relative;
   top:-8rem !important;
-  height: 1350px!important;
+  height: 90rem!important;
   overflow-y: scroll;
   background: black !important;
+  
 }
 .unit_group{
   background: black!important;
 }
-.groups_label_index{
-  
+.down_title_groups{
+  width: 40rem;
+  border:2px solid green;
+}
+.down_title_groups_demo{
+  width: 50rem;
+  border:2px solid rgb(86, 28, 245);
+  position: relative;
+  top:-5rem;
+  left:-2rem;
+}
+.groups_label_index_g{
+  position: relative;
+  top:-6rem;
+  left:2rem;
 }
 .meta_card_relative{
   position: relative;
