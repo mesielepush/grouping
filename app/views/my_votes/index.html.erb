@@ -74,7 +74,7 @@
                 <div class="demands_list_my_votes_group ">
                     <ul class="list-group">
                         <% current_user.votes.each do |demand| %>
-                            <a href=<%= vote_stats_url(vote_id: demand.id) %>>
+                            <a href=<%= vote_stats_url(votes_id: demand.id) %>>
                                 <li class="list-group-item d-flex justify-content-between align-items-center demand_my_votes_item mb-1">
                                     <%=demand.name%>
                                     <span class="badge badge-success badge-pill counter_for_demand_list">

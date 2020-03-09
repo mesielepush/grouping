@@ -2,22 +2,19 @@
 </div>
 
 
-    <div class="group_stats_gral">
-            <img class="card-img-top_show_group img-fluid" src=<%= @group.imagen_url%> alt="Group image">
-            <div class="d-flex justify-content-center ">
-                
-                <div class="card group_my_votes">
-                    
-                    <div class="card-body info_group_my_votes">
-                        <h5 class="card-title title_group text-center"><%=@group.name%></h5>
-                        <p class="card-text my_group_description" > <%=@group.description%> </p>
-                    </div>
-                </div>
-            </div>
-            
-            
+<div class="group_stats_gral">
+    <img class="card-img-top_show_group img-fluid" src=<%= @group.imagen_url%> alt="Group image">
+    <div class="d-flex justify-content-center ">
         
+        <div class="card group_my_votes">
+            
+            <div class="card-body info_group_my_votes">
+                <h5 class="card-title title_group text-center"><%=@group.name%></h5>
+                <p class="card-text my_group_description" > <%=@group.description%> </p>
+            </div>
+        </div>
     </div>
+</div>
     
     <section class = 'my_votes_data' >
         
@@ -54,25 +51,25 @@
                     <% @group.my_collaborators(current_user.id).each do |col_id, collaborator|%>
                         <div class= 'collaborator_names text-center d-flex justify-content-between'>
                             
-                            <div class="modal fade " id=<%= 'myModal'+col_id.to_s%>>
+                            <div class="modal fade modal_show_group" id=<%= 'myModal'+col_id.to_s%>>
                                 <div class="modal-dialog">
                                     
-                                    <div class="modal-content">
+                                    <div class="modal-content_show_group">
                                         
-                                        <div class="modal-header d-flex justify-content-around align-content-center">
+                                        <div class="modal-header_show_group d-flex justify-content-around align-content-center">
                                             <span id = 'thisdemands'>
                                                 This demands were created by: <%= ' '+ User.find_by_id(col_id).name %>
                                             </span>
                                         </div>
 
-                                        <div class="modal-body d-flex flex-column justify-content-center">
+                                        <div class="modal-body_show_group d-flex flex-column justify-content-center">
                                             
                                             <% collaborator.keys.each do |vote| %>
                                                 
                                                 <% if vote != :total_counter %>
 
-                                                    <div class="card_my_vote d-flex justify-items-center" >
-                                                        <img class="img-fluid image_modal_votes rounded-circle" style="width:10rem;height:10rem" src=<%= Vote.find_by_id(vote).gravatar_url %> alt="Card image cap">
+                                                    <div class="card_my_vote_show_group d-flex justify-items-center" >
+                                                        <img class="img-fluid image_modal_votes_show_group rounded-circle" style="width:10rem;height:10rem" src=<%= Vote.find_by_id(vote).gravatar_url %> alt="Card image cap">
                                                         <a href=<%=vote_url(id:vote) %> style="" >
                                                             <div class="vote_my_votes_body">
                                                                 <span id = 'user_name_card_my_votes'>
@@ -137,7 +134,7 @@
                     <div class="demands_list_my_votes ">
                         <ul class="list-group ">
                             <% @group.votes.each do |demand| %>
-                                <a href=<%= vote_stats_url(vote_id: demand.id) %>>
+                                <a href=<%= vote_stats_url(votes_id: demand.id) %>>
                                     <li class="list-group-item d-flex justify-content-between align-items-center demand_my_votes_item">
                                         <%=demand.name%>
                                         <span class="badge badge-success badge-pill counter_for_demand_list">

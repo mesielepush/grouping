@@ -15,7 +15,7 @@ class VotesController < ApplicationController
         end
     end
     def show
-        @vote = Vote.find(params[:id])
+        @vote = Vote.find(params[:votes_id])
     end
 
     def index
@@ -24,7 +24,7 @@ class VotesController < ApplicationController
     
     def update
         
-        votes = Vote.find_by_id(params[:vote_id])
+        votes = Vote.find_by_id(params[:votes_id])
         
         if params[:vote] == 'up'
             votes.counter += 1
@@ -45,7 +45,7 @@ class VotesController < ApplicationController
                 current_user.my_votes.new(votes_id: votes.id, counter: count-1).save
             end
         end
-        redirect_to vote_url(id: votes.id)
+        redirect_to vote_url(votes_id: votes.id)
         
     end
     private

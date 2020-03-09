@@ -24,7 +24,7 @@
     color: white!important;
     height: 6rem;
     width: 50rem!important;
-    background: rgba(59, 57, 57,0.7)!important;;
+    background: rgba(58, 57, 59, 0.7)!important;;
     box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7);
     z-index: 3000;
     font-size: 2rem;
@@ -101,7 +101,7 @@
 }
 
 .total_votes_title_group{
-    background: rgba(241, 65, 6, 0.65);
+    background: rgba(126, 126, 129, 0.65);
     position: relative;
     top: -0.6rem;
     padding: 0.5rem;
@@ -182,7 +182,7 @@
 
  
 
-.modal-header{
+.modal-header_show_group{
     position: relative;
     background: #0c0c0c;
     color: white;
@@ -203,13 +203,13 @@
     width: 8rem;
     background: rgba(77, 77, 143, 0.7);
 }
-.modal{
+.modal_show_group{
     position: relative;
     left: -8rem!important;
     height: 80rem!important;
     overflow-y: scroll;
 }
-.modal-body{
+.modal-body_show_group{
     
     background: rgb(17, 17, 17);
     width: 45rem!important;; 
@@ -228,7 +228,7 @@
     font-size: 3rem;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-bottom: 3rem;
+    margin-bottom: 3rem;;
 }
 
 .collab_title:hover{
@@ -270,9 +270,7 @@
     color: white!important;
     cursor: pointer;
 }
-.collabs:hover{
-    background: red;
-}
+
 
 .my_votes_data_1{
     position: relative;
@@ -284,7 +282,7 @@
     position: relative;
     color:white;
 }
-.modal-content{
+.modal-content_show_group{
     background: rgba(77, 85, 34, 0.4)!important;
     
 }
@@ -295,7 +293,7 @@
     font-size: 2rem;
     
 }
-.image_modal_votes{
+.image_modal_votes_show_group{
     box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7);
 }
 .model-footer{
@@ -372,7 +370,7 @@
     
     
 }
-.card_my_vote{
+.card_my_vote_show_group{
     background: rgba(39, 39, 53, 0.7);
     margin-bottom: 2rem;
     padding: 2rem;
