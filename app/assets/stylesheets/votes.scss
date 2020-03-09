@@ -1,7 +1,15 @@
 // Place all the styles related to the Votes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-
+.background_votes{
+    background-image:linear-gradient(to bottom, rgba(43, 23, 37, 0.52), rgba(95, 78, 53, 0.73)),
+    url('https://i.imgur.com/in7tzyr.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 120%;;
+    
+}
 .down_title{
     width: 45rem;;
 }
@@ -75,6 +83,7 @@
     top:0;
     left:0;
     width: 8rem;
+    background: rgba(201, 196, 200, 0.9);
 }
 .imagen_vote_show{
     width: 8rem!important;
@@ -84,6 +93,7 @@
     top:0;
     right: 0;
     width: 8rem;
+    background: rgba(143, 140, 142, 0.52);
 }
 .imagen_vote_show_2{
     width: 8rem!important;

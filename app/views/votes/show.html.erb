@@ -1,33 +1,37 @@
-<div class="container demand">
-    <div class="text-center demand_img">
-        <img src= <%=@vote.gravatar_url%> alt="demand" class = "img-fluid img-thumbnail avatar">
+<div class="background_votes">
+
+
+    <div class="container demand">
+        <div class="text-center demand_img">
+            <img src= <%=@vote.gravatar_url%> alt="demand" class = "img-fluid img-thumbnail avatar">
+        </div>
+        <h1 class= 'demand_description text-justify'>
+            <%=@vote.description%>
+        </h1>
+    
     </div>
-    <h1 class= 'demand_description text-justify'>
-        <%=@vote.description%>
-    </h1>
-   
-</div>
-<div class="demand_controls">
-    <div class="demand_elements d-flex justify-content-between">
-        <a href=<%= demand_update_url(vote:'down',vote_id: @vote.id)  %>>
-            <img src= 'https://i.imgur.com/vRbv6wK.png' alt="demand" class = "img-fluid down_arrow">
-        </a>
-        <span class= 'demand_counter'><%=@vote.counter%></span>
-        <a href=<%= demand_update_url(vote:'up',vote_id: @vote.id)  %>>
-            <img src= 'https://i.imgur.com/SgIrwNL.png' alt="demand" class = "img-fluid up_arrow">
-        </a>
-        
-    </div>
-    <div class='d-flex justify-content-center'>
-        <a href=<%= root_url %> class = 'home_button'>
-            <img src="https://bit.ly/39poQlf" alt="" class='img-responsive imagen_vote_show'>
-        </a>
-        
-    </div>
-    <div class='d-flex justify-content-center'>
-        <a href=<%= root_url %> class = 'home_button_2'>
-            <img src="https://i.imgur.com/YIAtwMb.png" alt="" class='img-responsive imagen_vote_show_2'>
-        </a>
-        
+    <div class="demand_controls">
+        <div class="demand_elements d-flex justify-content-between">
+            <a href=<%= demand_update_url(vote:'down',vote_id: @vote.id)  %>>
+                <img src= 'https://i.imgur.com/vRbv6wK.png' alt="demand" class = "img-fluid down_arrow">
+            </a>
+            <span class= 'demand_counter'><%=@vote.counter%></span>
+            <a href=<%= demand_update_url(vote:'up',vote_id: @vote.id)  %>>
+                <img src= 'https://i.imgur.com/SgIrwNL.png' alt="demand" class = "img-fluid up_arrow">
+            </a>
+            
+        </div>
+        <div class='d-flex justify-content-center'>
+            <a href=<%= root_url %> class = 'home_button'>
+                <img src="https://bit.ly/39poQlf" alt="" class='img-responsive imagen_vote_show'>
+            </a>
+            
+        </div>
+        <div class='d-flex justify-content-center'>
+            <a href=<%= root_url %> class = 'home_button_2'>
+                <img src="https://i.imgur.com/YIAtwMb.png" alt="" class='img-responsive imagen_vote_show_2'>
+            </a>
+            
+        </div>
     </div>
 </div>

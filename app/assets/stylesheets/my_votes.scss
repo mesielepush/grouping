@@ -3,9 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 
-.ioo{
-    width: 100%;
-}
+
 .my_votes_avatar{
     position: relative;
     height: 250px!important;
@@ -198,9 +196,16 @@
     
     
 }
+.home_button_my_votes{
+    position: absolute;
+    bottom:-2rem;
+    left: 43%;
+    width: 8rem;
+    background: rgba(77, 77, 143, 0.7);
+}
 .modal{
     position: relative;
-    left: -19rem!important;
+    left: -8rem!important;
     height: 80rem!important;
     overflow-y: scroll;
 }
@@ -317,7 +322,9 @@
     position: relative;
     box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7);
     width: 50rem;
+    height: 30rem;;
     top:8rem;
+    overflow-y: scroll;
 }
 .title_group{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
