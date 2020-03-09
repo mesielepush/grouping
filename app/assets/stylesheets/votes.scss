@@ -37,10 +37,15 @@
     color: white;
     margin-top: 10rem;
 }
-.demand_img, .demand_description {
+.demand_img{
     padding: 2rem;
-    width: 43rem;
-    height: 25rem;
+    width: 43rem!important;
+    height: 30rem!important;
+}
+.demand_description {
+    padding: 2rem;
+    width: 43rem!important;
+    height: 23rem;
     
     overflow-y: scroll;
 }
