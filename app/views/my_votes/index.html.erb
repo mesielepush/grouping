@@ -4,16 +4,15 @@
     <div class="container d-flex justify-content-between">
 
         <div class="d-flex justify-content-center align-content-center">
-            <a href=<%=demands_new_url%>>
-                <div class=" text-center">
-                    <img src=<%= current_user.gravatar %> alt="User avatar" class = 'my_votes_avatar rounded-circle img-fluid'>
-                </div>
-            </a>
             
+            <div class=" text-center">
+                <img src=<%= current_user.gravatar %> alt="User avatar" class = 'my_votes_avatar rounded-circle img-fluid'>
+            </div>
+                    
         </div>
             
         <div class="d-flex justify-content-center align-content-center main_my_vote">
-            <div class="text-center">
+            <div class="text-center d-flex justify-content-center ">
                 <span id = 'my_votes_name'> <%=current_user.name[0..10] %></span>
             </div>
         </div>
@@ -22,7 +21,7 @@
 
     <div class="d-flex justify-content-center align-content-center">
         <div class="groups_label text-center d-flex justify-content-center align-content-center">
-        <img src="https://i.imgur.com/4JaJn4a.png" alt="">
+        <img src="https://i.imgur.com/4NfuoA0.png" alt="">
         </div>
     </div>
 
@@ -63,7 +62,7 @@
 
     <div class="d-flex justify-content-center align-content-center">
         <div class=" groups_label text-center d-flex justify-content-center align-content-center">
-            <img src="https://i.imgur.com/dFJVIaJ.png" alt="">
+            <img src="https://i.imgur.com/TQVn49Z.png" alt="">
         </div>
     </div>
 
@@ -90,10 +89,25 @@
             </div>
         </div>
     </div>
-    <div id= 'content_grl'>
-        <a href=<%= root_url %> class = 'home_button_my_votes'>
-            <img src="https://bit.ly/39poQlf" alt="" class='img-responsive imagen_vote_show'>
-        </a>
+    
+</div>
+
+<div class="foot_icons d-flex justify-content-center mt-5 pt-5">
         
+    <div class='d-flex justify-content-center'>
+            <a href=<%= root_url %> class = 'home_button'>
+                <img src="https://i.imgur.com/JcpkRZh.png" alt="" class='img-fluid imagen_vote_show'>
+            </a>
+    </div>
+    <div class='d-flex justify-content-center '>
+        <a href=<%=  groups_url %> class = 'groups_home_button'>
+            <img src="https://i.imgur.com/xbEKtIa.png" alt="" class='img-fluid imagen_vote_show'>
+        </a>
+    </div>
+    
+    <div class='d-flex justify-content-center '>
+        <a href=<%=  demands_profile_url %> class = 'demands_list_link'>
+            <img src="https://i.imgur.com/MRW2EsQ.png" alt="" class='img-fluid imagen_vote_show'>
+        </a>
     </div>
 </div>

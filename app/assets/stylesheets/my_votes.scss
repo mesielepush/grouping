@@ -11,23 +11,27 @@
         background-repeat: no-repeat;
         right: -1rem;
         top:-5rem;
-        padding-top: 5rem;;
+        width: 61rem;;
+        padding-top: 5rem;
+        
         
 }
-
+.modal{
+    z-index: 5000;
+}
 .my_votes_avatar{
     position: relative;
     height: 250px!important;
     color: white !important;
     width: 250px;
-    box-shadow: 0px 0px 70px rgba(77, 77, 143, 0.7);
+    box-shadow: -1px 2px 56px 28px rgba(0,0,0,0.75);
 }
 #my_votes_name{
     position: absolute;
     right: 6rem;
     color: white;
-    top:6rem;
-    
+    top:10rem;
+    box-shadow: -1px 2px 56px 28px rgba(0,0,0,0.75);
 }
 
 .groups_label{
@@ -132,15 +136,20 @@
     box-shadow: 0px 0px 50px rgba(62, 62, 68, 0.7);
 }
 .foot_1{
-    background: rgba(12, 12, 12, 9);
+    background: rgb(39, 44, 43);
     padding: 2rem;
-    width: 145%;
-    
+    width: 100%;
+    height: 200px;
+    position: relative;
 }
-.foot_demand_creator, .pp{
-   
-    width: 100px !important;
-    height: 100px!important;
+
+.pp{
+    position: absolute;
+    width: 9rem!important;
+    height: 9rem!important;
+    left: 27rem;;
+    
+    
     
 }
 
@@ -154,7 +163,7 @@
 }
 .collaborator_names{
     border: 2px solid black;
-    background-color: rgba(192, 192, 218, 0.7);
+    background-color: rgba(204, 238, 10, 0.7);
     padding-left: 1rem;
     padding-right: 1rem;
     font-size: 2rem;
@@ -174,17 +183,20 @@
     height: 100%;
     width: 185rem;
     margin-bottom: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .counter_for_demand_list{
     width: 70px;
     color:black!important
 }
+.counter_scroll_demands_my_vote_parent{
+    background: rgba(0, 0, 0, 0.4);
+    margin-top: 30px;;
+}
 .counter_scroll_demands_my_vote{
-    background: rgb(8, 8, 8)!important;
-    margin-top: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    color: white;
+    
+    
+    color: rgb(255, 255, 255);
     
     font-size: 3rem;
     box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7)!important;
@@ -197,14 +209,16 @@
     position: relative;
     background: #0c0c0c;
     color: white;
-    right: 0;
+    left:0;
+    top: -2rem;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 100%;
-    font-size: 2.5rem;;
+    width: 50rem;
+    height: 10rem;
+    font-size: 2.5rem;
     padding: 1rem;
     box-shadow: 0px 2px 119px 35px rgba(46,74,117,1)!important;
-    margin-bottom: 4rem;
+    
     
 }
 .home_button_my_votes{
@@ -216,14 +230,18 @@
 }
 .modal_show_group{
     position: relative;
-    left: -8rem!important;
     height: 80rem!important;
     overflow-y: scroll;
+    background: rgba(0, 0, 0, 0);
+    z-index: 1;
 }
 .modal-body_show_group{
+    position: relative;
+    background: rgba(69, 75, 39, 0.7);
+    width: 50rem!important;
+    right: 0;
+    top:-2rem;
     
-    background: rgb(17, 17, 17);
-    width: 45rem!important;; 
 }
 .card-img-top_show_group{
     height: 40rem !important;
@@ -234,7 +252,7 @@
     position: relative;
     right: -4.5rem;
     width: 45rem;
-    background: rgba(81, 146, 16, 0.9);
+    background: rgba(114, 126, 50, 0.7);
     text-align: center;
     font-size: 3rem;
     color: white;
@@ -278,7 +296,7 @@
 .collabs{
     margin-right: 2rem;
     margin-left: 5rem;
-    color: white!important;
+    color: rgb(0, 0, 0)!important;
     cursor: pointer;
 }
 
@@ -294,8 +312,9 @@
     color:white;
 }
 .modal-content_show_group{
-    background: rgba(77, 85, 34, 0.4)!important;
-    
+    background: rgba(147, 3, 231, 0.4)!important;
+    width: 100rem;
+    height: 100rem;
 }
 #user_name_card_my_votes{
     
@@ -305,7 +324,7 @@
     
 }
 .image_modal_votes_show_group{
-    box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7);
+    box-shadow: 0px 0px 50px rgba(185, 57, 35, 1);
 }
 .model-footer{
     height: 6rem;
@@ -389,7 +408,7 @@
     
 }
 .card_my_vote_show_group{
-    background: rgba(39, 39, 53, 0.7);
+    background: rgba(88, 226, 54, 0.7);
     margin-bottom: 2rem;
     padding: 2rem;
     margin-left: 1.5rem;

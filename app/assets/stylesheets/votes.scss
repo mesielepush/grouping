@@ -2,17 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .background_votes{
-    background:black
+    background:black;
+    padding-top:1rem;
 }
 .down_title{
     position: absolute;
     width: 45rem;
-    bottom: -2rem!important;
+    bottom: -2.5rem!important;
 }
 .name_header{
     position: absolute;
     color: rgb(255, 255, 255);
-    top:1rem;
+    top:2rem;
     left:12rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 3rem;;
@@ -52,7 +53,7 @@
     overflow-y: scroll;
 }
 .demand_controls {
-    padding-top: 12rem;
+    padding-top: 6rem;
     
 }
 .down_arrow, .up_arrow {
@@ -70,12 +71,12 @@
   position: absolute;
   top:1.5rem;
   left: 3.5rem;
-  width: 8rem;
+  width: 150px;
   background: rgba(175, 33, 194, 0.45);
 }
 .groups_label_index_votes{
   position: relative;
-  top:-6rem;
+  top:-8rem;
   left:2rem;
 }
 .meta_card_votes_index{
@@ -86,7 +87,7 @@
 }
 .demand_counter {
     background: rgba(0, 0, 0, 0.3);
-    width: 80%;
+    width: 20rem!important;;
     height: auto;
     padding: 2rem;
     font-size: 12rem;
@@ -100,21 +101,27 @@
     width: 55rem;
 }
 .home_button{
-    
-    width: 8rem;
+   
     background: rgba(201, 196, 200, 0.9);
 }
-.imagen_vote_show{
-    width: 8rem!important;
+.imagen_vote_show_votes{
+    width: 150px!important;
+    height: 150px;
 }
-.home_button_2{
+.demand_stats_button{
     
-    width: 8rem;
+    
     background: rgba(201, 196, 200, 0.9);
 }
-.imagen_vote_show_2{
-    width: 8rem!important;
+.groups_home_button{
+    
+    background: rgba(201, 196, 200, 0.9);
 }
+.demands_list_link{
+    
+    background: rgba(201, 196, 200, 0.9);
+}
+
 .post_title{
     position: relative;
     top: -5rem;
@@ -134,15 +141,16 @@
 
 .new_link_votes{
     position: relative;
-    right: -12rem!important;
+    right: -13rem!important;
     background: rgba(175, 33, 194, 0.45);
-    width: 150px;
+    width: 180px;
+    height: 180px;
 }
 .modal_new_demand{
     
     position: absolute;
-    top:-50rem;
-    left:-20rem;
+    top:-20rem;
+    left:-5rem;;
     width: 45rem!important;
     height: 40rem;
     background: rgb(13, 13, 14)!important;
@@ -182,7 +190,10 @@
   }
 .new_link_modal{
     position: relative;
-    right: -46rem;
+    width: 150px;
+    height: 150px;
+    right: -43rem;
+    
 }
 .mini_group{
     height: 15rem;;
@@ -205,3 +216,10 @@
     z-index: 3001;
 }
 
+.foot_icons{
+    padding-bottom: 3rem!important;
+}
+.group_new_photo{
+    width: 25rem!important;
+    height: 25rem!important;
+}
