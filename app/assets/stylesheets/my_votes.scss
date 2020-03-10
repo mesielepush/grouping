@@ -431,3 +431,22 @@ font-size: 1.5rem;
     width: 8rem;
     bottom:-10rem;
   }
+  .modal-backdrop {
+    z-index: 3000!important;
+    display: none;
+  }
+#top_x_div{
+    width: 80%!important;
+    height: 45rem!important;
+    
+}
+#chart_div{
+    width: 100%
+   
+    
+}
+.title_chart{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4rem;
+    color: white
+}

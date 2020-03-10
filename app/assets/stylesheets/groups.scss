@@ -3,16 +3,21 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .group_show_back {
-    position: relative;
-    
+    position: absolute;
     left: -3rem;
     background:black!important ;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
     width: 110%;
-    z-index: 100;
+    z-index: 0;
   }
+.group_show_back_profile{
+  position: absolute;
+  left: -3rem;
+  top:-5rem;
+  background:black!important ;
+  width: 110rem;
+  height: 130rem;
+  z-index: 0;
+}
   .group_front {
     background: rgba(#70615C, 0.2);
     
@@ -230,5 +235,5 @@ height: 50px;
 .back_button_index_groups{
   position: absolute;
   width: 8rem;
-  bottom:-3rem;
+  bottom:-15rem;
 }

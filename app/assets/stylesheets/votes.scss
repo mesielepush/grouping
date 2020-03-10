@@ -2,10 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .background_votes{
-    background-image:
-        linear-gradient(to bottom, rgba(179, 171, 165, 0.32), rgba(224, 123, 55, 0.23)),
-        url('https://i.imgur.com/UxB0ZFP.png');
-        background-size: cover;
+    background:black
 }
 .down_title{
     position: absolute;
@@ -14,7 +11,7 @@
 }
 .name_header{
     position: absolute;
-    color: rgb(230, 209, 23);
+    color: rgb(255, 255, 255);
     top:1rem;
     left:12rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -27,7 +24,7 @@
 .demand {
     
     background:rgba(0, 0, 0, 0.8);
-    height: 56rem;;
+    height: 51rem;;
     border: 5px solid rgb(139, 138, 33);
     margin-top: 8rem;;
     padding: 10px;
@@ -42,11 +39,16 @@
     width: 43rem!important;
     height: 30rem!important;
 }
+.demand_img_avatar{
+    height: 25rem!important;
+    width: 43rem!important;
+}
 .demand_description {
     padding: 2rem;
     width: 43rem!important;
     height: 23rem;
-    
+    position: relative;
+    top:-2.5rem;
     overflow-y: scroll;
 }
 .demand_controls {
@@ -98,9 +100,7 @@
     width: 55rem;
 }
 .home_button{
-    position: absolute;
-    top:0;
-    left:0;
+    
     width: 8rem;
     background: rgba(201, 196, 200, 0.9);
 }
@@ -108,11 +108,9 @@
     width: 8rem!important;
 }
 .home_button_2{
-    position: absolute;
-    top:0;
-    right: 0;
+    
     width: 8rem;
-    background: rgba(143, 140, 142, 0.52);
+    background: rgba(201, 196, 200, 0.9);
 }
 .imagen_vote_show_2{
     width: 8rem!important;
@@ -206,3 +204,4 @@
     background: rgb(204, 188, 188)!important;
     z-index: 3001;
 }
+

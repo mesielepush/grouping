@@ -14,16 +14,7 @@
  *= require_self
  */
 @import "bootstrap/scss/bootstrap";
-
 body{
-    background: black;;
-}
-.avatar {
-    max-width: 35rem;
-}
-.home_button {
-    background-color: rgba($color: white, $alpha: .2);
-}
-.new_link {
-    width: 200px;
+    background: black;
+    width: 100%;;
 }
