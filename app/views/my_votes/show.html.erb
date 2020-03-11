@@ -4,21 +4,13 @@ google.charts.load('current', {'packages':['bar']});
 google.charts.setOnLoadCallback(drawStuff);
 
 function drawStuff() {
-var data = new google.visualization.arrayToDataTable([
-    ['Opening Move', 'Percentage'],
-    ["King's pawn (e4)", 44],
-    ["Queen's pawn (d4)", 31],
-    ["Knight to King 3 (Nf3)", 12],
-    ["Queen's bishop pawn (c4)", 10],
-    ['Other', 3]
-]);
+var data = new google.visualization.arrayToDataTable(<%= raw(@bar_data) %>);
 
 var options = {
     title: 'Total Votes for Group',
     width: 900,
     legend: { position: 'none' },
-    chart: { title: 'Chess opening moves',
-            subtitle: 'popularity by percentage' },
+    chart: { title: 'Group Names'},
     bars: 'horizontal', // Required for Material Bar Charts.
     axes: {
     x: {
@@ -34,6 +26,8 @@ var chart = new google.charts.Bar(document.getElementById('freq_group'));
 chart.draw(data, options);
 };
 </script>
+
+
 <div class="container d-flex justify-content-center align-content-center ">
     <div id="freq_group" style="">
     </div>
