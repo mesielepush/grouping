@@ -14,43 +14,13 @@ user4 = User.new(name: 'four', email: 'four@gmail.com', gravatar: 'https://bit.l
 user5 = User.new(name: 'five', email: 'five@gmail.com', gravatar: 'https://bit.ly/32LOCOh',password: 'pppppp', password_confirmation: 'pppppp')
 user6 = User.new(name: 'six', email: 'six@gmail.com', gravatar: 'https://bit.ly/32NamJz',password: 'pppppp', password_confirmation: 'pppppp')
 
-if user1.save
-    puts '##################################'
-    puts 'User one DONE'
-    puts '##################################'
-end
-
-if user2.save
-    puts '##################################'
-    puts 'User one 2'
-    puts '##################################'
-end
-
-if user3.save
-    puts '##################################'
-    puts 'User one 3'
-    puts '##################################'
-end
-
-if user4.save
-    puts '##################################'
-    puts 'User one 4'
-    puts '##################################'
-end
-
-if user5.save
-    puts '##################################'
-    puts 'User one 5'
-    puts '##################################'
-end
-
-if user6.save
-    puts '##################################'
-    puts 'User one 6'
-    puts '##################################'
-end
-
-
+user1.save
+user2.save
+user3.save
+user4.save
+user5.save
+user6.save
+ 
 user_group_1 = user1.groups.new(name: "Kiwi's Education", description: "Having a Kiwi i'ts cool and all but what about the kikwi's learning environment?.", imagen_url: 'https://bit.ly/3cBnxlB')
 user_group_2 = user2.groups.new(name: 'General Relativity', description: "Is it?, is it thou?", imagen_url: 'https://bit.ly/39iZPII')
 user_group_3 = user3.groups.new(name: 'Jacques Brel', description: 'Jacques Brel should be prohibited, he smells funny, maybe drinks some alcohols or something', imagen_url: 'https://bit.ly/2vHKgeO')
@@ -58,38 +28,30 @@ user_group_4 = user4.groups.new(name: 'Bruno did nothing wrong', description: 'E
 user_group_5 = user5.groups.new(name: 'Apples', description: 'apples', imagen_url: 'https://bit.ly/32XtrZT')
 user_group_6 = user6.groups.new(name: 'Victory of Samothrace', description: 'Self explanatory mate', imagen_url: 'https://bit.ly/3aredyt')
 
-if user_group_1.save
-    puts '##################################'
-    puts 'User one 6'
-    puts '##################################'
-end
-if user_group_2.save
-    puts '##################################'
-    puts 'User one 6'
-    puts '##################################'
-end
-if user_group_3.save
-    puts '##################################'
-    puts 'User one 6'
-    puts '##################################'
-end
+extra_group_1 = user1.groups.new(name: "Politics", description: "General Politics", imagen_url: 'https://bit.ly/39JUr1d')
+extra_group_2 = user2.groups.new(name: 'Boxing Fights', description: "Let's rate live fights?", imagen_url: 'https://bit.ly/2W2XLk5')
 
-if user_group_4.save
-    puts '##################################'
-    puts 'User one 6'
-    puts '##################################'
-end
-if user_group_5.save
-    puts '##################################'
-    puts 'User one 6'
-    puts '##################################'
-end
+extra_group_1.save
+extra_group_2.save
 
-if user_group_6.save
-    puts '##################################'
-    puts 'User one 6'
-    puts '##################################'
-end
+extra_group_1.votes.new( name: 'President Juarez is the antichrist',
+                        description:'Church and State separation is the first step to corruption',
+                        gravatar_url: 'https://bit.ly/2WfDesX',
+                        user_id:2, counter: 0 ).save
+
+
+extra_group_2.votes.new( name: 'Ali in Ali vs Foreman',
+    description:'This is gonna be an easy one for Foreman I tell you',
+    gravatar_url: 'https://bit.ly/3cRN3mH',
+    user_id:1, counter: 0 ).save
+
+
+user_group_1.save
+user_group_2.save
+user_group_3.save
+user_group_4.save
+user_group_5.save
+user_group_6.save
 
 groups = [user_group_1,user_group_2,user_group_3,user_group_4,user_group_5,user_group_6,]
 
@@ -147,4 +109,58 @@ groups.each do |group|
         
     end
 end
-    
+
+def up_myvote(vote_id, user,n)
+    n.times do
+
+        user = User.find_by_id(user)
+        votes = Vote.find_by_id(vote_id)
+
+        votes.counter += 1
+        votes.save
+
+        if user.my_votes.where(votes_id: votes.id).last == nil
+            user.my_votes.new(votes_id: votes.id, counter: 1).save
+        else
+            count = user.my_votes.where(votes_id: votes.id).last.counter
+            user.my_votes.new(votes_id: votes.id, counter: count+1).save
+        end
+    end
+end
+
+def down_myvote(vote_id, user, n)
+    n.times do
+
+        user = User.find_by_id(user)
+        votes = Vote.find_by_id(vote_id)
+
+        votes.counter -= 1
+        votes.save
+
+        if user.my_votes.where(votes_id: votes.id).last == nil
+            user.my_votes.new(votes_id: votes.id, counter:1).save
+        else
+            count = user.my_votes.where(votes_id: votes.id).last.counter
+            user.my_votes.new(votes_id: votes.id, counter: count-1).save
+        end
+    end
+
+end
+
+down_myvote(2,2,30)
+up_myvote(2,2,5)
+down_myvote(2,2,10)
+up_myvote(2,2,15)
+down_myvote(2,2,5)
+up_myvote(2,2,45)
+
+down_myvote(2,1,10)
+up_myvote(2,1,3)
+down_myvote(2,1,15)
+up_myvote(2,1,5)
+down_myvote(2,1,5)
+up_myvote(2,1,60)
+
+
+
+

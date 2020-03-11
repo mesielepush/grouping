@@ -55,7 +55,7 @@
         
         <ul class="ul_scroll_groups_index ">
             <% @demands.each do |demand| %>
-                <% if demand.user_id != current_user.id%>
+                
                 
                     <a class = 'gral_link_for_group'href=<%= vote_url(votes_id: demand.id) %>>
 
@@ -77,14 +77,14 @@
                                 </div>
                                 <div class="card-text card-text_groups">
                                     Created by: <%=User.find_by_id(demand.user_id).name%>
-                                    <p>Last updated: No se qomcomasd</p>
+                                    
                                 </div>
                                     
                             </div>
                         </div>
                     </a>                   
                 <%end%>
-            <%end%>
+            
 
         </ul>
     </div>

@@ -16,6 +16,7 @@ class MyVotesController < ApplicationController
         @group = Group.find_by_id(params[:group_id])
     end
     def show
+        
         @votes = Vote.find_by_id(params[:vote_id])
     end
     def index

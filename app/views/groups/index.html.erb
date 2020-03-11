@@ -45,8 +45,10 @@
                                 </div>
                                 <div class="card-text card-text_groups">
                                     Created by: <%=User.find_by_id(group.user_id).name%>
-                                    <%if group %>
+                                    <%begin%>
                                         <p>Last updated <%= group.votes.last.created_at %></p>
+                                    <%rescue%>
+                                        <p>No demands for this group</p>
                                     <%end%>
                                 </div>
                                     
