@@ -15,7 +15,6 @@ class MyVotesController < ApplicationController
   end
 
   def show
-    
     @data = helpers.get_data(params[:votes_id])
     @data
   end
