@@ -77,7 +77,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-TBA
+I want to thank me for the help I give me in the creation of this web plataform.
 
 ## 📝 License
 
