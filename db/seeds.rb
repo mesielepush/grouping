@@ -41,9 +41,23 @@ extra_group_1.votes.new( name: 'President Juarez is the antichrist',
 
 
 extra_group_2.votes.new( name: 'Ali in Ali vs Foreman',
-    description:'This is gonna be an easy one for Foreman I tell you',
+    description: "He's not finished",
     gravatar_url: 'https://bit.ly/3cRN3mH',
-    user_id:1, counter: 0 ).save
+    user_id: 1, counter: 0 ).save
+
+extra_group_2.votes.new( name: 'Foreman in Ali vs Foreman',
+    description:'This is gonna be an easy one for Foreman I tell you',
+    gravatar_url: 'https://bit.ly/3aILXre',
+    user_id: 3, counter: 0 ).save
+
+extra_group_2.votes.new( name: 'Morales in Morales vs Barrera',
+    description:"Great oportunity for Morales let's rate it live",
+    gravatar_url: 'https://bit.ly/3cTdlok',
+    user_id: 4, counter: 0 ).save
+extra_group_2.votes.new( name: 'Pryor in Pryor vs Arguello',
+    description:"Pryor can't losse",
+    gravatar_url: 'https://bit.ly/2vY7PAl',
+    user_id: 5, counter: 0 ).save
 
 
 user_group_1.save
@@ -98,7 +112,7 @@ end
 
 
 groups.each do |group|
-    (1..10).each do
+    (1..50).each do
         
         demand = makeDemand(group.id)
         
@@ -146,21 +160,132 @@ def down_myvote(vote_id, user, n)
     end
 
 end
+def vote_for_ali()
 
-down_myvote(2,2,30)
-up_myvote(2,2,5)
-down_myvote(2,2,10)
-up_myvote(2,2,15)
-down_myvote(2,2,5)
-up_myvote(2,2,45)
+    down_myvote(2,2,30)
+    up_myvote(2,2,5)
+    down_myvote(2,2,10)
+    up_myvote(2,2,15)
+    down_myvote(2,2,5)
+    up_myvote(2,2,45)
 
-down_myvote(2,1,10)
-up_myvote(2,1,3)
-down_myvote(2,1,15)
-up_myvote(2,1,5)
-down_myvote(2,1,5)
-up_myvote(2,1,60)
+    down_myvote(2,1,10)
+    up_myvote(2,1,3)
+    down_myvote(2,1,15)
+    up_myvote(2,1,5)
+    down_myvote(2,1,5)
+    up_myvote(2,1,60)
+
+    down_myvote(2,3,40)
+    up_myvote(2,3,5)
+    down_myvote(2,3,10)
+    up_myvote(2,3,25)
+    down_myvote(2,3,15)
+    up_myvote(2,3,70)
 
 
+
+
+end
+def vote_for_foreman()
+    up_myvote(3,2,20)
+    down_myvote(3,2,5)
+    up_myvote(3,2,15)
+    down_myvote(3,2,5)
+    up_myvote(3,2,5)
+    down_myvote(3,2,25)
+    up_myvote(3,2,5)
+    down_myvote(3,2,55)
+
+    up_myvote(3,3,20)
+    down_myvote(3,3,5)
+    up_myvote(3,3,15)
+    down_myvote(3,3,5)
+    up_myvote(3,3,5)
+    down_myvote(3,3,25)
+    up_myvote(3,3,5)
+    down_myvote(3,3,55)
+
+    up_myvote(3,4,10)
+    down_myvote(3,4,3)
+    up_myvote(3,4,25)
+    down_myvote(3,4,5)
+    up_myvote(3,4,8)
+    down_myvote(3,4,38)
+    up_myvote(3,4,5)
+    down_myvote(3,4,65)
+
+end
+
+def vote_for_barrera
+    up_myvote(4,4,8)
+    down_myvote(4,4,5)
+    up_myvote(4,4,10)
+    down_myvote(4,4,8)
+    up_myvote(4,4,8)
+    down_myvote(4,4,16)
+    up_myvote(4,4,6)
+    down_myvote(4,4,2)
+    up_myvote(4,4,4)
+
+    up_myvote(4,1,8)
+    down_myvote(4,1,5)
+    up_myvote(4,1,10)
+    down_myvote(4,1,8)
+    up_myvote(4,1,8)
+    down_myvote(4,1,16)
+    up_myvote(4,1,6)
+    down_myvote(4,1,2)
+    up_myvote(4,1,4)
+    
+
+    up_myvote(4,2,10)
+    down_myvote(4,2,3)
+    up_myvote(4,2,3)
+    down_myvote(4,2,5)
+    up_myvote(4,2,6)
+    down_myvote(4,2,7)
+    up_myvote(4,2,6)
+    down_myvote(4,2,2)
+    up_myvote(4,2,1)
+end
+def vote_for_pryor
+
+    up_myvote(5,2,15)
+    down_myvote(5,2,5)
+    up_myvote(5,2,6)
+    down_myvote(5,2,6)
+    up_myvote(5,2,6)
+    down_myvote(5,2,8)
+    up_myvote(5,2,10)
+    down_myvote(5,2,2)
+    up_myvote(5,2,12)
+    
+    up_myvote(5,1,25)
+    down_myvote(5,1,5)
+    up_myvote(5,1,6)
+    down_myvote(5,1,6)
+    up_myvote(5,1,3)
+    down_myvote(5,1,10)
+    up_myvote(5,1,2)
+    down_myvote(5,1,9)
+    up_myvote(5,1,5)
+    
+    up_myvote(5,3,3)
+    down_myvote(5,3,3)
+    up_myvote(5,3,2)
+    down_myvote(5,3,4)
+    up_myvote(5,3,3)
+    down_myvote(5,3,1)
+    up_myvote(5,3,5)
+    down_myvote(5,3,1)
+    up_myvote(5,3,10)
+
+
+end
+vote_for_ali
+vote_for_foreman
+vote_for_barrera
+vote_for_pryor
 
 

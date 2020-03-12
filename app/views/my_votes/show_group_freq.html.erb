@@ -1,0 +1,47 @@
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load('current', {'packages':['bar']});
+google.charts.setOnLoadCallback(drawStuff);
+
+function drawStuff() {
+var data = new google.visualization.arrayToDataTable(<%= raw(@bar_data) %>);
+
+var options = {
+    title: 'Total Votes for Group',
+    width: 900,
+    legend: { position: 'none' },
+    chart: { title: 'Group Names',
+            },
+    titleTextStyle: {
+                    color:'red',
+                    fontName: 'Verdana',
+                    fontSize: 15,
+                    bold: true,
+                    italic: false
+                    },
+    bars: 'horizontal',
+    axes: {
+        x: {
+            0: { side: 'top', label: 'Total Votes for Group'} 
+        }
+    },
+    hAxis: {
+            textStyle:{color: 'red'}
+    },
+    bar: { groupWidth: "90%" },
+       
+};
+
+var chart = new google.charts.Bar(document.getElementById('freq_group'));
+chart.draw(data, options);
+};
+</script>
+
+
+<div class="container d-flex justify-content-center align-content-center ">
+    <div id="freq_group" style="">
+    </div>
+    <a href=<%= my_votes_url %> class = 'back_button_index_groups' id='back_group_stats_show'>
+        <img src="https://i.imgur.com/BEcgpsg.png" alt="" class='img-fluid imagen_vote_show'>
+    </a>
+</div>

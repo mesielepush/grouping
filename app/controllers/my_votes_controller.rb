@@ -12,10 +12,15 @@ class MyVotesController < ApplicationController
         end
     end
 
+    def show
+        @vote = params[:vote]
+    end
+
     def show_group
         @group = Group.find_by_id(params[:group_id])
     end
-    def show
+
+    def show_group_freq
         if params[:group_id]
            @group = Group.find_by_id(params[:group_id])
            @bar_data = [ ['Demand', 'Votes'] ]
@@ -27,13 +32,18 @@ class MyVotesController < ApplicationController
            organinzer = organinzer.sort_by {|k, v| v}
 
            organinzer.each do |name,votes|
-            @bar_data << [name,votes]
+            begin
+                @bar_data << [name[0..15]+'...',votes]
+            rescue
+                @bar_data << [name,votes]
+            end
            end
            
            return @bar_data
            
         end
     end
+
     def index
         
     end

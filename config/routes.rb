@@ -67,6 +67,8 @@ Rails.application.routes.draw do
   post '/demands_new',   to: 'votes#create'
   get '/group_stats', to: 'my_votes#show_group'
   get '/vote_stats', to: 'my_votes#show'
+  get '/group_stats_freq', to: 'my_votes#show_group_freq'
+
   
 end
 
