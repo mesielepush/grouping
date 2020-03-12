@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 class AddGroupsIdToVotes < ActiveRecord::Migration[6.0]
   def change
-    add_reference :votes, :group, foreign_key: {to_table: :groups}
-    
+    add_reference :votes, :group, foreign_key: { to_table: :groups }
   end
 end

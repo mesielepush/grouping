@@ -14,3 +14,10 @@
  *= require_self
  */
 @import "bootstrap/scss/bootstrap";
+body{
+    background: black;
+    width: 100%;;
+}
+.sign_up_button{
+    width: 35rem!important;
+  }

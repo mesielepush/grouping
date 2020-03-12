@@ -1,3 +1,497 @@
 // Place all the styles related to the my_votes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.back_my_votes_group{
+    position: relative;
+    background-image:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.12), rgba(39, 21, 9, 0.13)),
+        url('https://i.imgur.com/aDUDXk7.png')!important;
+        background-size: auto;
+        background-repeat: no-repeat;
+        right: -1rem;
+        top:-5rem;
+        width: 61rem;;
+        padding-top: 5rem;
+        
+        
+}
+.modal{
+    z-index: 5000;
+}
+.my_votes_avatar{
+    position: relative;
+    height: 250px!important;
+    color: white !important;
+    width: 250px;
+    box-shadow: -1px 2px 56px 28px rgba(0,0,0,0.75);
+}
+#my_votes_name{
+    position: absolute;
+    right: 6rem;
+    color: white;
+    top:10rem;
+    box-shadow: -1px 2px 56px 28px rgba(0,0,0,0.75);
+}
+
+.groups_label{
+    margin-top: 5rem!important;
+    color: white!important;
+    height: 6rem;
+    width: 50rem!important;
+    background: rgba(25, 24, 26, 0.8)!important;;
+    box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7);
+    z-index: 3000;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.main_my_vote {
+    z-index: 100;
+    font-size: 5rem;
+}
+
+.avatar_group_my_votes {
+    width: 250px;
+}
+.group_foto_my_votes{
+  height: 300px!important;
+  width: 300px!important;
+  margin-top: 3rem;;
+  box-shadow: 0px 0px 100px rgba(173, 173, 185, 0.7);
+}
+.demands_label_my_votes {
+    top: 8rem;
+    margin-bottom: 7rem;
+    position: relative;
+    width: 400px;
+    box-shadow: 0px 0px 50px rgba(24, 24, 26, 0.7);
+
+}
+.votes_carousel {
+    margin-top: 5rem;
+    height: 300px;
+}
+.groups_carousel {
+    height: 300px;
+}
+
+.group_stats_gral{
+    position: relative;
+    right: -2.5rem;
+    
+}
+.group_my_votes{
+    background: rgb(0, 0, 0)!important;
+    
+}
+.info_group_my_votes{
+   
+   width: 50rem;
+    
+}
+.group_totals{
+    position: relative;
+    margin-top:2rem;
+    
+}
+.total_votes_group{
+    background: rgba(19, 197, 87, 0.65) !important;
+    color: rgb(19, 18, 18);
+    font-family: 'Raleway';
+    font-size: 2rem;
+}
+.collaborators {
+    text-align: center;
+    position: relative;
+}
+.total_groups {
+    width: 70rem;
+    
+    height: 50px;
+    background: rgba(173, 173, 185, 0.7);
+    color: black;
+    font-size: 2rem;
+    padding:.5rem;
+    text-align: center;
+}
+
+.total_votes_title_group{
+    background: rgba(226, 60, 9, 0.65);
+    position: relative;
+    top: -0.6rem;
+    padding: 0.5rem;
+    right: 10rem;
+    font-weight: 900;
+    box-shadow: 0px 0px 50px rgba(62, 62, 68, 0.7);
+}
+.total_votes_group {
+    width: 500px;
+    position: relative;
+    font-size: 2.5rem;
+    padding:0.5rem;
+    top:-0.2rem;
+    right: -8rem;
+    font-weight: 900;
+    background: rgb(129, 230, 13) !important;
+    box-shadow: 0px 0px 50px rgba(62, 62, 68, 0.7);
+}
+.foot_1{
+    background: rgb(39, 44, 43);
+    padding: 2rem;
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.pp{
+    position: absolute;
+    width: 9rem!important;
+    height: 9rem!important;
+    left: 27rem;;
+    
+    
+    
+}
+
+.collaborators{
+    top:-5rem;
+    max-height: 30rem;
+    position: relative;
+    overflow-y: scroll;
+    width: 45rem;
+    background: rgba(19, 19, 173, 0.7);
+}
+.collaborator_names{
+    border: 2px solid black;
+    background-color: rgba(204, 238, 10, 0.7);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 2rem;
+    position: relative;
+}
+#collaborator_name{
+    position:relative;
+    
+    padding-left: 4rem;
+    padding-right: 4rem;
+    background: rgb(120, 113, 126);
+    padding: 1rem;
+}
+#thisdemands{
+    position: absolute;
+    top: 2rem;
+    height: 100%;
+    width: 185rem;
+    margin-bottom: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.counter_for_demand_list{
+    width: 70px;
+    color:black!important
+}
+.counter_scroll_demands_my_vote_parent{
+    background: rgba(0, 0, 0, 0.4);
+    margin-top: 30px;;
+}
+.counter_scroll_demands_my_vote{
+    
+    
+    color: rgb(255, 255, 255);
+    
+    font-size: 3rem;
+    box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7)!important;
+}
+
+
+ 
+
+.modal-header_show_group{
+    position: relative;
+    background: #0c0c0c;
+    color: white;
+    left:0;
+    top: -2rem;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 50rem;
+    height: 10rem;
+    font-size: 2.5rem;
+    padding: 1rem;
+    box-shadow: 0px 2px 119px 35px rgba(46,74,117,1)!important;
+    
+    
+}
+.home_button_my_votes{
+    position: absolute;
+    bottom:-20rem;
+    left: 43%;
+    width: 8rem;
+    background: rgba(77, 77, 143, 0.7);
+}
+.modal_show_group{
+    position: relative;
+    height: 80rem!important;
+    overflow-y: scroll;
+    background: rgba(0, 0, 0, 0);
+    z-index: 1;
+}
+.modal-body_show_group{
+    position: relative;
+    background: rgba(69, 75, 39, 0.7);
+    width: 50rem!important;
+    right: 0;
+    top:-2rem;
+    
+}
+.card-img-top_show_group{
+    height: 40rem !important;
+    width: 60rem;;
+}
+
+.collab_title{
+    position: relative;
+    right: -4.5rem;
+    width: 45rem;
+    background: rgba(114, 126, 50, 0.7);
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 3rem;;
+}
+
+.collab_title:hover{
+    background: rgba(89, 167, 11, 0.9);
+}
+.collab_title_1{
+    position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 45rem;
+    background: rgba(81, 146, 16, 0.9);
+    text-align: center;
+    font-size: 3rem;
+    color: white
+}
+.collab_title_1:hover{
+    background: rgba(89, 167, 11, 0.9);
+}
+.collab_demand_name:nth-child(odd) {
+    background: rgba(1, 1, 27, 0.7);
+}
+.users_counter{
+    background-color: rgba(156, 156, 179, 0.7);
+    position: relative;
+    
+    width: 45rem;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.collab_title, .user_counter, .collaborators {
+    box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7);
+    margin-top: 7rem;
+}
+.collabs{
+    margin-right: 2rem;
+    margin-left: 5rem;
+    color: rgb(0, 0, 0)!important;
+    cursor: pointer;
+}
+
+
+.my_votes_data_1{
+    position: relative;
+    right: -1.5rem;
+    bottom:-5rem
+}
+.vote_my_votes_body{
+    padding-left: 2rem;
+    position: relative;
+    color:white;
+}
+.modal-content_show_group{
+    background: rgba(147, 3, 231, 0.4)!important;
+    width: 100rem;
+    height: 100rem;
+}
+#user_name_card_my_votes{
+    
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 2rem;
+    
+}
+.image_modal_votes_show_group{
+    box-shadow: 0px 0px 50px rgba(185, 57, 35, 1);
+}
+.model-footer{
+    height: 6rem;
+    font-size: 2rem;
+    background: #4e4d53!important;;
+}
+.button_cards{
+    font-size: 2rem !important;
+    position: absolute;
+    background: green;
+    right: -15rem;
+    bottom: -1rem;
+    color: red;
+    padding: 1rem;
+    box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7);
+}
+.my_votes_demand_list{
+    right: -1.5rem;
+    position: relative;
+    box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7);
+    width: 50rem;
+    top:1rem;    
+}
+.my_votes_demand_list_index{
+    position: relative;
+    box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7);
+    width: 50rem;
+    height: 30rem;;
+    top:8rem;
+    overflow-y: scroll;
+}
+.title_group{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 46rem;;
+}
+.bad_link{
+   z-index: 4000;
+   cursor:pointer
+}
+.bad_link:hover{
+    background: red;
+}
+.my_group_description{
+    font-size: 2.5rem;
+    
+    background: rgb(197, 199, 202);
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    width: 46rem;;
+}
+.demands_list_my_votes{
+    
+    max-height: 35rem;
+    position: relative;
+    overflow-y: scroll;
+    
+}
+.demands_list_my_votes_group{
+    max-height: 45rem;
+    position: relative;
+    overflow-y: scroll;
+}
+
+.demand_my_votes_item{
+    background: rgba(79, 79, 122, 0.2) !important;
+    color:white;
+    font-size: 1.8rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;;
+}
+.collab_card {
+    align-items: center;
+}
+.my_votes_data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    
+}
+.card_my_vote_show_group{
+    background: rgba(88, 226, 54, 0.7);
+    margin-bottom: 2rem;
+    padding: 2rem;
+    margin-left: 1.5rem;
+  
+}
+.card-body{
+    top:-15rem
+}
+.card_description_demand{
+font-size: 1.5rem;
+}
+.link_go_to{
+       
+    color: white;
+    
+    position: relative;
+   
+}
+#button_cards{
+    width:15rem;
+    height:3rem;
+    position: absolute;
+    top:-.3rem;
+    font-size:1.5rem;
+    
+}
+.foot_buttons{
+    margin-top: 4rem;;
+}
+.home_button_index_my_votes_groups{
+    position: absolute;
+    left: 5rem;
+    bottom:-10rem;
+    width: 8rem;
+    background: rgba(73, 179, 46, 0.25);
+  }
+  .back_button_index_my_votes_groups{
+    position: absolute;
+    width: 8rem;
+    bottom:-10rem;
+  }
+  .modal-backdrop {
+    z-index: 3000!important;
+    display: none;
+  }
+#m_content_freqs{
+    position: relative;
+    left:-15rem;
+    width: 61rem;;
+    background: black;
+}
+#freqs_chart{
+    z-index: 8000;
+    width: 45rem;
+    height: 100%;
+    margin-top: 10rem;
+}
+#top_x_div{
+    width: 45rem;
+    height: 100%;
+    color: rgb(211, 31, 31)!important
+}
+#chart_div{
+    width: 100%
+   
+    
+}
+.title_chart{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4rem;
+    color: white
+}
+#freq_group{
+    position: absolute;
+    left:2.5rem;;
+    width: 100%;
+    height: 500px;
+    
+}
+.back_group_stats_show{
+    position: absolute;
+    bottom:15rem;;
+}
+.back_vote_stats{
+    background: white;
+}

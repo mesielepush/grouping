@@ -1,0 +1,99 @@
+<div class="group_show_back">
+    
+    <div class="group_list_votes_index">
+
+        <a class="new_link_modal text-center d-flex justify-content-between" href= <%=groups_url%> type="button" data-toggle="modal" data-target="#modal_new_demand">
+            <img src="https://i.imgur.com/yFmVzKG.png" alt="uptitle" class='new_link_votes'>
+        </a>
+        <div class="modal fade" id="modal_new_demand">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content modal_new_demand">
+                
+                    <!-- Modal Header -->
+                    <div class="modal-header header_new_demand">
+                        <h4 class="modal-title title_new_demand">PICK A GROUP</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body body_demands_new_list">
+                            <%Group.all.each do |group|%>
+                                <a class="groups_list_item_new_demand d-flex justify-content-start align-content-center" href=<%=demands_new_url(group_id: group.id)%>>
+                                    <img src=<%=group.imagen_url%> class='img-fluid rounded-circle' style='width:80px;height:80px;margin-right:5rem;'>
+                                    <span><%=group.name%></span>
+                                </a>
+                            <%end%>
+
+                    </div>
+                    
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id='button_submit_new_demand'>Close</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="d-flex justify-content-center align-content-center">
+        <div class=" groups_label_index_votes text-center mb-5">
+           
+                <img src="https://i.imgur.com/CgFTaF0.png" alt="downtitle" class='  img-responsive' style='width:40rem;'>
+            
+        </div>
+    </div>
+
+    <div id= 'content_grl'>
+        <a href=<%= root_url %> class = 'home_button_votes'>
+            <img src="https://bit.ly/39poQlf" alt="" class='img-responsive imagen_vote_show_votes'>
+        </a>
+        
+    </div>
+
+    <div class='d-flex justify-content-center groups_scroll_show'>
+        
+        <ul class="ul_scroll_groups_index ">
+            <% @demands.each do |demand| %>
+                
+                
+                    <a class = 'gral_link_for_group'href=<%= vote_url(votes_id: demand.id) %>>
+
+                        <div class="card pb-5 unit_group">
+                            <div class='photo_top_group_card'>
+                                <img class="card-img-top " src=<%=demand.gravatar_url%>>
+                                
+                            </div>
+            
+                            
+                            <div class="card-block text-center center_card_groups_index">
+                                <div class="profile">
+                                    <img class= 'rounded-circle img-fluid author_image' src=<%=User.find_by_id(demand.user_id).gravatar%> alt="">
+                                </div>
+                                <h4 class="card-title mt-3 group_title_scroll"><%=demand.name%></h4>
+                                <div class="meta meta_card_relative">
+                                    <h6 class='meta_card_votes_index'><%=demand.description%></h6>
+                                    
+                                </div>
+                                <div class="card-text card-text_groups">
+                                    Created by: <%=User.find_by_id(demand.user_id).name%>
+                                    
+                                </div>
+                                    
+                            </div>
+                        </div>
+                    </a>                   
+                <%end%>
+            
+
+        </ul>
+    </div>
+    
+    <footer class="">
+      <div class="container">
+        <img src="https://i.imgur.com/LwK6neL.png" alt="downtitle" class='down_title  img-responsive'>
+      </div>
+    </footer>
+    
+    
+</div>

@@ -1,20 +1,47 @@
+# frozen_string_literal: true
+
 class MyVotesController < ApplicationController
-    def create
-        @my_vote = current_user.my_votes.new(post_params)
+  before_action :authenticate_user!
+  def create
+    @my_vote = current_user.my_votes.new(post_params)
 
-        if @my_vote.save
-            
-            notice: 'Your Vote was successfully created.'
-        else
-            
-            render :index, alert: 'Vote was not created.'
-        end
-    end
-    def show
-        @my_vote = Vote.find(params[:id])
-    end
+    if @my_vote.save
 
-    def post_params
-        params.require(:post).permit(:content)
-      end
+      render :index, alert: 'Your Vote was successfully created.'
+    else
+
+      render :index, alert: 'Vote was not created.'
+    end
+  end
+
+  def show
+    @data = helpers.get_data(params[:votes_id])
+    @data
+  end
+
+  def show_group
+    @group = Group.find_by_id(params[:group_id])
+  end
+
+  def show_group_freq
+    return unless params[:group_id]
+
+    @group = Group.find_by_id(params[:group_id])
+    @bar_data = [%w[Demand Votes]]
+    organizer = {}
+
+    @group.votes.each do |vote|
+      organizer[vote.name] = vote.counter
+    end
+    organizer = organizer.sort_by { |_k, v| v }
+
+    organizer.each do |name, votes|
+      @bar_data << [name[0..15] + '...', votes]
+    rescue StandardError
+      @bar_data << [name, votes]
+    end
+    @bar_data
+  end
+
+  def index; end
 end

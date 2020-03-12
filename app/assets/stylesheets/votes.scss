@@ -1,3 +1,225 @@
 // Place all the styles related to the Votes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.background_votes{
+    background:black;
+    padding-top:1rem;
+}
+.down_title{
+    position: absolute;
+    width: 45rem;
+    bottom: -2.5rem!important;
+}
+.name_header{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top:2rem;
+    left:12rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3rem;;
+    width: 40rem;
+    height: 10rem;;
+    overflow-y: scroll;
+    text-align: center;
+}
+.demand {
+    
+    background:rgba(0, 0, 0, 0.8);
+    height: 51rem;;
+    border: 5px solid rgb(139, 138, 33);
+    margin-top: 8rem;;
+    padding: 10px;
+    -webkit-box-shadow: 3px 2px 45px 9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 2px 45px 9px rgba(0,0,0,0.75);
+    box-shadow: 3px 2px 45px 9px rgba(0,0,0,0.75);
+    color: white;
+    margin-top: 10rem;
+}
+.demand_img{
+    padding: 2rem;
+    width: 43rem!important;
+    height: 30rem!important;
+}
+.demand_img_avatar{
+    height: 25rem!important;
+    width: 43rem!important;
+}
+.demand_description {
+    padding: 2rem;
+    width: 43rem!important;
+    height: 23rem;
+    position: relative;
+    top:-2.5rem;
+    overflow-y: scroll;
+}
+.demand_controls {
+    padding-top: 6rem;
+    
+}
+.down_arrow, .up_arrow {
+    padding-top: 5rem;
+    width: 300px;
+}
+.new_button_votes{
+    position: relative;
+    top:1.5rem;
+    right: -82%;
+    width: 8rem;
+    background: rgba(175, 33, 194, 0.45);
+  }
+.home_button_votes{
+  position: absolute;
+  top:1.5rem;
+  left: 3.5rem;
+  width: 150px;
+  background: rgba(175, 33, 194, 0.45);
+}
+.groups_label_index_votes{
+  position: relative;
+  top:-8rem;
+  left:2rem;
+}
+.meta_card_votes_index{
+    color:rgba(222, 129, 235, 0.45);
+  font-size: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.demand_counter {
+    background: rgba(0, 0, 0, 0.3);
+    width: 20rem!important;;
+    height: auto;
+    padding: 2rem;
+    font-size: 12rem;
+    color: white;
+    text-align:center;
+    -webkit-box-shadow: 3px 2px 45px 9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 2px 45px 9px rgba(0,0,0,0.75);
+    box-shadow: 3px 2px 45px 9px rgba(0,0,0,0.75);
+}
+.site-heading-upper {
+    width: 55rem;
+}
+.home_button{
+   
+    background: rgba(201, 196, 200, 0.9);
+}
+.imagen_vote_show_votes{
+    width: 150px!important;
+    height: 150px;
+}
+.demand_stats_button{
+    
+    
+    background: rgba(201, 196, 200, 0.9);
+}
+.groups_home_button{
+    
+    background: rgba(201, 196, 200, 0.9);
+}
+.demands_list_link{
+    
+    background: rgba(201, 196, 200, 0.9);
+}
+
+.post_title{
+    position: relative;
+    top: -5rem;
+    height: 6rem;;
+}
+.footer_votes_index{
+    height: 6rem;
+    font-size: 2rem;
+    position:relative;
+    top:-5rem;
+    
+}
+.group_list_votes_index{
+   position: relative;
+   
+}
+
+.new_link_votes{
+    position: relative;
+    right: -13rem!important;
+    background: rgba(175, 33, 194, 0.45);
+    width: 180px;
+    height: 180px;
+}
+.modal_new_demand{
+    
+    position: absolute;
+    top:-20rem;
+    left:-5rem;;
+    width: 45rem!important;
+    height: 40rem;
+    background: rgb(13, 13, 14)!important;
+    
+}
+.header_new_demand{
+    width: 45rem!important;
+    background: rgb(160, 69, 145);
+}
+.title_new_demand{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    color:white;
+    font-weight: 700;
+}
+.body_demands_new_list{
+    overflow: scroll;
+}
+.groups_list_item_new_demand{
+    background: rgba(99, 42, 89,0.5);
+    border: 2px solid black;
+    padding:1rem;
+}
+.groups_list_item_new_demand span{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    color:white;
+    margin-top: 1.5rem;font-weight: 700;;
+}
+#button_submit_new_demand{
+    width: 7rem!important;
+    height: 3rem;;
+    background: rgb(160, 69, 145);
+}
+.modal-backdrop {
+    z-index: -1!important;
+  }
+.new_link_modal{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    right: -43rem;
+    
+}
+.mini_group{
+    height: 15rem;;
+    z-index: 3300;
+}
+.content_index_vote{
+    position: relative;
+    left:-22rem;
+    width: 45rem!important;;
+    background: rgb(221, 17, 221)!important;
+    z-index: 3200;
+}
+
+.modal_head_index{
+    background: rgb(255, 255, 255)!important;
+    z-index: 3001;
+}
+.body_groups_show{
+    background: rgb(204, 188, 188)!important;
+    z-index: 3001;
+}
+
+.foot_icons{
+    padding-bottom: 3rem!important;
+}
+.group_new_photo{
+    width: 25rem!important;
+    height: 25rem!important;
+}

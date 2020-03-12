@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 # == Route Map
 #
 #                                Prefix Verb   URI Pattern                                                                              Controller#Action
 #                      new_user_session GET    /users/sign_in(.:format)                                                                 devise/sessions#new
 #                          user_session POST   /users/sign_in(.:format)                                                                 devise/sessions#create
-#                  destroy_user_session DELETE /users/sign_out(.:format)                                                                devise/sessions#destroy
+#                  destroy_user_session GET    /users/sign_out(.:format)                                                                devise/sessions#destroy
 #                     new_user_password GET    /users/password/new(.:format)                                                            devise/passwords#new
 #                    edit_user_password GET    /users/password/edit(.:format)                                                           devise/passwords#edit
 #                         user_password PATCH  /users/password(.:format)                                                                devise/passwords#update
@@ -19,6 +21,14 @@
 #                                  root GET    /                                                                                        users#show
 #                           create_vote GET    /create_vote(.:format)                                                                   votes#create
 #                                  vote GET    /vote(.:format)                                                                          votes#show
+#                                groups GET    /groups(.:format)                                                                        groups#index
+#                               demands GET    /demands(.:format)                                                                       votes#index
+#                              my_votes GET    /my_votes(.:format)                                                                      my_votes#index
+#                         group_profile GET    /group_profile(.:format)                                                                 groups#show
+#                       demands_profile GET    /demands_profile(.:format)                                                               votes#index
+#                                demand GET    /demand(.:format)                                                                        votes#show
+#                         demand_update GET    /demand_update(.:format)                                                                 votes#update
+#                             new_group POST   /new_group(.:format)                                                                     groups#create
 #         rails_mandrill_inbound_emails POST   /rails/action_mailbox/mandrill/inbound_emails(.:format)                                  action_mailbox/ingresses/mandrill/inbound_emails#create
 #         rails_postmark_inbound_emails POST   /rails/action_mailbox/postmark/inbound_emails(.:format)                                  action_mailbox/ingresses/postmark/inbound_emails#create
 #            rails_relay_inbound_emails POST   /rails/action_mailbox/relay/inbound_emails(.:format)                                     action_mailbox/ingresses/relay/inbound_emails#create
@@ -41,9 +51,23 @@
 
 Rails.application.routes.draw do
   devise_for :users
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root to: "users#show"
-  get '/create_vote',   to: 'votes#create'
+  root to: 'users#show'
+
   get '/vote',   to: 'votes#show'
-  
+  get '/groups', to: 'groups#index'
+  get '/demands', to: 'votes#index'
+  get '/my_votes', to: 'my_votes#index'
+  get '/group_profile', to: 'groups#show'
+  get '/demands_profile', to: 'votes#index'
+  get '/demand',   to: 'votes#show'
+  get '/demand_update',   to: 'votes#update'
+  get '/groups_new', to: 'groups#new'
+  post '/groups_new',   to: 'groups#create'
+  get '/demands_new',   to: 'votes#new'
+  post '/demands_new', to: 'votes#create'
+  get '/group_stats', to: 'my_votes#show_group'
+  get '/vote_stats', to: 'my_votes#show'
+  get '/group_stats_freq', to: 'my_votes#show_group_freq'
 end

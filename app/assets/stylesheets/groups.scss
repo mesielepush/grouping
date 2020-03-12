@@ -1,3 +1,244 @@
 // Place all the styles related to the groups controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.group_show_back {
+    position: absolute;
+    left: -3rem;
+    background:black!important ;
+    width: 110%;
+    z-index: 0;
+  }
+.group_show_back_profile{
+  position: absolute;
+  left: -3rem;
+  top:-5rem;
+  background:black!important ;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+  .group_front {
+    background: rgba(#70615C, 0.2);
+    
+  }
+  .group_front_show {
+    padding-top: 5rem;
+    
+  }
+
+  .group_back {
+    
+    background: rgba(0, 0, 0, 0.95) !important;
+    
+    border: 2px solid;
+    padding: 10px;
+    box-shadow:  0px 0px 80px rgba(27, 27, 29, 0.8);
+  }
+  .group_back:hover {
+    box-shadow: 0px 0px 50px rgba(139, 47, 151, 0.5);
+  }
+.avatar_carousel {
+  margin-top: 8rem;
+}
+.group_show_back {
+  
+    background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('https://bit.ly/2PONYdx') ;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-top: -5rem;
+    
+    box-shadow:  0px 0px 80px rgba(27, 27, 29, 0.8);
+}
+
+.title_group {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3.0rem !important;
+  margin-top: 3rem;
+  width: 50rem;
+  color: rgb(255, 166, 0);
+  text-shadow: 3px 3px #5f4437;
+  background-color: rgba(47, 23, 15, 0.65);
+  box-shadow: 0px 0px 50px rgba(27, 27, 29, 0.5);
+  text-align: center;
+}
+.description_group {
+  margin-top: 3rem;
+  font-family:   monospace;
+  font-size: 3rem !important;
+  text-shadow: 3px 3px #181716;
+  background-color: rgba(105, 60, 45, 0.65);
+  box-shadow: 0px 0px 50px rgba(27, 27, 29, 0.5);
+  
+}
+.group_foto {
+  max-height: 20rem;
+  max-width: 10rem;
+  box-shadow: 0px 0px 100px rgba(173, 173, 185, 0.7);
+}
+.group_foto_show {
+  max-height: 18rem;
+  max-width: 18rem;
+  box-shadow: 0px 0px 100px rgba(173, 173, 185, 0.7);
+}
+.group_avatar_show{
+  max-height: 25rem;
+  max-width: 25rem;
+  box-shadow: 0px 0px 100px rgba(173, 173, 185, 0.7);
+}
+.group_name {
+  background: rgba(71, 25, 10, 0.35);
+  margin-top: 1rem;
+  font-family: monospace;
+  font-size: 5rem;
+  color: rgb(221, 160, 27);
+  text-shadow: 3px 3px #5f4437;
+  box-shadow: 0px 0px 50px rgba(171, 171, 184, 0.5);
+}
+.group_title {
+  position: relative;
+  
+  width: 48rem;
+}
+.content_grl{
+  background: black !important;
+}
+
+.new_demand {
+  position: relative;
+  top: -6rem
+}
+.create_demand {
+  height: 10rem;
+}
+.new_demand_link {
+  max-width: 250px;
+  position: relative;
+  left: 11rem
+}
+.new_button{
+  position: relative;
+  top:1.5rem;
+  right: -85%;
+  width: 10rem;
+  background: rgba(149, 180, 228, 0.4);
+}
+.home_button_groups{
+  position: absolute;
+  top:1.5rem;
+  left: 3.5rem;
+  
+  background: rgba(149, 180, 228, 0.4);
+}
+.imagen_vote_show{
+  width: 150px;
+  height: 150px;
+}
+.groups_scroll_show{
+  position:relative;
+  top:-8rem !important;
+  height: 90rem!important;
+  overflow-y: scroll;
+  background: black !important;
+  
+}
+.unit_group{
+  background: black!important;
+}
+.down_title_groups{
+  width: 40rem;
+  
+}
+.down_title_groups_demo{
+  width: 50rem;
+  position: relative;
+  top:-5rem;
+  left:-2rem;
+  
+}
+.groups_label_index_g{
+  position: relative;
+  top:-8rem;
+  left:2rem;
+}
+.meta_card_relative{
+  position: relative;
+  
+}
+.profile{
+  position: absolute;
+  
+  display: inline-block;
+  
+  box-sizing: border-box;
+  right: 3rem;
+  bottom:14rem;
+  margin: 0;
+  box-shadow: 3px 2px 45px 9px rgba(83, 76, 76, 0.75);
+  border-radius: 50%;
+}
+.author_image{
+  z-index: 10000;
+  width: 150px!important;
+  height: 150px!important;
+}
+.group_title_scroll{
+  padding: 1.5rem;
+  color: rgb(231, 222, 222);
+  font-size: 3.8rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.card-img-top{
+  width: 15rem;
+  height: 40rem!important;
+}
+.center_card_groups_index{
+  background: rgb(0, 0, 0);
+  overflow-y: scroll;
+  max-height: 15rem;
+}
+.meta_card_group_index{
+  color:rgba(73, 179, 46, 0.75);
+  font-size: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+}
+.card-text_groups{
+  font-size: 2rem;;
+}
+.foot_group_index{
+height: 50px;
+
+}
+.ul_scroll_groups_index{
+  background: black;
+}
+.gral_link_for_group{
+  background: black;
+}
+.footer{
+  
+  background: black;
+  position: relative;
+  
+}
+.my_votes_demand_list_index_group{
+  position: relative;
+  box-shadow: 0px 0px 50px rgba(77, 77, 143, 0.7);
+  width: 50rem;
+  height: 32rem;
+  top:8rem;
+  right: -2.5rem;
+  overflow-y: scroll;
+}
+.back_button_index_groups{
+  position: absolute;
+  width: 8rem;
+  bottom:-15rem;
+}
+.for_group_show{
+  position:relative;
+  top: 6rem!important;
+}

@@ -1,56 +1,36 @@
+<div class="my_votes_user_background d-flex justify-content-center">
+</div>
 
-<section class = 'page-section clearfix'>
+<section class='User_Profile'>
+
+  <div class="site-heading">
+    <h1 class="text-center text-white d-lg-block">
+      <img src="https://i.imgur.com/FDk3V48.png" alt="uptitle" class='up_title  img-responsive'>
+      <img src="https://i.imgur.com/Apw10z1.png" alt="downtitle" class='down_title_user  img-responsive'>
+      <img src="https://i.imgur.com/dBGjQI5.png" alt="posttitle" class='post_title  img-responsive'>
+      
+    </h1>
+  </div>
     
-    <div class="container">
-      <div class="intro">
-        
-        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-          <h2 class="section-heading mb-4">
-            <span class="section-heading-upper">Fresh Coffee</span>
-            <span class="section-heading-lower">Worth Drinking</span>
-          </h2>
-          <p class="mb-3">Every cup of our quality artisan coffee starts with locally sourced, hand picked ingredients. Once you try it, our coffee will be a blissful addition to your everyday morning routine - we guarantee it!
-          </p>
-          <div class="intro-button mx-auto">
-            <a class="btn btn-primary btn-xl" href="#">Visit Us Today!</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class='container'>
-        <div class='jojo'>
-            añlshjdlfjk
-        </div>
-        <div class='jojo'>
-            My Groups
-        </div>
-        <div class='jojo'>
-            My Votes
-        </div>
-    </div>
+
+    <ul class="nav user-nav justify-content-center align-items-center mx-auto" id="mainNav">
+      <li class="nav-item px-lg-1">
+          <%= link_to 'Groups', groups_url, method: :get, class: 'nav-link io text-uppercase text-expanded' %>
+          
+      </li>
+      <li class="nav-item px-lg-1">
+          <%= link_to 'Demands', demands_profile_url, method: :get, class: 'nav-link io text-uppercase text-expanded' %>
+      </li>
+      <li class="nav-item io px-lg-1">
+          <%= link_to 'My Demands', my_votes_url, method: :get, class: 'nav-link io text-uppercase text-expanded' %>
+      </li>
+      <li class="nav-item io px-lg-3">
+          <a class= "nav-link text-uppercase text-expanded" href= "/users/sign_out">Sign out</a>
+      </li>
+    </ul>
+  
 </section>
 
-<section class="page-section cta">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-9 mx-auto">
-          <div class="cta-inner text-center rounded">
-            <h2 class="section-heading mb-4">
-              <span class="section-heading-upper">Our Promise</span>
-              <span class="section-heading-lower">To You</span>
-            </h2>
-            <p class="mb-0">When you walk into our shop to start your day, we are dedicated to providing you with friendly service, a welcoming atmosphere, and above all else, excellent products made with the highest quality ingredients. If you are not satisfied, please let us know and we will do whatever we can to make things right!</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer text-faded text-center py-5">
-    <div class="container">
-      <p class="m-0 small">Copyright &copy; Your Website 2019</p>
-    </div>
-  </footer>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
