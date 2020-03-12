@@ -13,7 +13,33 @@ class MyVotesController < ApplicationController
     end
 
     def show
-        @vote = params[:vote]
+        vote = params[:votes_id]
+
+        raw_data = {}
+
+        votes = MyVote.where(votes_id: vote)
+        collaborators = {}
+        votes.each do |vote|
+            collaborators[vote.user_id] = []
+        end
+
+        collaborators.each do     |key,value|
+            my_votes = votes.where(user_id: key)
+            my_votes = my_votes.order(:created_at)
+            my_votes.each do |vote|
+                collaborators[key] << vote.counter
+            end
+        end
+        min_len = []
+        collaborators.each do |key,value|
+            min_len << collaborators[key][value].lenght
+        end
+        min_len = min_len.min
+
+        
+
+        
+
     end
 
     def show_group
