@@ -25,6 +25,7 @@ class VotesController < ApplicationController
   def index
     @demands = Vote.all
   end
+
   # rubocop:disable Metrics/AbcSize
   def update
     votes = Vote.find_by_id(params[:votes_id])
@@ -36,7 +37,7 @@ class VotesController < ApplicationController
       begin
         count = current_user.my_votes.where(votes_id: votes.id).last.counter
         current_user.my_votes.new(votes_id: votes.id, counter: count + 1).save
-      rescue
+      rescue StandardError
         count = current_user.my_votes.where(votes_id: votes.id).last.counter
         current_user.my_votes.new(votes_id: votes.id, counter: count + 1).save
       end
@@ -47,7 +48,7 @@ class VotesController < ApplicationController
       begin
         count = current_user.my_votes.where(votes_id: votes.id).last.counter
         current_user.my_votes.new(votes_id: votes.id, counter: count - 1).save
-      rescue
+      rescue StandardError
         current_user.my_votes.where(votes_id: votes.id).last.nil?
         current_user.my_votes.new(votes_id: votes.id, counter: 1).save
       end
@@ -55,6 +56,7 @@ class VotesController < ApplicationController
     redirect_to vote_url(votes_id: votes.id)
   end
   # rubocop:enable Metrics/AbcSize
+
   private
 
   def vote_params
