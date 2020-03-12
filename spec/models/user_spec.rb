@@ -18,5 +18,4 @@ RSpec.describe User, type: :model do
       expect(user.save).to eq(true)
     end
   end
-
 end

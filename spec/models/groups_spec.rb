@@ -6,7 +6,7 @@ RSpec.describe Group, type: :model do
     user = User.new(name: Faker::Name.name, email: Faker::Internet.email, password: 'pppppp', password_confirmation: 'pppppp')
     user.save
 
-    group = Group.new(name: 'some', user_id: user.id, description:'this is some desciription', imagen_url:'https://bit.ly/2U5FQ9M')
+    group = Group.new(name: 'some', user_id: user.id, description: 'this is some desciription', imagen_url: 'https://bit.ly/2U5FQ9M')
     it 'has a valid factory' do
       expect(group).to be_valid
     end
@@ -21,5 +21,4 @@ RSpec.describe Group, type: :model do
       expect(group.save).to eq(true)
     end
   end
-
 end

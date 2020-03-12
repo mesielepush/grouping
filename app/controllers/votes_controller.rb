@@ -29,7 +29,8 @@ class VotesController < ApplicationController
   def update
     votes = Vote.find_by_id(params[:votes_id])
 
-    if params[:vote] == 'up'
+    case params[:vote]
+    when 'up'
       votes.counter += 1
       votes.save
       if current_user.my_votes.where(votes_id: votes.id).last.nil?
@@ -38,7 +39,7 @@ class VotesController < ApplicationController
         count = current_user.my_votes.where(votes_id: votes.id).last.counter
         current_user.my_votes.new(votes_id: votes.id, counter: count + 1).save
       end
-    elsif params[:vote] == 'down'
+    when 'down'
       votes.counter -= 1
       votes.save
       if current_user.my_votes.where(votes_id: votes.id).last.nil?

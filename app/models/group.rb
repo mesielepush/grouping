@@ -17,7 +17,7 @@ class Group < ApplicationRecord
   belongs_to :user
   has_many :votes
   validates :name, presence: true, length: { maximum: 20 }
-  
+
   def group_total
     total = 0
     demands = votes

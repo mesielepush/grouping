@@ -24,25 +24,23 @@ class MyVotesController < ApplicationController
   end
 
   def show_group_freq
-    if params[:group_id]
-      @group = Group.find_by_id(params[:group_id])
-      @bar_data = [%w[Demand Votes]]
-      organizer = {}
+    return unless params[:group_id]
 
-      @group.votes.each do |vote|
-        organizer[vote.name] = vote.counter
-      end
-      organizer = organizer.sort_by { |_k, v| v }
+    @group = Group.find_by_id(params[:group_id])
+    @bar_data = [%w[Demand Votes]]
+    organizer = {}
 
-      organizer.each do |name, votes|
-        @bar_data << [name[0..15] + '...', votes]
-      rescue StandardError
-        @bar_data << [name, votes]
-      end
-
-      @bar_data
-
+    @group.votes.each do |vote|
+      organizer[vote.name] = vote.counter
     end
+    organizer = organizer.sort_by { |_k, v| v }
+
+    organizer.each do |name, votes|
+      @bar_data << [name[0..15] + '...', votes]
+    rescue StandardError
+      @bar_data << [name, votes]
+    end
+    @bar_data
   end
 
   def index; end
