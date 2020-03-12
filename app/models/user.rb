@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: users
@@ -26,5 +28,4 @@ class User < ApplicationRecord
   def my_votes_of(demand_id)
     My_Vote.where(votes_id: demand_id, user_id: current_user.id)
   end
-
 end

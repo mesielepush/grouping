@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Route Map
 #
 #                                Prefix Verb   URI Pattern                                                                              Controller#Action
@@ -49,10 +51,10 @@
 
 Rails.application.routes.draw do
   devise_for :users
-  
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root to: "users#show"
-  get '/create_vote',   to: 'votes#create'
+  root to: 'users#show'
+
   get '/vote',   to: 'votes#show'
   get '/groups', to: 'groups#index'
   get '/demands', to: 'votes#index'
@@ -61,14 +63,11 @@ Rails.application.routes.draw do
   get '/demands_profile', to: 'votes#index'
   get '/demand',   to: 'votes#show'
   get '/demand_update',   to: 'votes#update'
-  get '/groups_new',   to: 'groups#new'
+  get '/groups_new', to: 'groups#new'
   post '/groups_new',   to: 'groups#create'
   get '/demands_new',   to: 'votes#new'
-  post '/demands_new',   to: 'votes#create'
+  post '/demands_new', to: 'votes#create'
   get '/group_stats', to: 'my_votes#show_group'
   get '/vote_stats', to: 'my_votes#show'
   get '/group_stats_freq', to: 'my_votes#show_group_freq'
-
-  
 end
-

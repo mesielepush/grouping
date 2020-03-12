@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: votes
@@ -14,6 +16,6 @@
 #
 
 class Vote < ApplicationRecord
-    belongs_to :user
-    belongs_to :group
+  belongs_to :user
+  belongs_to :group
 end

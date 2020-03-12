@@ -20,7 +20,6 @@
 <div class='d-flex justify-content-center'>
 
         <div>
-            
             <div class="my_votes_demand_list_index_group ">
                 <div class="demands_list_my_votes_group ">
                     <ul class="list-group">
@@ -39,14 +38,34 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="foot_buttons d-flex justify-content-around">
-                
-        <div>
-            <a href=<%= groups_url %> class = 'back_button_index_groups'>
-                <img src="https://i.imgur.com/BEcgpsg.png" alt="" class='img-fluid imagen_vote_show'>
+</div>
+
+<div class="foot_icons d-flex justify-content-center mt-5 pt-5 for_group_show">
+
+    <div class='d-flex justify-content-center'>
+            <a href=<%= root_url %> class = 'home_button'>
+                <img src="https://i.imgur.com/JcpkRZh.png" alt="" class='img-fluid imagen_vote_show'>
             </a>
-            
-        </div>
-        
     </div>
+    <div class='d-flex justify-content-center '>
+        <a href=<%=  groups_url %> class = 'groups_home_button'>
+            <img src="https://i.imgur.com/xbEKtIa.png" alt="" class='img-fluid imagen_vote_show'>
+        </a>
+    </div>
+    <div class='d-flex justify-content-center'>
+        <a href=<%= group_stats_freq_url(group_id: @group.id) %> class='demand_stats_button' >
+            <img src="https://i.imgur.com/XQ0rn90.png" alt="" class='img-fluid imagen_vote_show'>
+        </a>
+    </div>
+    <div class='d-flex justify-content-center '>
+        <a href=<%=  demands_profile_url %> class = 'demands_list_link'>
+            <img src="https://i.imgur.com/MRW2EsQ.png" alt="" class='img-fluid imagen_vote_show'>
+        </a>
+    </div>
+    <div class='d-flex justify-content-center '>
+        <a href=<%=  demands_new_url(group_id: @group.id) %> class = 'demands_list_link'>
+            <img src="https://i.imgur.com/Nxx48DE.png" alt="" class='img-fluid imagen_vote_show'>
+        </a>
+    </div>
+    
+</div>

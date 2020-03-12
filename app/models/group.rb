@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: groups
@@ -12,47 +14,39 @@
 #
 require 'set'
 class Group < ApplicationRecord
-    belongs_to :user
-    has_many :votes
-    
-    def group_total
-        total = 0
-        demands = self.votes
-        demands.each do |demand|
-            total += demand.counter
-        end
-        total
+  belongs_to :user
+  has_many :votes
+
+  def group_total
+    total = 0
+    demands = votes
+    demands.each do |demand|
+      total += demand.counter
+    end
+    total
+  end
+
+  def my_collaborators(current_user)
+    collaborators = {}
+    votes.where.not(user_id: current_user).each do |vote|
+      if collaborators[vote.user_id].nil?
+        collaborators[vote.user_id] = { total_counter: 0 }
+
+      end
+
+      collaborators[vote.user_id][vote.id] = { name: vote.name,
+                                               description: vote.description,
+                                               counter: vote.counter,
+                                               avatar: vote.gravatar_url }
+      collaborators[vote.user_id][:total_counter] += vote.counter
     end
 
-    def my_collaborators(current_user)
-        collaborators = {}
-        self.votes.where.not(user_id: current_user).each do |vote|
-            if collaborators[vote.user_id] == nil
-                collaborators[vote.user_id] = {total_counter: 0}
-                
-            end
-            
-            collaborators[vote.user_id][vote.id] = {name:vote.name,
-                                                    description: vote.description,
-                                                    counter: vote.counter,
-                                                    avatar: vote.gravatar_url}
-            collaborators[vote.user_id][:total_counter] += vote.counter
-     
-        end
+    collaborators
+  end
 
-        collaborators
-    end
+  def cumulative; end
 
-    def cumulative
-        
-    end
-
-    def all_collaborators
-        @demands = self.votes
-    end
-
-
+  def all_collaborators
+    @demands = votes
+  end
 end
-
-
-

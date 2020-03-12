@@ -1,78 +1,99 @@
+# frozen_string_literal: true
+
 class MyVotesController < ApplicationController
-    before_action :authenticate_user!
-    def create
-        @my_vote = current_user.my_votes.new(post_params)
+  before_action :authenticate_user!
+  def create
+    @my_vote = current_user.my_votes.new(post_params)
 
-        if @my_vote.save
-            
-            render :index, alert: 'Your Vote was successfully created.'
-        else
-            
-            render :index, alert: 'Vote was not created.'
-        end
+    if @my_vote.save
+
+      render :index, alert: 'Your Vote was successfully created.'
+    else
+
+      render :index, alert: 'Vote was not created.'
+    end
+  end
+
+  def show
+    vote = params[:votes_id]
+    @data = {}
+    raw_data = {}
+
+    votes = MyVote.where(votes_id: vote)
+    collaborators = {}
+    coll_ids = []
+    votes.each do |vote|
+      collaborators[vote.user_id] = []
     end
 
-    def show
-        vote = params[:votes_id]
+    collaborators.each do |key, _value|
+      coll_ids.push(User.find_by_id(key).name)
+      my_votes = votes.where(user_id: key)
+      my_votes = my_votes.order(:created_at)
+      my_votes.each do |vote|
+        collaborators[key] << vote.counter
+      end
+    end
+    max_len = []
+    collaborators.each do |key, _value|
+      max_len << collaborators[key].length
+    end
+    max_len = max_len.max
 
-        raw_data = {}
+    collaborators.each do |key, _value|
+      next unless collaborators[key].length < max_len
 
-        votes = MyVote.where(votes_id: vote)
-        collaborators = {}
-        votes.each do |vote|
-            collaborators[vote.user_id] = []
-        end
+      (max_len - collaborators[key].length).times do
+        collaborators[key] << collaborators[key].last
+      end
+    end
+    cum_data = []
+    (1..max_len - 1).each do |index|
+      row = []
+      row << index
+      input = []
+      collaborators.each do |key, _value|
+        input.push(collaborators[key][index])
+      end
+      input.each do |datum|
+        row.push(datum)
+      end
 
-        collaborators.each do     |key,value|
-            my_votes = votes.where(user_id: key)
-            my_votes = my_votes.order(:created_at)
-            my_votes.each do |vote|
-                collaborators[key] << vote.counter
-            end
-        end
-        min_len = []
-        collaborators.each do |key,value|
-            min_len << collaborators[key][value].lenght
-        end
-        min_len = min_len.min
-
-        
-
-        
-
+      cum_data.push(row)
     end
 
-    def show_group
-        @group = Group.find_by_id(params[:group_id])
-    end
+    @data[:data] = cum_data
+    @data[:coll_ids] = coll_ids
+    @data[:title] = Vote.find_by_id(vote).name
+    @data[:votes_id] = vote
+    @data
+  end
 
-    def show_group_freq
-        if params[:group_id]
-           @group = Group.find_by_id(params[:group_id])
-           @bar_data = [ ['Demand', 'Votes'] ]
-           organinzer = {} 
-           
-           @group.votes.each do |vote|
-             organinzer[vote.name] = vote.counter
-            end
-           organinzer = organinzer.sort_by {|k, v| v}
+  def show_group
+    @group = Group.find_by_id(params[:group_id])
+  end
 
-           organinzer.each do |name,votes|
-            begin
-                @bar_data << [name[0..15]+'...',votes]
-            rescue
-                @bar_data << [name,votes]
-            end
-           end
-           
-           return @bar_data
-           
-        end
-    end
+  def show_group_freq
+    if params[:group_id]
+      @group = Group.find_by_id(params[:group_id])
+      @bar_data = [%w[Demand Votes]]
+      organizer = {}
 
-    def index
-        
+      @group.votes.each do |vote|
+        organizer[vote.name] = vote.counter
+      end
+      organizer = organizer.sort_by { |_k, v| v }
+
+      organizer.each do |name, votes|
+        @bar_data << [name[0..15] + '...', votes]
+      rescue StandardError
+        @bar_data << [name, votes]
+      end
+
+      @bar_data
+
     end
-    
-    
+  end
+
+  def index; end
 end
