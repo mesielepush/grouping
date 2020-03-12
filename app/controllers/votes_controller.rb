@@ -25,7 +25,7 @@ class VotesController < ApplicationController
   def index
     @demands = Vote.all
   end
-
+# rubocop:disable Metrics/CyclomaticComplexity
   def update
     votes = Vote.find_by_id(params[:votes_id])
 
@@ -54,7 +54,7 @@ class VotesController < ApplicationController
     end
     redirect_to vote_url(votes_id: votes.id)
   end
-
+# rubocop:enable Metrics/CyclomaticComplexity
   private
 
   def vote_params
