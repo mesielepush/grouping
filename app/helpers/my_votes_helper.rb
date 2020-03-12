@@ -4,20 +4,19 @@ module MyVotesHelper
   def get_data(vote)
     votes = MyVote.where(votes_id: vote)
     data = {}
-    raw_data = {}
     collaborators = {}
     coll_ids = []
 
-    votes.each do |vote|
-      collaborators[vote.user_id] = []
+    votes.each do |vot|
+      collaborators[vot.user_id] = []
     end
 
     collaborators.each do |key, _value|
       coll_ids.push(User.find_by_id(key).name)
       my_votes = votes.where(user_id: key)
       my_votes = my_votes.order(:created_at)
-      my_votes.each do |vote|
-        collaborators[key] << vote.counter
+      my_votes.each do |vot|
+        collaborators[key] << vot.counter
       end
     end
 
