@@ -54,7 +54,7 @@ class VotesController < ApplicationController
     end
     redirect_to vote_url(votes_id: votes.id)
   end
-  
+  # rubocop:enable Metrics/AbcSize
   private
 
   def vote_params
