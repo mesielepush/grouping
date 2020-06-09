@@ -15,11 +15,11 @@
 
     <div class="demand_controls">
         <div class="demand_elements d-flex justify-content-around">
-            <a href=<%= demand_update_url(vote:'down',votes_id: @vote.id)  %>>
+            <a href=<%= demand_update_url(vote:'down', votes_id: @vote.id)  %>>
                 <img src= 'https://i.imgur.com/vRbv6wK.png' alt="demand" class = "img-fluid down_arrow">
             </a>
             <span class= 'demand_counter'><%=@vote.counter%></span>
-            <a href=<%= demand_update_url(vote:'up',votes_id: @vote.id)  %>>
+            <a href=<%= demand_update_url(vote:'up', votes_id: @vote.id)  %>>
                 <img src= 'https://i.imgur.com/SgIrwNL.png' alt="demand" class = "img-fluid up_arrow">
             </a>
             
