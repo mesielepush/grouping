@@ -2,6 +2,11 @@
 
 > This repo includes a plataform called: Democraticon in which you can create groups and demands within each group. Users can vote each demand trough time. You can check the charts of the vote behaviour for each demand.
 
+![phtoto](https://i.imgur.com/MGabTxl.png)  
+![phtoto](https://i.imgur.com/SwK9AVX.png)
+
+
+
 ## Built With
 
 - ruby 2.6.3p62

@@ -37,9 +37,8 @@ class VotesController < ApplicationController
       begin
         count = current_user.my_votes.where(votes_id: votes.id).last.counter
         current_user.my_votes.new(votes_id: votes.id, counter: count + 1).save
-      rescue StandardError
-        count = current_user.my_votes.where(votes_id: votes.id).last.counter
-        current_user.my_votes.new(votes_id: votes.id, counter: count + 1).save
+      rescue 
+        current_user.my_votes.new(votes_id: votes.id, counter: 1).save
       end
 
     when 'down'
@@ -48,8 +47,7 @@ class VotesController < ApplicationController
       begin
         count = current_user.my_votes.where(votes_id: votes.id).last.counter
         current_user.my_votes.new(votes_id: votes.id, counter: count - 1).save
-      rescue StandardError
-        current_user.my_votes.where(votes_id: votes.id).last.nil?
+      rescue 
         current_user.my_votes.new(votes_id: votes.id, counter: 1).save
       end
     end
