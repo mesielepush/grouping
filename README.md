@@ -42,12 +42,12 @@ rails db:{drop,create,migrate,seed,migrate}
 ```
 From there you have acces to 6 users:
 
-one@gmail.com
-two@gmail.com
-three@gmail.com
-four@gmail.com
-five@gmail.com
-six@gmail.com
+* one@gmail.com  
+* two@gmail.com  
+* three@gmail.com  
+* four@gmail.com  
+* five@gmail.com  
+* six@gmail.com  
 
 password for all of them is six p's: 'pppppp'
 
@@ -76,7 +76,7 @@ https://github.com/mesielepush
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](..issues/).
+Feel free to check the [issues page](https://github.com/mesielepush/grouping/issues).
 
 ## Show your support
 
