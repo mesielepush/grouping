@@ -9,12 +9,15 @@
       <div class="field">
           <%= f.label :name %><br />
           <%= f.text_field :name, autofocus: true%>
-        </div>
-        <div class="field">
+      </div>
+      <div class="field">
           <%= f.label :email %><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
         </div>
-
+        <div class="field">
+          <%= f.label :image_url %><br />
+          <%= f.text_field :gravatar %>
+        </div>
         <div class="field">
           <%= f.label :password %>
           <% if @minimum_password_length %>
@@ -33,7 +36,8 @@
         </div>
       <% end %>
 
-      <%= render "devise/shared/links" %>
+      
   </div>
 
 </div>
+<%= render "devise/shared/links" %>

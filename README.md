@@ -40,8 +40,16 @@ Setup database with:
 ```
 rails db:{drop,create,migrate,seed,migrate} 
 ```
+From there you have acces to 6 users:
 
+one@gmail.com
+two@gmail.com
+three@gmail.com
+four@gmail.com
+five@gmail.com
+six@gmail.com
 
+password for all of them is six p's: 'pppppp'
 
 ### Usage
 
@@ -59,17 +67,11 @@ Open `http://localhost:3000/` in your browser.
     rpsec --format documentation
 ```
 
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
-
-### Deployment
-
-https://limitless-atoll-45324.herokuapp.com/users/sign_in
-
-
-## Authors
+## Author:
 
 Jonathan Marín
 https://github.com/mesielepush
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
